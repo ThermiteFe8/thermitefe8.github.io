@@ -5,3 +5,41 @@ a.button {
     text-decoration: none;
     color: initial;
 }
+html {
+    background-image: url('Mega mogus.png');
+    background-size: cover;
+}
+body {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+}
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 31px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: orange;
+        background-image: linear-gradient(180deg, #2d66eb, #cd29ff);
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: white;
+        background: url('Bone Bar.png');
+        background-size: contain;
+        background-repeat: space;
+    }
+
+main * {
+    font-size: 18px;
+}
+
+#container {
+    background-image: linear-gradient(45deg, #2d66eb, #cd29ff);
+}
