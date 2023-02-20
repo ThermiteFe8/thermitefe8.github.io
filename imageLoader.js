@@ -1,8 +1,10 @@
 // JavaScript source code
 function loadImages(dirName, imageExtension) {
+    var directoryHolderGuy = "";
     var penisDirectory = "/Thermite Portfolio/" + dirName + "/fileNames.txt";
     function reqListener() {
         console.log(this.responseText);
+        directoryHolderGuy = this.responseText;
     }
     var penisDirectory = "/Thermite Portfolio/" + dirName + "/fileNames.txt";
     const req = new XMLHttpRequest();
@@ -10,7 +12,7 @@ function loadImages(dirName, imageExtension) {
     req.open("GET", penisDirectory);
     req.send();
     console.log(req);
-    var allFiles = req.split("\n");
+    var allFiles = directoryHolderGuy.split("\n");
     console.log(allFiles[0]);
 
     var mediaFiles = [];
