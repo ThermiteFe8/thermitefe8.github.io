@@ -1,10 +1,14 @@
 // JavaScript source code
+var directoryHolderGuy = "";
 function loadImages(dirName, imageExtension) {
-    var directoryHolderGuy = "";
+
     var penisDirectory = "/Thermite Portfolio/" + dirName + "/fileNames.txt";
     function reqListener() {
         console.log(this.responseText);
         directoryHolderGuy = this.responseText;
+        console.log("Printing directory holder guy");
+        console.log(directoryHolderGuy);
+        loadImagesPart2(dirName, imageExtension);
     }
     var penisDirectory = "/Thermite Portfolio/" + dirName + "/fileNames.txt";
     const req = new XMLHttpRequest();
@@ -12,6 +16,10 @@ function loadImages(dirName, imageExtension) {
     req.open("GET", penisDirectory);
     req.send();
     console.log(req);
+
+
+}
+function loadImagesPart2(dirName, imageExtension) {
     var allFiles = directoryHolderGuy.split("\n");
     console.log(allFiles[0]);
 
@@ -41,6 +49,4 @@ function loadImages(dirName, imageExtension) {
         funnyImage.src = ballsDirectory + mediaFiles[i];
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
-   
-
 }
