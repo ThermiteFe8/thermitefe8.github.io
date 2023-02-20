@@ -34,7 +34,7 @@ function loadImagesPart2(dirName, imageExtension) {
 
     mediaFiles.sort(function (a, b) {
         var firstArray = a.split(" - ");
-        var secondArray = b.spit(" - ");
+        var secondArray = b.split(" - ");
 
         return firstArray[0] - secondArray[0];
     });
@@ -44,8 +44,8 @@ function loadImagesPart2(dirName, imageExtension) {
     var ballsDirectory = "/Thermite Portfolio" + dirName + "/";
 
     for (var i = 0; i < mediaFiles.length; i++) {
-        var arraySections = mediaFIles[i].split(" - ");
-        var funnyImage = document.createElement(img);
+        var arraySections = mediaFiles[i].split(" - ");
+        var funnyImage = document.createElement("img");
         funnyImage.src = ballsDirectory + mediaFiles[i];
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
