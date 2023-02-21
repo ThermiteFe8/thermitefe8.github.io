@@ -80,8 +80,8 @@ function enlargeImage(imageSource, imageNameInfo) {
     overlay.classList.remove("hidden");
     document.getElementById('modal-image').src = imageSource;
     if (imageNameInfo.includes(".png") || imageNameInfo.includes(".mp4")) {
-        imageNameInfo.replace(".png", "");
-        imageNameInfo.replace(".mp4", "");
+        imageNameInfo = imageNameInfo.replace(".png", "");
+        imageNameInfo = imageNameInfo.replace(".mp4", "");
     }
     var nameSplit = imageNameInfo.split(" - ");
     document.getElementById("zoomedName").innerHTML = nameSplit[1];
