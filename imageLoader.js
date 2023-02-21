@@ -48,7 +48,7 @@ function loadImagesPart2(dirName, imageExtension) {
         var funnyImage = document.createElement("img");
         
         funnyImage.src = ballsDirectory + mediaFiles[i];
-        funnyImage.setAttribute('onclick',("enlargeImage("+ballsDirectory+mediaFiles[i]+")"));
+        funnyImage.setAttribute('onclick',("enlargeImage(\'"+ballsDirectory+mediaFiles[i]+"\'')"));
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
 }
