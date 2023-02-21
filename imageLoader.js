@@ -52,7 +52,7 @@ function loadImagesPart2(dirName, imageExtension) {
         }
         
         funnyImage.src = ballsDirectory + mediaFiles[i];
-        var cleanupHelper = ballsDirectory + mediaFiles[i];
+        var cleanupHelper = mediaFiles[i];
 
         if (cleanupHelper.includes("\'")) {
             var tempArray = cleanupHelper.split("\'");
@@ -64,13 +64,14 @@ function loadImagesPart2(dirName, imageExtension) {
 
         }
 
-        funnyImage.setAttribute('onclick', ("enlargeImage(\'" + cleanupHelper + "\')"));
+        funnyImage.setAttribute('onclick', ("enlargeImage(\'" + ballsDirectory + cleanupHelper + "\', \'" + cleanupHelper + "\')"));
         funnyImage.setAttribute('class', 'theMedia');
+       // funnyImage.setAttribute('id', cleanupHelper);
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
 }
 
-function enlargeImage(imageSource) {
+function enlargeImage(imageSource, imageNameInfo) {
     // Get the modal image tag
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
@@ -78,6 +79,19 @@ function enlargeImage(imageSource) {
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
     document.getElementById('modal-image').src = imageSource;
+    if (imageNameInfo.includes(".png") || imageNameInfo.includes(".mp4")) {
+        imageNameInfo.replace(".png", "");
+        imageNameInfo.replace(".mp4", "");
+    }
+    var nameSplit = imageNameInfo.split(" - ");
+    document.getElementById("zoomedName").innerHTML = nameSplit[1];
+    var descriptionHelper = "";
+    for (var i = 2; i < nameSplit.length - 1; i++) {
+        descriptionHelper = descriptionHelper + nameSplit[i] + " | ";
+    }
+    descriptionHelper = descriptionHelper + nameSplit[nameSplit.length - 1];
+    document.getElementById("zoomedDescription").innerHTML = descriptionHelper;
+
     
 }
 
