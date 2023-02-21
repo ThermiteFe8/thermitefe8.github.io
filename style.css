@@ -8,7 +8,7 @@ a.button {
 
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: sticky; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 50px; /* Location of the box */
     left: 0;
