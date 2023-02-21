@@ -84,7 +84,7 @@ main * {
 #imageHolder {
     
     margin: auto;
-    width: 80%;
+    max-width: 80%;
     padding: 30px;
 }
 
