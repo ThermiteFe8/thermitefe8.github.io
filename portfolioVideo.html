@@ -2,12 +2,37 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <meta charset="utf-8" />
-    <title></title>
+    <script src="imageLoader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Videos</title>
 </head>
-<body>
+<body class="container">
+    <section class="modal hidden">
+        <div class="flex">
+
+
+        </div>
+        <div>
+            <img id="modal-image" src="">
+        </div>
+
+    </section>
+
+    <div class="overlay hidden" onclick="closeImage()"></div>
+    <main>
+        <div id="imageHolder">
+
+        </div>
+    </main>
     <div>
-        <iframe src="https://drive.google.com/file/d/1WCLBIqDSQLGp7lHmvGMkVvMu6QDkmIXJ/preview" width="640" height="480" allow="autoplay"></iframe>
+        <script>
+            loadImages('Videos', '.mp4');
+        </script>
     </div>
 </body>
+
 </html>

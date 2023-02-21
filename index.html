@@ -10,27 +10,12 @@
 <body class="container">
 	<main>
 		<div id="AboutMe">
-			<p></p>
 			<button href="mailto:thermitefe8@gmail.com">GMAIL</button>
 			<button href="https://www.youtube.com/channel/UCLOeP5ukWxQ9YBYXQ__ZfBw">YOUTUBE</button>
 			<button href="https://drive.google.com/drive/folders/1xuuLsOnBqKKsO1WCwhHDxrMKSThW_D3j?usp=share_link">Google Drive portfolio</button>
-			<script>const fs = require("fs");
-
-                let directory_name = "Thermite Portfolio";
-
-                // Function to get current filenames
-                // in directory
-                let filenames = fs.readdirSync(directory_name);
-
-                console.log("\nFilenames in directory:");
-                filenames.forEach((file) => {
-                    console.log("File:", file);
-                });</script>
-
 		</div>
 
-
-		<div>
+		<div id="moreButtons">
 			<button onclick="window.location.href = '/more.html'">MORE about me</button>
 			<button onclick="window.location.href ='/portfolioIndex.html'">PORTFOLIO</button>
 			<button onclick="window.location.href ='/commission.html'">commission info</button>

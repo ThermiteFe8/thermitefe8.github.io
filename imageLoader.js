@@ -47,6 +47,9 @@ function loadImagesPart2(dirName, imageExtension) {
     for (var i = 0; i < mediaFiles.length; i++) {
         var arraySections = mediaFiles[i].split(" - ");
         var funnyImage = document.createElement("img");
+        if (imageExtension == "mp4") {
+            funnyImage = document.createElement("video");
+        }
         
         funnyImage.src = ballsDirectory + mediaFiles[i];
         var cleanupHelper = ballsDirectory + mediaFiles[i];
