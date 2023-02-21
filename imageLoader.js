@@ -48,7 +48,7 @@ function loadImagesPart2(dirName, imageExtension) {
         var funnyImage = document.createElement("img");
         
         funnyImage.src = ballsDirectory + mediaFiles[i];
-        funnyImage.setAttribute('onclick',("enlargeImage(\'"+ballsDirectory+mediaFiles[i]+"\'')"));
+        funnyImage.setAttribute('onclick',("enlargeImage(\'"+ballsDirectory+mediaFiles[i]+"\')"));
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
 }
@@ -56,7 +56,7 @@ function loadImagesPart2(dirName, imageExtension) {
 function enlargeImage(imageSource) {
     // Get the modal image tag
     var modal = document.getElementById("myModal");
-
+    console.log("Enlarging image");
     var modalImage = document.getElementById("modal-image");
 
     modal.style.display = "block";
