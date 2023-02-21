@@ -55,7 +55,7 @@ function loadImagesPart2(dirName, imageExtension) {
             var tempArray = cleanupHelper.split("\'");
             cleanupHelper = "";
             for (var k = 0; k < tempArray.length - 1; k++) {
-                cleanupHelper = cleanupHelper + tempArray[k] + "\''";
+                cleanupHelper = cleanupHelper + tempArray[k] + "\\'";
             }
             cleanupHelper = cleanupHelper + tempArray[tempArray.length - 1];
 
