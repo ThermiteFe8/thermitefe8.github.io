@@ -1,5 +1,6 @@
 // JavaScript source code
 var directoryHolderGuy = "";
+
 function loadImages(dirName, imageExtension) {
 
     var penisDirectory = "/Thermite Portfolio/" + dirName + "/fileNames.txt";
@@ -56,29 +57,20 @@ function loadImagesPart2(dirName, imageExtension) {
 
 function enlargeImage(imageSource) {
     // Get the modal image tag
-    var modal = document.getElementById("myModal");
-    console.log("Enlarging image");
-    var modalImage = document.getElementById("modal-image");
-
-    modal.style.display = "block";
-    modalImage.src = imageSource;
+    const modal = document.querySelector(".modal");
+    const overlay = document.querySelector(".overlay");
+    const closeModalBtn = document.querySelector(".btn-close");
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    document.getElementById('modal-image').src = imageSource;
+    
 }
-document.addEventListener(
-    "click",
-    function (event) {
-        // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-        if (document.getElementById("myModal").display != "none") {
-        if (
-            event.target.matches(".button-close-modal") ||
-            !event.target.closest(".modal")
-        ) {
-            closeModal()
-            }
-        }
-    },
-    false
-)
 
-function closeModal() {
-    document.querySelector(".modal").style.display = "none"
+function closeImage() {
+    const modal = document.querySelector(".modal");
+    const overlay = document.querySelector(".overlay");
+    const closeModalBtn = document.querySelector(".btn-close");
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
 }
+

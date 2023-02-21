@@ -11,19 +11,22 @@
     <title>Portfolio Art</title>
 </head>
 <body class="container">
-   
-    <main>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <img src="" id="modal-image" />
-            </div>
+    <section class="modal hidden">
+        <div class="flex">
+  
+            <button class="btn-close" onclick="closeImage()">⨉</button>
+        </div>
+        <div>
+            <img id ="modal-image" src="">
         </div>
 
+    </section>
+
+    <div class="overlay hidden" onclick="closeImage()"></div>
+    <main>
         <div id="imageHolder">
 
         </div>
-
     </main>
     <div>
         <script>
