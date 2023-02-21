@@ -41,29 +41,9 @@ body {
     background-color: rgba(255, 255, 255, 0.35);
     box-shadow:0 1px 12px rgba(0, 0, 0, 0.15);
     border:1px solid rgba(255, 255, 255, 0.2);
+    max-width:80%;
 }
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: blue orange;
-}
-
-    /* Works on Chrome, Edge, and Safari */
-    *::-webkit-scrollbar {
-        width: 31px;
-    }
-
-    *::-webkit-scrollbar-track {
-        background: orange;
-        background-image: linear-gradient(180deg, #2d66eb, #cd29ff);
-    }
-
-    *::-webkit-scrollbar-thumb {
-        background-color: white;
-        background: url('Bone Bar.png');
-        background-size: contain;
-        background-repeat: space;
-    }
 
 main * {
     font-size: 18px;
@@ -75,9 +55,11 @@ main * {
 
 
 .theMedia {
-    width: 20%; /* or any custom size */
-    height: 20%;
+   /* width: 20%; /* or any custom size */
+  /*  height: 20%;*/
     object-fit: scale-down;
+    max-height:20%;
+    max-width:20%;
    
 }
 
