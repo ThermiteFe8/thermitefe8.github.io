@@ -11,17 +11,15 @@ a.button {
     flex-direction: column;
     justify-content: center;
     gap: 0.4rem;
-    width: 450px;
+    max-width: 100%;
     padding: 1.3rem;
-    min-height: 250px;
+    max-height: 95vh;
     position: sticky;
-    top: 20%;
+    top: 2%;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 15px;
-
     z-index: 2;
-
 }
 
     .modal .flex {
@@ -37,19 +35,29 @@ a.button {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(3px);
     z-index: 1;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
+
 .hidden {
     display: none;
 }
+
 button {
     cursor: pointer;
     border: none;
     font-weight: 600;
+}
+
+#modal-image {
+    max-height: 100%;
+    max-width: 100%
 }
 
 .btn {
@@ -97,7 +105,7 @@ main * {
 }
 
 #container {
-    display:flex;
+    display: flex;
     justify-content: center;
     background-image: linear-gradient(45deg, #2d66eb, #cd29ff);
 }

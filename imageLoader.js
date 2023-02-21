@@ -49,7 +49,13 @@ function loadImagesPart2(dirName, imageExtension) {
         var funnyImage = document.createElement("img");
         
         funnyImage.src = ballsDirectory + mediaFiles[i];
-        funnyImage.setAttribute('onclick', ("enlargeImage(\'" + ballsDirectory + mediaFiles[i] + "\')"));
+        var cleanupHelper = ballsDirectory + mediaFiles[i];
+
+        while (cleanupHelper.includes("\'")) {
+           cleanupHelper = cleanupHelper.replace("\'", "\\'");
+        }
+
+        funnyImage.setAttribute('onclick', ("enlargeImage(\'" + cleanupHelper + "\')"));
         funnyImage.setAttribute('class', 'theMedia');
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
@@ -59,7 +65,7 @@ function enlargeImage(imageSource) {
     // Get the modal image tag
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
-    const closeModalBtn = document.querySelector(".btn-close");
+   // const closeModalBtn = document.querySelector(".btn-close");
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
     document.getElementById('modal-image').src = imageSource;
@@ -69,7 +75,7 @@ function enlargeImage(imageSource) {
 function closeImage() {
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
-    const closeModalBtn = document.querySelector(".btn-close");
+  //  const closeModalBtn = document.querySelector(".btn-close");
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
 }
