@@ -70,8 +70,8 @@ main * {
 
 
 .theMedia {
-    width: 100%; /* or any custom size */
-    height: 100%;
+    width: 20%; /* or any custom size */
+    height: 20%;
     object-fit: contain;
    
 }
