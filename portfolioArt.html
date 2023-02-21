@@ -4,13 +4,23 @@
 <head>
     <meta charset="utf-8" />
     <script src="imageLoader.js"></script>
+    <style src="style.css"></style>
     <title>Portfolio Art</title>
 </head>
 <body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="" id="modal-image" />
+        </div>
+    </div>
     <div id="imageHolder">
-        
+
         <a href="/Thermite Portfolio/fileNames.txt">when the pain is immeasurable!!!</a>
         <button onclick="loadImages('', '.png')"></button>
     </div>
+    <script>
+        loadImages('', '.png');
+    </script>
 </body>
 </html>

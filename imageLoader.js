@@ -46,7 +46,19 @@ function loadImagesPart2(dirName, imageExtension) {
     for (var i = 0; i < mediaFiles.length; i++) {
         var arraySections = mediaFiles[i].split(" - ");
         var funnyImage = document.createElement("img");
+        
         funnyImage.src = ballsDirectory + mediaFiles[i];
+        funnyImage.onclick("enlargeImage("+ballsDirectory+mediaFiles[i]+")");
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
+}
+
+function enlargeImage(imageSource) {
+    // Get the modal image tag
+    var modal = document.getElementById("myModal");
+
+    var modalImage = document.getElementById("modal-image");
+
+    modal.style.display = "block";
+    modalImage.src = imageSource;
 }
