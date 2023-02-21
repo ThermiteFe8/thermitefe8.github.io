@@ -51,8 +51,14 @@ function loadImagesPart2(dirName, imageExtension) {
         funnyImage.src = ballsDirectory + mediaFiles[i];
         var cleanupHelper = ballsDirectory + mediaFiles[i];
 
-        while (cleanupHelper.includes("\'")) {
-           cleanupHelper = cleanupHelper.replace("\'", "\\'");
+        if (cleanupHelper.includes("\'")) {
+            var tempArray = cleanupHelper.split("\'");
+            cleanupHelper = "";
+            for (var k = 0; k < tempArray.length - 1; k++) {
+                cleanupHelper = cleanupHelper + tempArray[k] + "\''";
+            }
+            cleanupHelper = cleanupHelper + tempArray[tempArray.length - 1];
+
         }
 
         funnyImage.setAttribute('onclick', ("enlargeImage(\'" + cleanupHelper + "\')"));
