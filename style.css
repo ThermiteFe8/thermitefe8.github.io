@@ -45,7 +45,6 @@ a.button {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-content: bottom;
     padding: 5px;
 }
 
@@ -251,6 +250,7 @@ main * {
     object-fit: scale-down;
     max-height: 45%;
     max-width: 45%;
+    padding: 3px
 }
 
 #imageHolder {
@@ -260,4 +260,5 @@ main * {
     margin: auto;
     max-width: 100%;
     padding: 30px;
+    filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
 }
