@@ -1,15 +1,67 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>More</title>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div>
-        <p>Insert info about me - name, pronouns, interests, discord, reiterate contact info</p>
-    </div>
-    
+
+<body class="container">
+    <main>
+        <div id="topIndexSection">
+            <img src="thermiteIcon.png" id="swagIcon" />
+            <p id="name">Thermite/Nicole</p>
+            <p id="textBelowName">She/Her</p>
+            <p id="moreTextBelowNames">Thermite#9532</p>
+        </div>
+        <div id="AboutMe">
+            <div id="coolStuff">
+                <p>Stuff I Make</p>
+                <ul>
+                    <li>Art with Cool Lighting</li>
+                    <li>Tutorials</li>
+                    <li>FNF Mods/Scripts/Animations</li>
+                    <li>Videos/Timelapses</li>
+                    <li>...And More!</li>
+                </ul>
+            </div>
+            <div>
+                <p>Fandoms</p>
+                <ul>
+                    <li>Undertale/Deltarune</li>
+                    <li>Undertale AUs</li>
+                    <li>Splatoon</li>
+                    <li>Friday Night Funkin'</li>
+                    <li>Hollow Knight</li>
+                    <li>Omori</li>
+                    <li>Sonic</li>
+                </ul>
+            </div>
+            <div id="aboutThisSite">
+                <p>
+                        I made this site with Github Pages! However, manually programming every single image would've been a pain - I make a lot of art. That's why I made a system that dynamically loads an arbitrary amount of images depending on how many I've got in each folder.
+                </p>
+                <p>
+                        However, without Node.JS, I couldn't iterate through folders and I can't install the Node.JS framework on Github Pages because this is supposed to be static. So I had to write a program that'd go through my art folders and make a text file listing out all the file names.
+                </p>
+                <p>
+                        Then when you load up the Portfolio pages, it looks at the list of files, sorts the ones it wants using the file extension names (.png, .mp4, etc), and then loads all of them onto the page. The naming system for files allows me to display extra info while separating the name of the art piece too.
+                </p>
+                <p>
+                        Clicking on the image/video pulls it up and makes it bigger, also displaying extra information about the image. For this, I just used a modal with an img/video element and a dark overlay covering the rest of the page. Clicking on the overlay closes the modal.
+                </p>
+                <p>
+                        Also the art folder that this site references is synced with Google Drive - that way if Github bugs out or if Drive goes down, you can still look at my stuff. 
+                </p>
+            </div>
+        </div>
+
+        <div id="moreButtons">
+            <button onclick="window.location.href ='/'">Back</button>
+        </div>
+
+    </main>
 </body>
+
 </html>
