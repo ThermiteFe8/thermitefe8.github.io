@@ -41,10 +41,24 @@ a.button {
     /* Next rules are only be have a clearer preview */
 }
 
+.columndivs {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-content: bottom;
+    padding: 5px;
+}
+
+#portfolioIndexSet {
+    display: flex;
+    justify-content: center;
+    max-height: 100%;
+}
 
 .indexThumbnail {
-    max-height: 10%;
-    max-width: 10%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: scale-down;
 }
 
 .overlay {
@@ -172,7 +186,6 @@ li {
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
     background: rgba(0, 0, 0, 0.21);
     width: 20%;
- 
 }
 
 #coolStuff, #fandoms {
