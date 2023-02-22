@@ -111,7 +111,7 @@ function loadVideos() {
         console.log(videoListHolder);
         loadVideos2();
     }
-    var penisDirectory = "/Thermite Portfolio/" + dirName + "/fileNames.txt";
+    var penisDirectory = "/YTVideoList.txt";
     const vidListReq = new XMLHttpRequest();
     vidListReq.addEventListener("load", reqListener);
     vidListReq.open("GET", penisDirectory);
