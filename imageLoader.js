@@ -120,7 +120,7 @@ function loadVideos() {
 }
 
 function loadVideos2(){
-    var allFiles = directoryHolderGuy.split("\n");
+    var allFiles = videoListHolder.split("\n");
     console.log(allFiles[0]);
     for (var i = 0; i < allFiles.length; i++) {
         var swagVideo = document.createElement("iframe");
