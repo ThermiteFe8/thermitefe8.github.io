@@ -123,6 +123,7 @@ html {
     background-image: url('/Thermite Portfolio/17 - Dusttale FNF RTX - December 2021.png');
     background-size: cover;
     background-attachment: fixed;
+    background-position:center, bottom;
     overflow-x: hidden;
 }
 
@@ -209,13 +210,15 @@ body {
     justify-content: center;
     padding-left: 00px;
     padding-right: 00px;
+    padding-top:13px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius:5px;
     background-color: rgb(69,230,255); /* Fallback color */
     background-color: rgba(69,230,255,0.4); /* Black w/ opacity */
-    border-radius: 8px;
     backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.35);
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     max-width: 80%;
     background: rgb(230,228,255);
     background: linear-gradient(14deg, rgba(230,228,255,0.3114495798319328) 0%, rgba(46,148,247,0.2946428571428571) 100%);
