@@ -173,7 +173,11 @@ main * {
     display: flex;
     justify-content: center;
 }
-
+.svgIcons{
+    object-fit:scale-down;
+    max-width:20%;
+    max-height:20%;
+}
 #container {
     display: flex;
     justify-content: center;
