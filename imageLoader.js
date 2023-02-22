@@ -102,4 +102,32 @@ function closeImage() {
     modal.classList.add("hidden");
     overlay.classList.add("hidden");
 }
+var videoListHolder = "";
+function loadVideos() {
+    function reqListener() {
+        console.log(this.responseText);
+        videoListHolder = this.responseText;
+        console.log("pronting");
+        console.log(videoListHolder);
+        loadVideos2();
+    }
+    var penisDirectory = "/Thermite Portfolio/" + dirName + "/fileNames.txt";
+    const vidListReq = new XMLHttpRequest();
+    vidListReq.addEventListener("load", reqListener);
+    vidListReq.open("GET", penisDirectory);
+    vidListReq.send();
+    console.log(vidListReq);
+}
+
+function loadVideos2(){
+    var allFiles = directoryHolderGuy.split("\n");
+    console.log(allFiles[0]);
+    for (var i = 0; i < allFiles.length; i++) {
+        var swagVideo = document.createElement("iframe");
+        swagVideo.src = allFiles[i];
+        swagVideo.setAttribute('class', 'theMedia');
+        document.getElementById('imageHolder').appendChild(swagVideo);
+    }
+
+}
 
