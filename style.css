@@ -86,7 +86,7 @@ button {
     font-weight: 600;
     border-radius: 5px;
     margin: 1%;
-    padding:10px;
+    padding: 10px;
     color: white;
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
     background: rgb(2,0,36);
@@ -123,7 +123,7 @@ html {
     background-image: url('dustybackgroundisolated.png');
     background-size: cover;
     background-attachment: fixed;
-    background-position:center, bottom;
+    background-position: center, bottom;
     overflow-x: hidden;
 }
 
@@ -140,6 +140,8 @@ html {
     max-height: 90%;
     max-width: 100%;
     object-fit: scale-down;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 0.25rem rgba(27, 10, 51, 0.4));
 }
 
 #topIndexSection {
@@ -158,6 +160,10 @@ html {
     margin-left: 35%;
     margin-right: 35%;
 }
+#moreButtons {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 #name,
 #textBelowName, #moreTextBelowNames {
@@ -175,18 +181,26 @@ html {
     flex-direction: row;
 }
 
-ul {
-    list-style-type: circle;
-    object-fit: scale-down;
+.pseudoList {
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
+    flex-direction: row;
+    max-width: 90%;
+    justify-content: center;
+    align-content: center;
 }
 
-li {
+.funnyList {
     padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 3px;
     text-align: center;
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
     background: rgba(0, 0, 0, 0.21);
-    width: 20%;
+    min-width: 20%;
+    min-height: 10%;
 }
 
 #coolStuff, #fandoms {
@@ -194,6 +208,8 @@ li {
     text-align: left;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     flex-direction: column;
 }
 
@@ -210,10 +226,10 @@ body {
     justify-content: center;
     padding-left: 00px;
     padding-right: 00px;
-    padding-top:13px;
-    margin-top:10px;
-    margin-bottom:10px;
-    border-radius:5px;
+    padding-top: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     background-color: rgb(69,230,255); /* Fallback color */
     background-color: rgba(69,230,255,0.4); /* Black w/ opacity */
     backdrop-filter: blur(20px);
@@ -240,12 +256,13 @@ main * {
     max-width: 90%;
     max-height: 90%;
 }
-.svgButtons{
-    max-width:100px;
-    background:none;
-    padding:10px;
-    margin-left:15px;
-    margin-right:15px;
+
+.svgButtons {
+    max-width: 100px;
+    background: none;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #container {
