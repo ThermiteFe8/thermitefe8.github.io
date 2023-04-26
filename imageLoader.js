@@ -50,8 +50,15 @@ function loadImagesPart2(dirName, imageExtension) {
         if (imageExtension == ".mp4") {
             funnyImage = document.createElement("video");
         }
+        if (imageExtension == ".mp4"){
+             funnyImage.src = ballsDirectory + mediaFiles[i] + "#t=0.001";  
+        }
+        else{
+             funnyImage.src = ballsDirectory + mediaFiles[i];
+        }
         
-        funnyImage.src = ballsDirectory + mediaFiles[i];
+        
+        
         var cleanupHelper = mediaFiles[i];
 
         if (cleanupHelper.includes("\'")) {
