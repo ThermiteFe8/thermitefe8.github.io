@@ -86,9 +86,10 @@ function enlargeImage(imageSource, imageNameInfo) {
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
     document.getElementById('modal-image').src = imageSource;
-    if (imageNameInfo.includes(".png") || imageNameInfo.includes(".mp4")) {
+    if (imageNameInfo.includes(".png") || imageNameInfo.includes(".mp4") || imageNameInfo.includes(".gif")) {
         imageNameInfo = imageNameInfo.replace(".png", "");
         imageNameInfo = imageNameInfo.replace(".mp4", "");
+        imageNameInfo = imageNameInfo.replace(".gif", "");
     }
     var nameSplit = imageNameInfo.split(" - ");
     document.getElementById("zoomedName").innerHTML = nameSplit[1];

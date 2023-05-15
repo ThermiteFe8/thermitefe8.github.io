@@ -1,0 +1,30 @@
+1 - Idle Animation - April 2023.gif
+10 - Enemy Run - April 2023.gif
+11 - Bolt Idle - April 2023.gif
+12 - Bolt Get - April 2023.gif
+13 - Tree - April 2023.png
+14 - Ground Tile - April 2023.png
+15 - Ground Tile Dark - April 2023.png
+16 - Ground Tile Top - April 2023.png
+17 - Floating Tile Left - April 2023.png
+18 - Floating Tile Middle - April 2023.png
+19 - Floating Tile Right - April 2023.png
+2 - Walk Cycle - April 2023.gif
+20 - Fence - April 2023.png
+21 - Short Building - April 2023.png
+22 - Tall Building - April 2023.png
+23 - House - April 2023.png
+24 - Midground - April 2023.png
+25 - Plant - April 2023.png
+26 - Hillside - April 2023.png
+27 - Cloud - April 2023.png
+28 - Mountains - April 2023.png
+3 - Jump - April 2023.gif
+4 - Land - April 2023.gif
+5 - Hurt - April 2023.gif
+6 - Death - April 2023.gif
+7 - Revive - April 2023.gif
+8 - Victory - April 2023.gif
+9 - Enemy Jump - April 2023.gif
+desktop.ini
+fileNames.txt

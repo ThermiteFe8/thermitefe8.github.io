@@ -1,0 +1,27 @@
+1 - Witch note animations - May 2022.gif
+10 - Matchboy Idle - May 2022.gif
+11 - Angry Witch Spritesheet - May 2022.png
+12 - Witch Spritesheet - May 2022.png
+13 - Scared Witch Spritesheet - May 2022.png
+14 - Matchboy Spritesheet - May 2022.png
+15 - Forest Foreground - May 2022.png
+16 - Fire Forest Foreground - May 2022.png
+17 - Ground - May 2022.png
+18 - Fire Ground - May 2022.png
+19 - Forest 1 - May 2022.png
+2 - Witch Idle - May 2022.gif
+20 - Forest Fire 1 - May 2022.png
+21 - Forest 2 - May 2022.png
+22 - Forest Fire 2 - May 2022.png
+23 - Log Cabin - May 2022.png
+24 - Warning - May 2022.png
+25 - Witch Icon - May 2022.png
+3 - Angry witch note animations - May 2022.gif
+4 - Witch Shoot Animations - May 2022.gif
+5 - Angry Witch Idle.gif
+6 - Scared Witch Notes - May 2022.gif
+7 - Scared Witch Idle - May 2022.gif
+8 - Matchboy Note animations - May 2022.gif
+9 - Matchboy attack and hit - May 2022.gif
+desktop.ini
+fileNames.txt
