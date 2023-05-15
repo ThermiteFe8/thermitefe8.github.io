@@ -46,6 +46,7 @@ a.button {
     flex-direction: column;
     justify-content: end;
     padding: 5px;
+    max-width:25%;
 }
 
 #portfolioIndexSet {

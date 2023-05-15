@@ -72,11 +72,6 @@ function loadImagesPart2(dirName, imageExtension) {
         }
 
         funnyImage.setAttribute('onclick', ("enlargeImage(\'" + ballsDirectory + cleanupHelper + "\', \'" + cleanupHelper + "\')"));
-        if (imageExtension == ".gif") {
-            funnyImage.setAttribute('class', 'theGifMedia');
-        } else {
-
-        }
         funnyImage.setAttribute('class', 'theMedia');
        // funnyImage.setAttribute('id', cleanupHelper);
         document.getElementById('imageHolder').appendChild(funnyImage);
