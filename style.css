@@ -56,7 +56,7 @@ a.button {
 
 .indexThumbnail {
     max-height: 100%;
-    max-width: 100%;
+    max-width: 25%;
     object-fit: scale-down;
 }
 
