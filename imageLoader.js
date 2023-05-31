@@ -55,7 +55,8 @@ function loadImagesPart2(dirName, imageExtension) {
         }
         else if (imageExtension = ".png")
         {
-            funnyImage.src = "/Thumbnails/" + mediaFiles[i];
+            var tempString = mediaFiles[i].replace(".png", ".jpg");
+            funnyImage.src = "/Thumbnails/" + tempString;
         }
         else{
              funnyImage.src = ballsDirectory + mediaFiles[i];
