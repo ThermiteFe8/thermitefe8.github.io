@@ -53,7 +53,7 @@ function loadImagesPart2(dirName, imageExtension) {
         if (imageExtension == ".mp4"){
              funnyImage.src = ballsDirectory + mediaFiles[i] + "#t=0.001";  
         }
-        else if (imageExtension = ".png")
+        else if (imageExtension == ".png")
         {
             var tempString = mediaFiles[i].replace(".png", ".jpg");
             funnyImage.src = "/Thumbnails/" + tempString;
