@@ -116,7 +116,7 @@ function closeImage() {
     overlay.classList.add("hidden");
 }
 var videoListHolder = "";
-function loadVideos() {
+function loadVideos(youtubeDirectory) {
     function reqListener() {
         console.log(this.responseText);
         videoListHolder = this.responseText;
@@ -124,7 +124,7 @@ function loadVideos() {
         console.log(videoListHolder);
         loadVideos2();
     }
-    var penisDirectory = "/YTVideoList.txt";
+    var penisDirectory = youtubeDirectory;
     const vidListReq = new XMLHttpRequest();
     vidListReq.addEventListener("load", reqListener);
     vidListReq.open("GET", penisDirectory);
