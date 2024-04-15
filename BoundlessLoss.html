@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <style>
+    /* CSS styles for layout */
+    .gallery-container {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 600px;
+    }
+    .art-image {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <div>
+      <span id="gallery-progress"></span> <!-- Displays progress like 4/10 -->
+    </div>
+    <div>
+      <button id="previous-btn">Previous</button>
+      <span id="art-title">Art Title</span>
+      <button id="next-btn">Next</button>
+    </div>
+    <div>
+      <img id="art-image" class="art-image" src="image.jpg" alt="Artwork">
+    </div>
+    <div>
+      <p id="art-description">Art Description</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for gallery functionality
+    const galleryProgress = document.getElementById('gallery-progress');
+    const previousBtn = document.getElementById('previous-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const artTitle = document.getElementById('art-title');
+    const artImage = document.getElementById('art-image');
+    const artDescription = document.getElementById('art-description');
+
+    let currentArtIndex = 0;
+    const gallery = [
+      { title: 'Artwork 1', imageUrl: 'image1.jpg', description: 'Description for Artwork 1' },
+      { title: 'Artwork 2', imageUrl: 'image2.jpg', description: 'Description for Artwork 2' },
+      { title: 'Artwork 3', imageUrl: 'image3.jpg', description: 'Description for Artwork 3' },
+      // Add more artworks as needed
+    ];
+
+    function updateGallery() {
+      const currentArtwork = gallery[currentArtIndex];
+      artTitle.textContent = currentArtwork.title;
+      artImage.src = currentArtwork.imageUrl;
+      artDescription.textContent = currentArtwork.description;
+      galleryProgress.textContent = `${currentArtIndex + 1}/${gallery.length}`;
+    }
+
+    function goToPrevious() {
+      currentArtIndex = (currentArtIndex - 1 + gallery.length) % gallery.length;
+      updateGallery();
+    }
+
+    function goToNext() {
+      currentArtIndex = (currentArtIndex + 1) % gallery.length;
+      updateGallery();
+    }
+
+    previousBtn.addEventListener('click', goToPrevious);
+    nextBtn.addEventListener('click', goToNext);
+
+    // Initial update
+    updateGallery();
+  </script>
+</body>
+</html>
