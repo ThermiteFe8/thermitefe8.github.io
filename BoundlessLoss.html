@@ -9,35 +9,54 @@
     body {
       background-color: black;
       color: white;
-      font-family: Arial, sans-serif;
-      font-size: 20px;
+      font-family: Helvetica, Arial, sans-serif;
     }
     .gallery-container {
       text-align: center;
       margin: 0 auto;
       max-width: 600px;
     }
+    #navigation {
+      padding: 20px 0;
+    }
+    #art-description {
+      padding-top: 20px;
+    }
     .art-image {
       max-width: 100%;
       height: auto;
+    }
+    .btn {
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 5px;
+      color: white;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
     }
   </style>
 </head>
 <body>
   <div class="gallery-container">
-    <div>
-      <span id="gallery-progress"></span> <!-- Displays progress like 4/10 -->
+    <div id="navigation">
+      <button id="previous-btn" class="btn">Previous</button>
+      <span id="art-title" style="font-size: 24px;">Art Title</span>
+      <button id="next-btn" class="btn">Next</button>
     </div>
     <div>
-      <button id="previous-btn">Previous</button>
-      <span id="art-title">Art Title</span>
-      <button id="next-btn">Next</button>
+      <span id="gallery-progress" style="font-size: 20px;"></span> <!-- Displays progress like 4/10 -->
     </div>
     <div>
       <img id="art-image" class="art-image" src="image.jpg" alt="Artwork">
     </div>
-    <div>
-      <p id="art-description">Art Description</p>
+    <div id="art-description">
+      <p style="font-size: 18px;" id="art-description-content">Art Description</p>
     </div>
   </div>
 
@@ -48,7 +67,7 @@
     const nextBtn = document.getElementById('next-btn');
     const artTitle = document.getElementById('art-title');
     const artImage = document.getElementById('art-image');
-    const artDescription = document.getElementById('art-description');
+    const artDescription = document.getElementById('art-description-content');
 
     let currentArtIndex = 0;
     const gallery = [
