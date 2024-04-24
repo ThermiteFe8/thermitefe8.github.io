@@ -46,11 +46,12 @@
   <div class="gallery-container">
     <div id="navigation">
       <button id="previous-btn" class="btn">Previous</button>
-      <span id="art-title" style="font-size: 24px;">Art Title</span>
+          <span id="gallery-progress" style="font-size: 20px;"></span>
       <button id="next-btn" class="btn">Next</button>
     </div>
     <div>
-      <span id="gallery-progress" style="font-size: 20px;"></span> <!-- Displays progress like 4/10 -->
+      <span id="art-title" style="font-size: 24px;">Art Title</span>
+  <!-- Displays progress like 4/10 -->
     </div>
     <div>
       <img id="art-image" class="art-image" src="image.jpg" alt="Artwork">
@@ -125,7 +126,7 @@
       artDescription.textContent = currentArtwork.description;
       galleryProgress.textContent = `${currentArtIndex + 1}/${8}`;
 
-      if(galleryProgress == 42)
+      if(currentArtIndex == 42)
       {
           window.open("thermitefe8.github.io/Bounds/BoundlessLossTruth.pdf");
       }
