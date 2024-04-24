@@ -74,6 +74,47 @@
       { title: 'I remember...', imageUrl: '/Bounds/odysus.png', description: 'Tbh it should really just be Odysus i remember you\'re nobody but shh' },
       { title: 'Diagram.kpeg', imageUrl: '/Bounds/OOB Diagram.png', description: 'Awww yeah - this is the diagram I used for figuring out  OOB stuff' },
       { title: 'The skin cubes', imageUrl: '/Bounds/Skin cubes.png', description: 'Le skin cubes' },
+      { title: 'A Chest', imageUrl: '/Bounds/Chest image.png', description: 'Just an empty chest with a spotlight. Or is it empty? I\' hoping that the sense of mystery helps, along  with the spotlight seemingly shining in from nowhere. Maybe it\'ll also make people remember the unopened box from FNAF a while back. Also - let me know what you think of the shading style! I tried out something new and I hope it worked.' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       // Add more artworks as needed
     ];
 
@@ -82,7 +123,12 @@
       artTitle.textContent = currentArtwork.title;
       artImage.src = currentArtwork.imageUrl;
       artDescription.textContent = currentArtwork.description;
-      galleryProgress.textContent = `${currentArtIndex + 1}/${gallery.length}`;
+      galleryProgress.textContent = `${currentArtIndex + 1}/${8}`;
+
+      if(galleryProgress == 42)
+      {
+          window.open("thermitefe8.github.io/Bounds/BoundlessLossTruth.pdf");
+      }
     }
 
     function goToPrevious() {
