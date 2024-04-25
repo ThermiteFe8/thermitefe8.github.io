@@ -62,9 +62,17 @@
 <body>
   <div class = "ContainerBoiler">
   <h1 class="Boiler">Welcome to the Out of Bounds!</h1>
-  <p style = "font-size: 29px" class="Boiler">This is my first time hosting a gallery like this - I hope you enjoy it! Let me know if you have any questions or run into any issues. Javascript's a surprisingly awkward language, so I don't understand it perfectly. My goal is to (hopefully) simulate the feeling of being Out of Bounds in a videogame but with 2D art alone. If any of these do it for you, I consider it a win.</p>
   <audio id="Ambiance" src="/Bounds/Creepy 1.mp3" loop autoplay></audio>
   </div>
+  <div class = "ContainerBoiler">
+  <h2 class="Boiler">By Nicole/Thermite</h2>
+  </div>
+  <div class = "ContainerBoiler">
+  <p style="font-size: 29px" class="Boiler">This is my first time hosting a gallery like this - I hope you enjoy it! Let me know if you have any questions or run into any issues. Javascript's a surprisingly awkward language, so I don't understand it perfectly. My goal is to (hopefully) simulate the feeling of being Out of Bounds in a videogame but with 2D art alone. If any of these do it for you, I consider it a win.</p>
+  </div>
+
+  <div class = "ContainerBoiler">
+  <p style="font-size: 19px" class="Boiler">You can reach me at thermitefe8@gmail.com or on Discord (thermitefe) - happy viewing!</p>
   
   <div class="gallery-container">
     <div id="navigation">
@@ -97,7 +105,7 @@
     let currentArtIndex = 0;
     const gallery = [
       { title: 'Behind the Curtain', imageUrl: '/Bounds/Behind curtain.png', description: 'My professor described the idea of the out of bounds as a peek behind the curtain - so I\'ve drawn just that! I added gears and stuff to make it seem less like it was built for human use and more like there\'s something else going on behind the curtains, so to speak.' },
-      { title: 'Diagram.kpeg', imageUrl: '/Bounds/OOB Diagram.png', description: 'Awww yeah - this is the diagram I used for figuring out  OOB stuff' },
+      { title: 'The Barrier', imageUrl: '/Bounds/The barrier.png', description: 'Anyone that knows me understands that I love Undertale. Undertale has a lot of OOB stuff, but one of the first ones that you\'ll notice is the barrier. It\'s such a trippy area - and it makes you wonder \"what if I got stuck here?\"' },
       { title: 'The Motherboard', imageUrl: '/Bounds/motherboard.png', description: 'There\'s something eldritch about a motherboard. Millions of calculations happening all at once, just to render this stupid image. There\'s also something about being trapped inside a computer, and  since the computer\'s where a lot of this feeling of being OOB started, maybe this captures it?' },
       { title: 'A Chest', imageUrl: '/Bounds/Chest image.png', description: 'Just a closed chest with a spotlight. I\'m hoping that the sense of mystery helps, along  with the spotlight seemingly shining in from nowhere. Maybe it\'ll also make people remember the unopened box from FNAF a while back. Also - let me know what you think of the shading style! I tried out something new and I hope it worked.' },
       { title: 'Gazing into the Void', imageUrl: '/Bounds/void camera.png', description: 'Stare into the void. It\'s the definitive out of bounds location. What could be more OOB than the void? The camera overlay helps disguise the fact that I just used a noise generator and a black gradient, but you don\'t need to know about that.' },
@@ -105,6 +113,8 @@
       { title: 'The Basement', imageUrl: '/Bounds/Basement.png', description: 'Looking up to a light and stairs always seems to imply something. It says something about where you\'re standing and it says \"I\'m not where I should be\".' },
       { title: 'Noclip Website', imageUrl: '/Bounds/noclip website.png', description: 'Admittedly, this one\'s just cheating. A screenshot of the actual out of bounds using Noclip.website. I mean if it works, it works. This site\'s largely experimental, after all.' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: 'Behind the Curtain', imageUrl: '/Bounds/Error.png', description: 'My professor described the idea of the out of bounds as a peek behind the curtain - so I\'ve drawn just that! I added gears and stuff to make it seem less like it was built for human use and more like there\'s something else going on behind the curtains, so to speak.' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
@@ -115,28 +125,28 @@
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: 'MyFirstDrawing.jpg', imageUrl: '/Bounds/sunsetGIF.gif', description: 'My first drawing! Please let me know if you like it in the comments down below.' },
-     
+     { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: 'A Chest', imageUrl: '/Bounds/Chest gone.png', description: 'Just a closed chest with a spotlight. I\'m hoping that the sense of mystery helps, along  with the spotlight seemingly shining in from nowhere. Maybe it\'ll also make people remember the unopened box from FNAF a while back. Also - let me know what you think of the shading style! I tried out something new and I hope it worked.' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-       { title: 'Project 2025: The Right’s Dystopian Plan to Dismantle Civil Rights and What It Means for Women', imageUrl: '/Bounds/project 2025.png', description: ' 2/8/2024 by Carrie N. Baker \nWith careful planning, conservatives today are working to make their policy priorities permanent—no matter what happens in future elections. ' },
+       { title: 'Project 2025: The Right’s Dystopian Plan to Dismantle Civil Rights and What It Means for Women', imageUrl: '/Bounds/project 2025.png', description: ' 2/8/2024 by Carrie N. Baker \nWith careful planning, conservatives today are working to make their policy priorities permanent—no matter what happens in future elections. \n <p>Wealthy right-wing think tank <a href=\"https://www.heritage.org\">The Heritage Foundation</a> has published a detailed plan for the next Republican president to use the executive branch of the federal government to attack the rights of women, LGBTQ people and the BIPOC community, by eliminating the agencies and offices responsible for enforcing civil rights laws and placing trained right-wing ideologues in staff positions throughout the federal government.&nbsp;</p> ' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/large img.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
@@ -171,7 +181,7 @@
         artDescription.textContent = currentArtwork.description;
       galleryProgress.textContent = `${currentArtIndex + 1}/${8}`;
 
-      if(currentArtIndex == 9)
+      if(currentArtIndex == 8)
       {
           alert(location.hostname + "RangeError: invalid array length")
           audioMan.loop = false;
