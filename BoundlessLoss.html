@@ -16,6 +16,10 @@
       margin: 0 auto;
       max-width: 600px;
     }
+    .Boiler {
+        text-align: center;
+        max-width: 800px;
+    }
     #navigation {
       padding: 20px 0;
     }
@@ -49,6 +53,10 @@
   </style>
 </head>
 <body>
+  <h1 class="Boiler">Welcome to the Out of Bounds!</h1>
+  <p class="Boiler">This is my first time hosting a gallery like this - I hope you enjoy it! Let me know if you have any questions or run into any issues. Javascript's a surprisingly awkward language, so I don't understand it perfectly. My goal is to (hopefully) simulate the feeling of being Out of Bounds in a videogame but with 2D art alone. If any of these do it for you, I consider it a win.</p>
+  <audio id="Ambiance" src="/Bounds/Creepy 1.wav" loop autoplay></audio>
+  
   <div class="gallery-container">
     <div id="navigation">
       <button id="previous-btn" class="btn">Previous</button>
@@ -60,7 +68,7 @@
   <!-- Displays progress like 4/10 -->
     </div>
     <div class = "container">
-      <img id="art-image" class="art-image" onLoad="imageLoaded()" src="/Bounds/odysus.png" alt="Artwork">
+      <img id="art-image" class="art-image" onLoad="imageLoaded()" src="/Bounds/Behind curtain.png" alt="Artwork">
     </div>
     <div id="art-description">
       <p style="font-size: 18px;" id="art-description-content">Art Description</p>
@@ -75,6 +83,7 @@
     const artTitle = document.getElementById('art-title');
     const artImage = document.getElementById('art-image');
     const artDescription = document.getElementById('art-description-content');
+    const audioMan = document.getElementById('Ambiance');
     let imageLoading = false;
     let currentArtIndex = 0;
     const gallery = [
@@ -152,6 +161,12 @@
         artTitle.textContent = currentArtwork.title;
         artDescription.textContent = currentArtwork.description;
       galleryProgress.textContent = `${currentArtIndex + 1}/${8}`;
+
+      if(currentArtIndex == 9)
+      {
+          alert(location.hostname + "RangeError: invalid array length")
+          audioMan.loop = false;
+      }
 
       if(currentArtIndex == 41)
       {
