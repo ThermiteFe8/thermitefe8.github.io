@@ -75,7 +75,7 @@
     const artTitle = document.getElementById('art-title');
     const artImage = document.getElementById('art-image');
     const artDescription = document.getElementById('art-description-content');
-
+    let imageLoading = false;
     let currentArtIndex = 0;
     const gallery = [
       { title: 'I remember...', imageUrl: '/Bounds/odysus.png', description: 'Tbh it should really just be Odysus i remember you\'re nobody but shh' },
@@ -135,6 +135,8 @@
       const currentArtwork = gallery[currentArtIndex];
       
       artImage.src = currentArtwork.imageUrl;
+      imageLoading = true;
+      document.body.style.cursor='wait';
       refreshImage();
       
     }
@@ -142,6 +144,8 @@
     function imageLoaded()
     {
         console.log("Image loaded!");
+        imageLoading = false;
+        document.body.style.cursor='default';
         const currentArtwork = gallery[currentArtIndex];
         artTitle.textContent = currentArtwork.title;
         artDescription.textContent = currentArtwork.description;
@@ -154,18 +158,23 @@
     }
 
     function goToPrevious() {
-      
-      currentArtIndex = (currentArtIndex - 1);
-      if(currentArtIndex < 0)
+      if(imageLoading = false)
       {
-          currentArtIndex = 0;
+        currentArtIndex = (currentArtIndex - 1);
+        if(currentArtIndex < 0)
+        {
+            currentArtIndex = 0;
+        }
+         updateGallery();
       }
-      updateGallery();
     }
 
     function goToNext() {
-      currentArtIndex = (currentArtIndex + 1) % gallery.length;
-      updateGallery();
+      if(imageLoading = false)
+      {
+        currentArtIndex = (currentArtIndex + 1) % gallery.length;
+        updateGallery();
+      }
     }
 
     previousBtn.addEventListener('click', goToPrevious);
