@@ -59,7 +59,7 @@
 
   </style>
 </head>
-<body>
+<body onload="MobileDetector()">
   <div class = "ContainerBoiler">
   <h1 class="Boiler">Welcome to the Out of Bounds!</h1>
   <audio id="Ambiance" src="/Bounds/Creepy 1.mp3" loop autoplay></audio>
@@ -111,7 +111,7 @@
       { title: 'Gazing into the Void', imageUrl: '/Bounds/void camera.png', description: 'Stare into the void. It\'s the definitive out of bounds location. What could be more OOB than the void? The camera overlay helps disguise the fact that I just used a noise generator and a black gradient, but you don\'t need to know about that.' },
       { title: 'Moved Away', imageUrl: '/Bounds/bloon.png', description: 'This taps more into raw liminal spaces. I took this picture right after my roommate moved out. The balloons are leftovers from an April Fools prank. I just thought that the image was super evocative and wanted to put it on here - I whited out the windows to make it feel more out of bounds.' },
       { title: 'The Basement', imageUrl: '/Bounds/Basement.png', description: 'Looking up to a light and stairs always seems to imply something. It says something about where you\'re standing and it says \"I\'m not where I should be\".' },
-      { title: 'Noclip Website', imageUrl: '/Bounds/noclip website.png', description: 'Admittedly, this one\'s just cheating. A screenshot of the actual out of bounds using Noclip.website. I mean if it works, it works. This site\'s largely experimental, after all.' },
+      { title: 'Noclip Website', imageUrl: '/Bounds/noclip website.png', description: 'Admittedly, this one\'s just cheating. A screenshot of the actual out of bounds using Noclip.website. I mean if it works, it works. This site\'s largely experimental, after all. Thank you so much for viewing my gallery - let me know if you run into any issues!' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: 'Behind the Curtain', imageUrl: '/Bounds/Error.png', description: 'My professor described the idea of the out of bounds as a peek behind the curtain - so I\'ve drawn just that! I added gears and stuff to make it seem less like it was built for human use and more like there\'s something else going on behind the curtains, so to speak.' },
@@ -126,7 +126,6 @@
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: 'MyFirstDrawing.jpg', imageUrl: '/Bounds/sunsetGIF.gif', description: 'My first drawing! Please let me know if you like it in the comments down below.' },
      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
@@ -138,22 +137,30 @@
        { title: 'Project 2025: The Right’s Dystopian Plan to Dismantle Civil Rights and What It Means for Women', imageUrl: '/Bounds/project 2025.png', description: ' 2/8/2024 by Carrie N. Baker \nWith careful planning, conservatives today are working to make their policy priorities permanent—no matter what happens in future elections. \n <p>Wealthy right-wing think tank <a href=\"https://www.heritage.org\">The Heritage Foundation</a> has published a detailed plan for the next Republican president to use the executive branch of the federal government to attack the rights of women, LGBTQ people and the BIPOC community, by eliminating the agencies and offices responsible for enforcing civil rights laws and placing trained right-wing ideologues in staff positions throughout the federal government.&nbsp;</p> ' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/large img.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
-      { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
+      { title: '-', imageUrl: '/Bounds/Error.png', description: 'https://thermitefe8.github.io/Bounds/BoundlessLossTruth.pdf' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       { title: '-', imageUrl: '/Bounds/Error.png', description: '????' },
       // Add more artworks as needed
     ];
+
+    function MobileDetector()
+    {
+        if (typeof screen.orientation == 'undefined')
+        {
+            if(confirm("Hey! This website is best viewed on Desktop - your experience might be diminished on Mobile.") == false)
+            {
+                history.back()
+            }
+        }
+    }
 
     function refreshImage() {
         // Append a random query parameter to the image URL
