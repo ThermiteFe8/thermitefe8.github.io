@@ -158,7 +158,7 @@
     }
 
     function goToPrevious() {
-      if(imageLoading = false)
+      if(imageLoading == false)
       {
         currentArtIndex = (currentArtIndex - 1);
         if(currentArtIndex < 0)
@@ -170,7 +170,7 @@
     }
 
     function goToNext() {
-      if(imageLoading = false)
+      if(imageLoading == false)
       {
         currentArtIndex = (currentArtIndex + 1) % gallery.length;
         updateGallery();
