@@ -54,7 +54,7 @@
   <!-- Displays progress like 4/10 -->
     </div>
     <div>
-      <img id="art-image" class="art-image" src="image.jpg" alt="Artwork">
+      <img id="art-image" class="art-image" onLoad="imageLoaded()" src="image.jpg" alt="Artwork">
     </div>
     <div id="art-description">
       <p style="font-size: 18px;" id="art-description-content">Art Description</p>
@@ -119,11 +119,25 @@
       // Add more artworks as needed
     ];
 
+    function refreshImage() {
+        // Append a random query parameter to the image URL
+        const randomParam = new Date().getTime(); // Generates a unique timestamp
+        artImage.src = `image.jpg?${randomParam}`;
+    }
+
     function updateGallery() {
       const currentArtwork = gallery[currentArtIndex];
-      artTitle.textContent = currentArtwork.title;
+      
       artImage.src = currentArtwork.imageUrl;
-      artDescription.textContent = currentArtwork.description;
+      refreshImage();
+      
+    }
+
+    function imageLoaded()
+    {
+        const currentArtwork = gallery[currentArtIndex];
+        artTitle.textContent = currentArtwork.title;
+        artDescription.textContent = currentArtwork.description;
       galleryProgress.textContent = `${currentArtIndex + 1}/${8}`;
 
       if(currentArtIndex == 41)
@@ -133,7 +147,12 @@
     }
 
     function goToPrevious() {
-      currentArtIndex = (currentArtIndex - 1 + gallery.length) % gallery.length;
+      
+      currentArtIndex = (currentArtIndex - 1);
+      if(currentArtIndex < 0)
+      {
+          currentArtIndex = 0;
+      }
       updateGallery();
     }
 
@@ -146,7 +165,7 @@
     nextBtn.addEventListener('click', goToNext);
 
     // Initial update
-    updateGallery();
+
   </script>
 </body>
 </html>
