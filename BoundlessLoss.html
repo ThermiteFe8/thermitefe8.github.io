@@ -121,8 +121,8 @@
 
     function refreshImage() {
         // Append a random query parameter to the image URL
-        const randomParam = new Date().getTime(); // Generates a unique timestamp
-        artImage.src = artImage.src+`${randomParam}`;
+         const randomParam = new Date().getTime(); // Generates a unique timestamp
+        artImage.src = `${artImage.src}?${randomParam}`;
     }
 
     function updateGallery() {
