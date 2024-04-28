@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta charset="utf-8" />
+    <script src="imageLoader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Corrupted Chateau</title>
+</head>
+<body class="container">
+    <section class="modal hidden">
+        <img id="modal-image" src="">
+        <b id="zoomedName"></b>
+        <p id="zoomedDescription"></p>
+    </section>
+
+    <div class="overlay hidden" onclick="closeImage()"></div>
+    <main>
+        <div>
+            <button onclick=" window.open('https://gadig.itch.io/princess-starshine-vs-the-demons','_blank')" id="name">Corrupted Chateau Coming Soon!</button>
+        </div>
+        <div id="imageHolder">
+
+        </div>
+        <div>
+            <button onclick="window.location.href = '/portfolioGameIndex.html'">Back</button>
+        </div>
+    </main>
+    <div>
+        <script>
+            loadImages('/Game Projects/Corrupted Chateau', '.png');
+            loadVideos("/YTChateauList.txt");
+        </script>
+    </div>
+</body>
+
+</html>

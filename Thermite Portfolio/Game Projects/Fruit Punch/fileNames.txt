@@ -1,0 +1,19 @@
+1 - Background Test - February 2024.png
+10 - Jar - April 2024.png
+11 - Frankenpine Attack - April 2024.gif
+12 - Frankenpine Dead - April 2024.gif
+13 - Frankenpine T Pose - April 2024.png
+14 - Acid Attack - April 2024.gif
+15 - Apple Core - April 2024.gif
+16 - Banana Peel - April 2024.gif
+17 - Grape Stem - April 2024.gif
+18 - Melon Rind - April 2024.gif
+2 - Frankenpine Walk - February 2024.gif
+3 - Stage 4 Art - March 2024 .png
+4 - Eggplant Guy Punch - March 2024.gif
+5  - Eggplant Guy Recovery - March 2024.gif
+6 - Eggplant Walk - March 2024.gif
+7 - Eggplant Knockback - March 2024.gif
+8 - Stage 3 art - April 2024.png
+9 - Knife - April 2024.png
+fileNames.txt
