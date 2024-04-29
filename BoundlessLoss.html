@@ -214,15 +214,15 @@
         console.log("Awww yeah");
               const currentArtwork = gallery[currentArtIndex];
       artImage.src = currentArtwork.imageUrl;
-      imageLoading = true;
-      document.body.style.cursor='wait';
+      imageLoading = false;
     }
 
     function updateGallery() {
       const currentArtwork = gallery[currentArtIndex];
-
-      setTimeout(refreshImage(), 3000);
-      imageLoading = false;
+      imageLoading = true;
+      document.body.style.cursor='wait';
+      setTimeout(refreshImage(), 5000);
+      
       
     }
 
