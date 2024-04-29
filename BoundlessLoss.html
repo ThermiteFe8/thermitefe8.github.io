@@ -57,6 +57,11 @@
     align-items: center;
     }
 
+    .disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
   </style>
 </head>
 <body onload="MobileDetector()">
@@ -221,7 +226,9 @@
       const currentArtwork = gallery[currentArtIndex];
       imageLoading = true;
       document.body.style.cursor='wait';
-      setTimeout(refreshImage, 3000);
+      previousBtn.disabled = true;
+      nextBtn.disabled = true;
+      setTimeout(refreshImage, 1500);
       
       
     }
@@ -230,6 +237,8 @@
     {
         console.log("Image loaded!");
         imageLoading = false;
+        previousBtn.disabled = false;
+      nextBtn.disabled = false;
         document.body.style.cursor='default';
         const currentArtwork = gallery[currentArtIndex];
         artTitle.textContent = currentArtwork.title;
