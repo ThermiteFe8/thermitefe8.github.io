@@ -65,14 +65,14 @@
   <audio id="Ambiance" src="/Bounds/Creepy 1.mp3" loop autoplay></audio>
   </div>
   <div class = "ContainerBoiler">
-  <h2 class="Boiler">By Nicole/Thermite</h2>
+  <h2 style= "color: #9182ff"class="Boiler">By Nicole/Thermite</h2>
   </div>
   <div class = "ContainerBoiler">
   <p style="font-size: 29px" class="Boiler">This is my first time hosting a gallery like this - I hope you enjoy it! Let me know if you have any questions or run into any issues. Javascript's a surprisingly awkward language, so I don't understand it perfectly. My goal is to (hopefully) simulate the feeling of being Out of Bounds in a videogame but with 2D art alone. If any of these do it for you, I consider it a win.</p>
   </div>
 
   <div class = "ContainerBoiler">
-  <p style="font-size: 19px" class="Boiler">You can reach me at thermitefe8@gmail.com or on Discord (thermitefe) - happy viewing!</p>
+  <p style="font-size: 19px; color: #26ffe2" class="Boiler">You can reach me at thermitefe8@gmail.com or on Discord (thermitefe) - happy viewing!</p>
   </div>
   <div class="gallery-container">
     <div id="navigation">
@@ -171,6 +171,33 @@
       // Add more artworks as needed
     ];
 
+    function preloadImages(imageUrls) {
+      imageUrls.forEach(function(url) {
+        const img = new Image();
+        img.src = url;
+      });
+    }
+
+    // Example usage:
+    const imageUrls = [
+      '/Bounds/Behind curtain.png',
+      '/Bounds/The barrier.png',
+      '/Bounds/motherboard.png',
+      '/Bounds/Chest image.png',
+      '/Bounds/void camera.png',
+      '/Bounds/bloon.png',
+      '/Bounds/Basement.png',
+      '/Bounds/noclip website.png',
+      '/Bounds/Error.png',
+      '/Bounds/emailTV.png',
+      '/Bounds/sunsetGIF.gif',
+      '/Bounds/Chest gone.png',
+      '/Bounds/project 2025.png',
+      '/Bounds/large img2.png'
+
+    ];
+
+     preloadImages(imageUrls);
     function MobileDetector()
     {
         if (isMobile.any())
@@ -184,17 +211,17 @@
 
     function refreshImage() {
         // Append a random query parameter to the image URL
-         const randomParam = new Date().getTime(); // Generates a unique timestamp
-        artImage.src = `${artImage.src}?${randomParam}`;
+        Console.log("Awww yeah");
+              
+      artImage.src = currentArtwork.imageUrl;
+      imageLoading = true;
+      document.body.style.cursor='wait';
     }
 
     function updateGallery() {
       const currentArtwork = gallery[currentArtIndex];
-      
-      artImage.src = currentArtwork.imageUrl;
-      imageLoading = true;
-      document.body.style.cursor='wait';
-      refreshImage();
+
+      setTimeout(refreshImage(), 500);
       
     }
 
