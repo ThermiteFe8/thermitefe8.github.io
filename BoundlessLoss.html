@@ -212,7 +212,7 @@
     function refreshImage() {
         // Append a random query parameter to the image URL
         console.log("Awww yeah");
-              
+              const currentArtwork = gallery[currentArtIndex];
       artImage.src = currentArtwork.imageUrl;
       imageLoading = true;
       document.body.style.cursor='wait';
