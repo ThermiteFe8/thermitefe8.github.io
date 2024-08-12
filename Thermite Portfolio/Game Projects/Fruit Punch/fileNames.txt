@@ -8,8 +8,27 @@
 16 - Banana Peel - April 2024.gif
 17 - Grape Stem - April 2024.gif
 18 - Melon Rind - April 2024.gif
+19 - Post Boss1 Cutscene - June 2024.png
 2 - Frankenpine Walk - February 2024.gif
+20 - Attack Peanut - June 2024.gif
+21 - Hit and Recover Peanut - June 2024.gif
+22 - Peanut Death - June 2024.gif
+23 - Peanut Walk - June 2024.gif
+24 - Small Peanut Idle - June 2024.gif
+25 - Small Peanut Hit - June 2024.gif
+26 - Small Peanut Attack - June 2024.gif
+27 - Leading Lady Hit and Recover - June 2024.gif
+28 - Leading Lady Jump - June 2024.gif
+29 - Leading Lady Walk - June 2024.gif
 3 - Stage 4 Art - March 2024 .png
+30 - Leading Lady Machine Gun - June 2024.gif
+31 - Leading Lady 3 Hit Combo - June 2024.gif
+32 - Phantomato Hit and Recover - July 2024.gif
+33 - Phantomato Attack - July 2024.gif
+34 - Phantomato Idle - July 2024.gif
+35 - Phantomato Vine Stab - July 2024.gif
+36 - Vine Stab - July 2024.gif
+37 - Album Art - July 2024.png
 4 - Eggplant Guy Punch - March 2024.gif
 5  - Eggplant Guy Recovery - March 2024.gif
 6 - Eggplant Walk - March 2024.gif
