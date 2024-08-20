@@ -302,3 +302,19 @@ main * {
     padding: 30px;
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
 }
+
+#pdfHolder{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin:auto;
+    max-width: 100%;
+    padding:30px;
+}
+
+#pdfEmbed{
+    max-height:20%;
+    max-width:45%;
+    min-width:35%;
+    padding:3px;
+}
