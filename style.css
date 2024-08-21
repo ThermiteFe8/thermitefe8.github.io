@@ -318,4 +318,8 @@ main * {
     min-width:45%;
     padding:3px;
     flex-shrink:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
+
