@@ -1,0 +1,21 @@
+1 - Protag Concept Art - September 2024.png
+10 - Basic Sword Side - September 2024.gif
+11 - Basic Sword Back - September 2024.gif
+12 - Interact Front - September 2024.gif
+13 - Interact Side - September 2024.gif
+14 - Interact Back - September 2024.gif
+15 - Player Death - September 2024.gif
+16 - Flame Sword - October 2024.gif
+17 - Ice Sword - October 2024.gif
+18 - Wind Sword - October 2024.gif
+19 - Cave Walls - October 2024.png
+2 - Pedestal and Sword Concept - September 2024.png
+20 - Cave Floor - October 2024.png
+3 - Protag Concept Art 2 - September 2024.png
+4 - Key Art 1 - September 2024.png
+5 - Key Art 2 - September 2024.png
+6 - Player Front Run - September 2024.gif
+7 - Player Back Run - September 2024.gif
+8 - Player Side Run - September 2024.gif
+9 - Basic Sword - September 2024.gif
+fileNames.txt
