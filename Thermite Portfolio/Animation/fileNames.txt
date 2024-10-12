@@ -1,0 +1,71 @@
+1 - Angry witch note animations - May 2022.gif
+10 - Starshine Idle - September 2023.gif
+11 - Starshine Walk - September 2023.gif
+12 - Starshine Spin - October 2023.gif
+13 - Cupquake Animation - December 2023.gif
+14 - Evil Starshine Idle - December 2023.gif
+15 - Parasol Weapon - December 2023.gif
+16 - Janitor Blob - January 2024.gif
+17.gif
+18 - Bird Animation - January 2024.gif
+19 - Frankenpine Walk - February 2024.gif
+2 - Witch Shoot Animations - May 2022.gif
+20 - Eggplant Walk - March 2024.gif
+21 - Eggplant Guy Punch - March 2024.gif
+22 - Eggplant Knockback - March 2024.gif
+23  - Eggplant Guy Recovery - March 2024.gif
+24 - Frankenpine Attack - April 2024.gif
+25 - Frankenpine Dead - April 2024.gif
+26 - Melon Rind - April 2024.gif
+27 - Apple Core - April 2024.gif
+28 - Banana Peel - April 2024.gif
+29 - Acid Attack - April 2024.gif
+3 - Angry Witch Idle.gif
+30 - Grape Stem - April 2024.gif
+31 - Peanut Walk - June 2024.gif
+32 - Attack Peanut - June 2024.gif
+33 - Hit and Recover Peanut - June 2024.gif
+34 - Peanut Death - June 2024.gif
+35 - Small Peanut Idle - June 2024.gif
+36 - Small Peanut Attack - June 2024.gif
+37 - Small Peanut Hit - June 2024.gif
+38 - Leading Lady Walk - June 2024.gif
+39 - Leading Lady 3 Hit Combo - June 2024.gif
+4 - Scared Witch Notes - May 2022.gif
+40 - Leading Lady Machine Gun - June 2024.gif
+41 - Leading Lady Jump - June 2024.gif
+42 - Leading Lady Hit and Recover - June 2024.gif
+43 - Phantomato Idle - July 2024.gif
+44 - Phantomato Attack - July 2024.gif
+45 - Phantomato Vine Stab - July 2024.gif
+46 - Vine Stab - July 2024.gif
+47 - Phantomato Hit and Recover - July 2024.gif
+48 - Basic Sword Side - September 2024.gif
+49 - Basic Sword Back - September 2024.gif
+5 - Scared Witch Idle - May 2022.gif
+50 - Basic Sword - September 2024.gif
+51 - Player Front Run - September 2024.gif
+52 - Player Side Run - September 2024.gif
+53 - Player Back Run - September 2024.gif
+54 - Interact Front - September 2024.gif
+55 - Interact Back - September 2024.gif
+56 - Interact Side - September 2024.gif
+57 - Player Death - September 2024.gif
+58 - Speech Bubble Side - September 2024.gif
+59 - Thought Bubble - September 2024.gif
+6 - Dia Idle - June 2023.gif
+60 - Speech Bubble Center - September 2024.gif
+61 - Fire Ball - October 2024.gif
+62 - Actual Fire - October 2024.gif
+63 - Flame Sword - October 2024.gif
+64 - Ice Sword - October 2024.gif
+65 - Wind Sword - October 2024.gif
+66 - Lever On - October 2024.gif
+67 - Lever Off - October 2024.gif
+68 - Sword Insert Pedestal - October 2024.gif
+69 - Sword Remove Pedestal - October 2024.gif
+7 - Dia Beatbox - June 2023.gif
+70 - Standing Button - October 2024.gif
+8 - Dia Note - June 2023.gif
+9 - Dia Miss - June 2023.gif
+fileNames.txt

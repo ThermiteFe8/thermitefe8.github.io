@@ -1,0 +1,22 @@
+1 - Mech Screenshots for 2D design class - Collab with Professor Grimsby - Design and model by Grimsby - Texture by me - March 2023.png
+10 - Regular Paint Wall Textures - September 2024.png
+11 - Fridge Inside Texture - Model by Kevin Naupari - September 2024.png
+12 - Fridge Outside Texture - Model by Kevin Naupari- September 2024.png
+13- Fridge Textures - September 2024.png
+14 - NPC1 Texture - Model by Kevin Naupari - October 2024.png
+15 - NPC1 Texture - October 2024.png
+16 - Floor Edges - October 2024.png
+17 - Floor Black and White Tile - October 2024.png
+18 - Floor White Tile - October 2024.png
+19 - Wood Floor - October 2024.png
+2 - Mech Texture for 2D design class - Collab with Professor Grimsby - Design and model by Grimsby - Texture by me - March 2023.png
+20 - Yumi Model and Texture - 2D Design Concept by Eric Piccione - October 2024.png
+21 - Yumi Texture - October 2024.png
+3 - Funko Screenshots for 2D design class - Collab with Professor Grimsby - Model by Grimsby - Texture by me - March 2023.png
+4 - Funko Texture for 2D design class - Collab with Professor Grimsby - Model by Grimsby - Texture by me - March 2023.png
+5 - Counter Model and Texture - September 2024.png
+6 - Counter Texture - September 2024.png
+7 - Tile Wall Textures - September 2024.png
+8 - Brick Wall Textures - September 2024.png
+9 - Cracked Paint Wall Textures - September 2024.png
+fileNames.txt
