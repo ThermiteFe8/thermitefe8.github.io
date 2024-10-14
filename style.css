@@ -87,7 +87,7 @@ button {
     font-weight: 600;
     border-radius: 5px;
     margin: 1%;
-    padding: 2%;
+    padding: 1%;
     color: white;
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
     background: rgb(2,0,36);
@@ -280,19 +280,12 @@ main * {
     /*  height: 20%;*/
     object-fit: scale-down;
     max-height: 45%;
-    max-width: 45%;
-    padding: 3px
-}
+    min-width: 20%;
+    max-width: 250px;
+    padding: 1%;
+    flex-grow:1;
 
-.theMedia {
-    /* width: 20%; /* or any custom size */
-    /*  height: 20%;*/
-    object-fit: scale-down;
-    max-height: 20%;
-    max-width: 20%;
-    padding: 3px
 }
-
 
 #imageHolder {
     display: flex;
