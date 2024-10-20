@@ -42,6 +42,7 @@ a.button {
     /* Next rules are only be have a clearer preview */
 }
 
+
 .columndivs {
     display: flex;
     flex-direction: column;
@@ -152,6 +153,10 @@ html {
     object-fit: scale-down;
     border-radius: 5px;
     filter: drop-shadow(0 0 0.25rem rgba(27, 10, 51, 0.4));
+}
+
+#BoundlessButton {
+	margin-top: 20vh;
 }
 
 #topIndexSection {
