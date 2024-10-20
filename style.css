@@ -178,13 +178,13 @@ html {
 #moreButtons {
     display: flex;
     flex-wrap: wrap;
-    line-height: 4.5rem;
+    line-height: 3.5rem;
     
 }
 #mainMenuIndex{
     padding-left:2.5%;
     padding-right:2.5%;
-    font-size:2.5rem;
+    font-size:1.5rem;
 }
 
 #main-name {
@@ -193,7 +193,6 @@ html {
     text-align: center;
     font-size: 2.5rem;
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
-}
 }
 
 #name,
@@ -210,6 +209,8 @@ html {
     flex-wrap: wrap;
     color: white;
     flex-direction: row;
+    margin-left:15%;
+    margin-right:15%;
 }
 
 .pseudoList {
@@ -293,9 +294,7 @@ main * {
     max-width: 19%;
     max-height:13vh;
     background: none;
-    padding: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
+    
 }
 
 #container {
