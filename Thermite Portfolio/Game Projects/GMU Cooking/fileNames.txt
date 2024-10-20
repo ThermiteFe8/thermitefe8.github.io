@@ -16,7 +16,14 @@
 23 - Wood Floor - October 2024.png
 24 - Fire Ball - October 2024.gif
 25 - Actual Fire - October 2024.gif
+26 - Idle Animation - Model and Texture by Hyoju Yang - October 2024.gif
+27 - Walk Cycle - Model and Texture by Hyoju Yang - October 2024.gif
+28 - Special Cheese Animation - Model and Texture by Hyoju Yang - October 2024.gif
+29 - Joystick Wiggle Animation - October 2024.gif
 3 - Character Concept1 - September 2024.png
+30 - Sushi UI Animation - October 2024.gif
+31 - Sushi Rolling Animation - October 2024.gif
+32 - Wiggle Text - October 2024.gif
 4 - Character Concept2 - September 2024.png
 5 - Pause Menu Concept Art - September 2024.png
 6 - Counter Model and Texture - September 2024.png

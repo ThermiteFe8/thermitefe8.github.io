@@ -95,10 +95,18 @@ button {
 }
 
 #modal-image {
-    max-height: 90vh;
-    max-width: 100%;
+    max-height: 75vh;
+    max-width: 150%;
     object-fit: scale-down;
     padding-top: 25px;
+}
+
+#modal-exit-button{
+    padding-top:0vh;
+    border-color:rgb(1, 0, 0);
+    background: rgba(0, 0, 0, 0);
+     border:2px solid white; 
+    max-width:15%;
 }
 
 .btn {

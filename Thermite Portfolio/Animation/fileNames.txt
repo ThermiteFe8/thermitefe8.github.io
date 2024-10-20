@@ -66,6 +66,9 @@
 69 - Sword Remove Pedestal - October 2024.gif
 7 - Dia Beatbox - June 2023.gif
 70 - Standing Button - October 2024.gif
+71 - Sushi Rolling Animation - October 2024.gif
+72 - Joystick Wiggle Animation - October 2024.gif
+73 - Chest Opening - October 2024.gif
 8 - Dia Note - June 2023.gif
 9 - Dia Miss - June 2023.gif
 fileNames.txt

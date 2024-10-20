@@ -2,4 +2,7 @@
 2 - Line Concept - September 2024.png
 3 - Tileable Stone Textures - September 2024.png
 4 - Church Walls Tileable - September 2024.png
+5 - Church Floor - October 2024.png
+6 - Pews - October 2024.png
+7 - Spiky Gate Thing - October 2024.png
 fileNames.txt
