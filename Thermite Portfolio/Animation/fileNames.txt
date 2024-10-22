@@ -69,6 +69,15 @@
 71 - Sushi Rolling Animation - October 2024.gif
 72 - Joystick Wiggle Animation - October 2024.gif
 73 - Chest Opening - October 2024.gif
+74 - Stump Burning - October 2024.gif
+75 - Torch - October 2024.gif
+76 - Crystal - October 2024.gif
+77 - Fire Extinguish - October 2024.gif
+78 - Gold Flower - October 2024.gif
+79 - Grass - October 2024.gif
 8 - Dia Note - June 2023.gif
+80 - Flower Burning - October 2024.gif
+81 - Large Gear Piece - October 2024.gif
+82 - Small Gear Piece - October 2024.gif
 9 - Dia Miss - June 2023.gif
 fileNames.txt

@@ -30,7 +30,17 @@
 36 - Boss Door - October 2024.gif
 37 - Chest Opening - October 2024.gif
 38 - Smoke Particles - October 2024.gif
+39 - Stump Burning - October 2024.gif
 4 - Key Art 1 - September 2024.png
+40 - Torch - October 2024.gif
+41 - Crystal - October 2024.gif
+41 - Fire Extinguish - October 2024.gif
+42 - Gold Flower - October 2024.gif
+43 - Grass - October 2024.gif
+44 - Flower Burning - October 2024.gif
+45 - Large Gear Piece - October 2024.gif
+45 - Small Gear Piece - October 2024.gif
+46 - Large Gear Piece Decorations.png
 5 - Key Art 2 - September 2024.png
 6 - Player Front Run - September 2024.gif
 7 - Player Back Run - September 2024.gif
