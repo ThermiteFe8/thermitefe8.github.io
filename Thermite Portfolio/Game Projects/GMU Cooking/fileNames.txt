@@ -24,7 +24,18 @@
 30 - Sushi UI Animation - October 2024.gif
 31 - Sushi Rolling Animation - October 2024.gif
 32 - Wiggle Text - October 2024.gif
+33 - Assorted Icons - October 2024.png
+34 - Buttons - October 2024.png
+35 - UI Containers - October 2024.png
+36 - Infinite Scrolling Background - October 2024.png
+37 - Table Splash Art - October 2024.png
+38 - Whole Lettuce - October 2024.png
+39 - Sliced Lettuce - October 2024.png
 4 - Character Concept2 - September 2024.png
+40 - Grass Tiles - October 2024.png
+41 - Dirt Tiles - October 2024.png
+42 - Cement Tiles - October 2024.png
+43 - Placeholder Skies - October 2024.png
 5 - Pause Menu Concept Art - September 2024.png
 6 - Counter Model and Texture - September 2024.png
 7 - Condiment Shaker UI Concept - September 2024.png

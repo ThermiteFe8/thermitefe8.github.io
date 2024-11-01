@@ -15,7 +15,13 @@
 22 - Special Cheese Animation - Model and Texture by Hyoju Yang - October 2024.gif
 23 - Idle Animation - Model and Texture by Hyoju Yang - October 2024.gif
 24 - Walk Cycle - Model and Texture by Hyoju Yang - October 2024.gif
+25 - Angry Stomp - October 2024.gif
+26 - Yumi Rig Test Animation - October 2024.gif
+27 - Whole Lettuce - October 2024.png
+28 - Sliced Lettuce Alpha Channels - October 2024.png
+29 - Grass Tiles - October 2024.png
 3 - Funko Screenshots for 2D design class - Collab with Professor Grimsby - Model by Grimsby - Texture by me - March 2023.png
+30 - Cement Tiles - October 2024.png
 4 - Funko Texture for 2D design class - Collab with Professor Grimsby - Model by Grimsby - Texture by me - March 2023.png
 5 - Counter Model and Texture - September 2024.png
 6 - Counter Texture - September 2024.png
