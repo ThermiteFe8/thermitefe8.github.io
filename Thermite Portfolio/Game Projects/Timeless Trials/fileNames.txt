@@ -51,6 +51,8 @@
 53 - Ice Block Loop - October 2024.gif
 54 - Water Splash - October 2024.gif
 55 - Seafoam Splash - October 2024.gif
+56 - Heart UI - November 2024.gif
+57 - Title Screen UI - November 2023.gif
 6 - Player Front Run - September 2024.gif
 7 - Player Back Run - September 2024.gif
 8 - Player Side Run - September 2024.gif
