@@ -22,7 +22,18 @@
 29 - Grass Tiles - October 2024.png
 3 - Funko Screenshots for 2D design class - Collab with Professor Grimsby - Model by Grimsby - Texture by me - March 2023.png
 30 - Cement Tiles - October 2024.png
+31 - Broomba Model and Texture - November 2024.png
+32 - Forklift Back Model and Texture - November 2024.png
+33 - Forklift Front Model and Texture - November 2024.png
+34 - Drone Model and Texture - November 2024.png
+35 - Conveyor Belt Model and Texture - November 2024.png
+36 - Security Camera Model and Texture - November 2024.png
+37 - Box Texture models and Variations - November 2024.png
+38 - Box Stand Model and Texture with box variations - November 2024.png
+39 - Crate Model and Texture - November 2024.png
 4 - Funko Texture for 2D design class - Collab with Professor Grimsby - Model by Grimsby - Texture by me - March 2023.png
+40 - Forklift Pallet - November 2024.png
+41 - Custom Skybox - November 2024.png
 5 - Counter Model and Texture - September 2024.png
 6 - Counter Texture - September 2024.png
 7 - Tile Wall Textures - September 2024.png

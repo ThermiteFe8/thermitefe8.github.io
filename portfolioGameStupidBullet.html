@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta charset="utf-8" />
+    <script src="imageLoader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Stupid Bullet Hell</title>
+</head>
+<body class="container">
+    <section class="modal hidden">
+        <img id="modal-image" src="">
+        <b id="zoomedName"></b>
+        <p id="zoomedDescription"></p>
+		<button id="modal-exit-button" onclick="closeImage()">Exit</button>
+    </section>
+
+    <div class="overlay hidden" onclick="closeImage()"></div>
+    <main>
+        <div>
+		<iframe frameborder="0" src="https://itch.io/embed/2755348?border_width=3&amp;bg_color=131974&amp;fg_color=ffffff&amp;link_color=ff8099&amp;border_color=6d4dac" width="556" height="171"><a href="https://thermitefe8.itch.io/stupid-bullet-hell-demo">Stupid Bullet Hell Demo by ThermiteFe8</a></iframe>
+        </div>
+
+        <p id="name">Solo game - I made this to teach myself how to use the Godot game engine</p>
+
+        <div id="imageHolder">
+
+        </div>
+        <div>
+            <button onclick="window.location.href = '/portfolioGameIndex.html'">Back</button>
+        </div>
+    </main>
+    <div>
+        <script>
+            loadVideos("/YTStupidBulletList.txt");
+        </script>
+    </div>
+</body>
+
+</html>
