@@ -1,0 +1,17 @@
+1 - Starshine Walk - September 2023.gif
+10 - Sushi Rolling Animation - October 2024.gif
+11 - Joystick Wiggle Animation - October 2024.gif
+12 - Chest Opening - October 2024.gif
+13 - Torch - October 2024.gif
+14 - Crystal - October 2024.gif
+15 - Still Water - October 2024.gif
+16 - Title Screen UI - November 2023.gif
+2 - Cupquake Animation - December 2023.gif
+3 - Frankenpine Attack - April 2024.gif
+4 - Leading Lady 3 Hit Combo - June 2024.gif
+5 - Interact Front - September 2024.gif
+6- Player Death - September 2024.gif
+7 - Wind Sword - October 2024.gif
+8 - Sword Insert Pedestal - October 2024.gif
+9 - Sword Remove Pedestal - October 2024.gif
+fileNames.txt

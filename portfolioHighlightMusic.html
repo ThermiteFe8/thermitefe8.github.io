@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta charset="utf-8" />
+    <script src="imageLoader.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Highlights</title>
+</head>
+<body class="container">
+    <section class="modal hidden">
+        <video id="modal-image" src="" controls></video>
+        <b id="zoomedName"></b>
+        <p id="zoomedDescription"></p>
+		<button id="modal-exit-button" onclick="closeImage()">Exit</button>
+    </section>
+
+    <div class="overlay hidden" onclick="closeImage()"></div>
+    <main>
+		<p id="name">My Favorite Tracks!</p>
+        <div id="imageHolder">
+
+        </div>
+        <div>
+            <button onclick="window.location.href = '/portfolioHighlightIndex.html'">Back</button>
+        </div>
+    </main>
+    <div>
+        <script>
+            loadVideos("/YTMusicListHighlight.txt");
+        </script>
+    </div>
+</body>
+
+</html>

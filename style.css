@@ -47,7 +47,7 @@ a.button {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding: 10px;
+    padding: 1%;
     max-width:45%;
 }
 
@@ -166,14 +166,16 @@ html {
     align-content: center;
     justify-content: center;
     object-fit: scale-down;
-    flex-direction: column;
-    padding: 20px;
+    flex-direction: row-reverse;
+    --padding: 20px;
+	--height:70vh;
 }
 
 #swagIcon {
-    object-fit: scale-down;
-    min-width:55%;
-    max-height:40vh;
+    object-fit: contain;
+    
+    width:50%;
+    
 	cursor: pointer;
 
 }
@@ -193,9 +195,24 @@ html {
     color: white;
     font-weight: 600;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
 	cursor: pointer;
+    min-width:55%;
+    max-height:40vh;
+}
+#my-titles {
+    margin-top:1vh;
+	color: white;
+    font-weight: 600;
+    text-align: center;
+    font-size: 3vw;
+    filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
+	cursor: pointer;
+    min-width:55%;
+    height:5vh;
+    line-height: 5vh;
+    margin-bottom: 0.9vh;
 }
 
 #name,
@@ -279,11 +296,12 @@ body {
 
 p {
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
+    font-family:serif;
 }
 
 
 main * {
-    font-size: 18px;
+    font-size: 2.8vw;
     display: flex;
     justify-content: center;
 }
@@ -320,6 +338,19 @@ main * {
 
 }
 
+.TtheMedia {
+    /* width: 20%; /* or any custom size */
+    /*  height: 20%;*/
+    object-fit: scale-down;
+    max-height: 45%;
+    min-width: 100%;
+    max-width: 250px;
+    padding: 1%;
+    flex-grow:1;
+
+}
+
+
 #imageHolder {
     display: flex;
     flex-wrap: wrap;
@@ -327,6 +358,17 @@ main * {
     margin: auto;
     max-width: 100%;
     padding: 30px;
+    filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
+}
+
+#TimageHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 100%;
+    padding: 30px;
+	height:420vh;
     filter: drop-shadow(0 0 0.25rem rgb(27, 10, 51));
 }
 
