@@ -397,3 +397,11 @@ iframe{
     max-width: 100%;
 }
 
+footer{
+	margin-top:5vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	max-width:100%;
+	padding:30px;
+}
