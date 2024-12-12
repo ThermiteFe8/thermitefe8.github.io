@@ -44,6 +44,11 @@
 49 - Ready Set Cook UI - November 2024.png
 5 - Pause Menu Concept Art - September 2024.png
 50 - Keyboard Model and Texture - November 2024.png
+51 - Rat Promo Art - December 2024.png
+52 - Time Out  Graphic - December 2024.png
+53 - Control Graphics - December 2024.png
+54 - Simple Button Loop - December 2024.gif
+55 - Sink UI Placeholder - December 2024.png
 6 - Counter Model and Texture - September 2024.png
 7 - Condiment Shaker UI Concept - September 2024.png
 8 - Refrigerator UI Concept - September 2024.png

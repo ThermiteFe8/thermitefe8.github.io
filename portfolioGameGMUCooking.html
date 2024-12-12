@@ -8,7 +8,7 @@
     <script src="imageLoader.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>GMU Cooking Game</title>
+    <title>Campus Cook-Off</title>
 </head>
 <body class="container">
     <section class="modal hidden">
@@ -20,10 +20,15 @@
 
     <div class="overlay hidden" onclick="closeImage()"></div>
     <main>
-        <div>
-            <button id="name">Coming Soon!</button>
+		<div>
+        <iframe src="https://itch.io/embed/3176060" width="552" height="167" frameborder="0"><a href="https://gmu-game.itch.io/campus-cook-off">Campus Cook-Off by GMU Game</a></iframe>
         </div>
-        <div id="imageHolder">
+		
+		<p id="name">I primarily did Character art, Environment art, and UI art for Campus Cook-Off. 
+		In the last month, I did more programming, implementing ingredient stacking, the scoring system, counter snapping, and more core mechanics along with most of the UI, such as the score screen, title screen, credits, and timer. 
+		I also fixed numerous bugs, recorded additional SFX here, composed the trailer music, and edited the trailer together.</p>
+		
+		<div id="imageHolder">
 
         </div>
         <div>
@@ -34,6 +39,7 @@
         <script>
             loadImages('/Game Projects/GMU Cooking','.gif');
             loadImages('/Game Projects/GMU Cooking', '.png');
+			loadVideos("/YTCampusCookoff.txt");
         </script>
     </div>
 	<footer>
