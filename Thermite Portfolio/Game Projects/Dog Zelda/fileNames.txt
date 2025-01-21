@@ -1,7 +1,22 @@
 1 - Painted Concept - September 2024.png
 10 - Vertical Bridge Tileable - October 2024.png
 11 - Horizontal Bridge Tileable - October 2024.png
+12 - Grass and Dirt - November 2024.png
+13 - Void - November 2024.png
+14 - Pillars - November 2024.png
+15 - Church Entrance - January 2025.png
+16 - Forest Entrance - January 2025.png
+17 - Chest - January 2025.png
+18 - Dog Door - January 2025.png
+19 - Boxes - January 2025.png
 2 - Line Concept - September 2024.png
+20 - Shelves - January 2025.png
+21 - Tudor House 1 - January 2025.png
+22 - Tudor House 2 - January 2025.png
+23 - Default Building - January 2025.png
+24 - Medieval Spire - January 2025.png
+25 - Stairs - January 2025.png
+26 - Chairs - January 2025.png
 3 - Tileable Stone Textures - September 2024.png
 4 - Church Walls Tileable - September 2024.png
 5 - Church Floor - October 2024.png
