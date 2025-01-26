@@ -65,7 +65,10 @@
 66 - Timeless Trials Logo - November 2024.png
 67 - Void Tiles - November 2024.png
 68 - Weapon Change UI - November 2024.gif
+69 - Rennaissance Floor - January 2025.png
 7 - Player Back Run - September 2024.gif
+70 - Rennaissance Walls - January 2025.png
+71 - Fan Animated - January 2025.gif
 8 - Player Side Run - September 2024.gif
 9 - Basic Sword - September 2024.gif
 fileNames.txt
