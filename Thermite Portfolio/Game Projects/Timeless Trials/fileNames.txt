@@ -69,6 +69,13 @@
 7 - Player Back Run - September 2024.gif
 70 - Rennaissance Walls - January 2025.png
 71 - Fan Animated - January 2025.gif
+72 - Ball Channel - February 2025.png
+73 - Rennaisance Walls - February 2025.png
+74 - Final Boss Fire Swing - March 2025.gif
+75 - Final Boss Ice Pose - March 2025.gif
+76 - Icicle - March 2025.gif
+77 - Tornado - March 2025.gif
+78 - Death - March 2025.gif
 8 - Player Side Run - September 2024.gif
 9 - Basic Sword - September 2024.gif
 fileNames.txt
