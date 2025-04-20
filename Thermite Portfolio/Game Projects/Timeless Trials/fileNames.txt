@@ -79,5 +79,7 @@
 79 - Shirt Design Transparent Background - March 2025.png
 8 - Player Side Run - September 2024.gif
 80 - Shirt Design Black Background - March 2025.png
+81 - Poster Cover No Logo - April 2025.png
+82 - Poster Cover Yes Logo - April 2025.png
 9 - Basic Sword - September 2024.gif
 fileNames.txt
