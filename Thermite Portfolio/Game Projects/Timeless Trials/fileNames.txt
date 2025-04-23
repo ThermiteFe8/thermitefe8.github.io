@@ -81,5 +81,10 @@
 80 - Shirt Design Black Background - March 2025.png
 81 - Poster Cover No Logo - April 2025.png
 82 - Poster Cover Yes Logo - April 2025.png
+83 - Stickers - April 2025.png
+84 - Burnable Barrel - April 2025.gif
+85 - Exploding Car - April 2025.gif
+86 - Easel - April 2025.gif
+87 - Road Cone - April 2025.gif
 9 - Basic Sword - September 2024.gif
 fileNames.txt
