@@ -1,5 +1,11 @@
 1 - Angry witch note animations - May 2022.gif
 10 - Starshine Idle - September 2023.gif
+100 - Ferm All Animations - March 2025.gif
+101 - Hammer Animation - July 2025.gif
+102 - Throw Animation - July 2025.gif
+103 - Test Krita Animation - July 2025.gif
+104 - Fire Scene Animation - July 2025.mp4
+105 - Rock Scene Animation - July 2025.mp4
 11 - Starshine Walk - September 2023.gif
 12 - Starshine Spin - October 2023.gif
 13 - Cupquake Animation - December 2023.gif
@@ -91,4 +97,10 @@
 91 - Heart UI - November 2024.gif
 92 - Title Screen UI - November 2023.gif
 93 - Fan Animated - January 2025.gif
+94 - Main Character Idle Animation - March 2025.gif
+95 - Main  Character Walk Animation - March 2025.gif
+96 - Test Animation for Rig - February 2025.gif
+97 - Tornado - March 2025.gif
+98 - Final Boss Ice Pose - March 2025.gif
+99 - Final Boss Fire Swing - March 2025.gif
 fileNames.txt
