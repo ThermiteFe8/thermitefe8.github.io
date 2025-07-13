@@ -12,7 +12,7 @@
 </head>
 <body class="container">
     <section class="modal hidden">
-        <video id="modal-image" src="" controls></video>
+        <img id="modal-image" src="">
         <b id="zoomedName"></b>
         <p id="zoomedDescription"></p>
 		<button id="modal-exit-button" onclick="closeImage()">Exit</button>
@@ -31,7 +31,7 @@
     <div>
         <script>
             loadImages('/Animation','.gif');
-			loadImages('/Animation', '.mp4');
+			loadVideos("/YTAnimList.txt");
             loadImages('/Animation', '.png');
         </script>
     </div>
