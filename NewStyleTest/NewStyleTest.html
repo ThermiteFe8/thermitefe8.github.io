@@ -1,0 +1,143 @@
+<html lang = "en">
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>New Style Test</title>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<body>
+	<div w3-include-html="header.html" id="headerbar">
+		<img id ="SmallerLogo"src ="SmallerLogo.png">
+		
+		<div class="dropdown">
+		  <button onclick="ToggleHighlightDropdown()" class="dropbtn">Highlights</button>
+		  <div id="HighlightDropdown" class="dropdown-content">
+			<a href="#">Illustrations</a>
+			<a href="#">3D Art</a>
+			<a href="#">Animations</a>
+			<a href="#">Music</a>
+			<a href="#">Games And More</a>
+		  </div>
+		</div>
+		<div class="dropdown">
+		  <button onclick="ToggleAllDropdown()" class="dropbtn">All Works</button>
+		  <div id="AllDropdown" class="dropdown-content">
+			<a href="#">2D Art</a>
+			<a href="#">3D Art</a>
+			<a href="#">Games</a>
+			<a href="#">Animations</a>
+			<a href="#">Writing</a>
+			<a href="#">Timelapses</a>
+			<a href="#">Videos</a>
+			<a href="#">Collabs/Edits</a>
+			<a href="#">Music</a>
+			<a href="#">Traditional Art</a>
+		  </div>
+		</div>
+		<div class="dropdown">
+		  <button onclick="ToggleGamesDropdown()" class="dropbtn">Games</button>
+		  <div id="GamesDropdown" class="dropdown-content">
+			<a href="#">All Game Projects</a>
+			<a href="#">Microlevel Mania</a>
+			<a href="#">Princess Starshine</a>
+			<a href="#">Ferm's Freezeframe Frenzy</a>
+			<a href="#">Corrupted Chateau</a>
+			<a href="#">Fruit Punch</a>
+			<a href="#">Fetch Quest</a>
+			<a href="#">Campus Cook-Off</a>
+			<a href="#">DIY Deliveries</a>
+			<a href="#">Timeless Trials</a>
+			<a href="#">Gorilla Grind</a>
+			<a href="#">Bake Me Crazy</a>
+			<a href="#">Custom Gravity Unity</a>		
+		  </div>
+		</div>
+	</div>
+
+	<div id= "centralContent" >
+		<div class="halfsiesContainer">
+			<div class="halfsies">
+				<div id = "profileDesc"class="markdownContainer">		
+					<md-block>
+					![enter image description here](thermiteIcon.png)
+					# Nicole's Portfolio
+					## ThermiteFe
+					Take a look around! I make art, music, games, videos, and more - essentially everything I've ever created can be accessed here. Check out the "highlights" section for some of my favorite works, and go to "all works" if you wanna see everything. Enjoy!
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies">
+				<div class="verticalHalfsiesContainer">
+					<div class="verticalHalfsies">
+						<div  class="markdownContainer">
+							<md-block>
+								![enter image description here](timelessTrialsThumbnail.png)
+								## Timeless Trials
+								This is one of my most recently completed games. It's a pixelart dungeon crawler where the main mechanic allows you to switch rooms around. I did a bunch of art for this game. 
+							</md-block>
+						</div>
+					</div>
+					<div class="verticalHalfsies">
+						<div class="markdownContainer">
+							<md-block>
+								![enter image description here](BakeMeCrazyThumbnail.png)
+								## Bake Me Crazy
+								This game is currently in development. It's a dating simulator combined with a cooking game, created with team GADIG. 
+							</md-block>
+						</div>
+					</div
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer">
+					<md-block>
+						![enter image description here](HighlightIndexThumbnail.png)
+						## Highlights
+						My favorite works of art, games, and more.
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer">
+					<md-block>
+						![enter image description here](ArchiveThumbnail.png)
+						## All Works
+						Everything I've ever made.
+					</md-block>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<div w3-include-html="footer.html" id="footerbar">
+		<a class="optionalFooter" href"#">Home</a>
+		<a class="optionalFooter" href"#">All Works</a>
+		<a class="optionalFooter" href"#">Games</a>
+		<a href"#">Contact</a>
+		<a href"#">About</a>
+		<p>©2025</p>
+	</div>
+</body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script src="moduleLoader.js"></script>
+<script src="hiddenScript.js"></script>
+<script src="scrollToTop.js"></script>
+<script src="toggleFont.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let id = params.get("id");
+	getData(id+".json");
+</script>
+</html>
