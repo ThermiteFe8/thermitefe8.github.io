@@ -44,10 +44,7 @@
 	includeHTML();
 </script> 
 
-<script src="moduleLoader.js"></script>
-<script src="hiddenScript.js"></script>
-<script src="scrollToTop.js"></script>
-<script src="toggleFont.js"></script>
+
 <script type="module" src="https://md-block.verou.me/md-block.js"></script>
 <script>
 	let params = new URLSearchParams(document.location.search);
@@ -55,7 +52,7 @@
 	let extensions = params.get("ext").split("-");
 	for(let i = 0; i < extensions.length; i++)
 	{
-		loadImages(id+extensions[i]);
+		loadImages(id, extensions[i]);
 	}
 	
 	
