@@ -209,16 +209,16 @@
 	{
 	display:flex;
 	flex-direction:column;
-	font-size:0.7em;
+	font-size:1em;
 	}
 	#profileDesc
 	{
-	font-size:0.8em;
+	font-size:1.2em;
 	flex-grow: 1;
 	}
 	.smallerModule
 	{
-		font-size:0.7em;
+		font-size:1.1em;
 	}
 }
 
