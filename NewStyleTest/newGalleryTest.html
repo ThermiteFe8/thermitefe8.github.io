@@ -1,0 +1,71 @@
+<html lang = "en">
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>New Style Test</title>
+	<link rel = "stylesheet" href = "newstyle.css">
+</head>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<script src="newImageLoader.js"></script>
+<body>
+	<section class="modal hidden">
+        <img id="modal-image" src="">
+        <b id="zoomedName"></b>
+        <p id="zoomedDescription"></p>
+		<button id="modal-exit-button" onclick="closeImage()">Exit</button>
+		</section>
+	<div class="overlay hidden" onclick="closeImage()"></div>
+	<div w3-include-html="header.html">
+		
+	</div>
+	
+	<div id= "centralContent" >
+		
+
+		
+	
+		<div id = "headerMarkdown" class="markdownContainer">
+			<md-block>
+				# Test Art Gallery
+				Here's some art! Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+			</md-block>
+		</div>
+		<div id="imageHolder">
+			<img src="poster.png" onclick="enlargeImage('poster.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="square.png" onclick="enlargeImage('square.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+        </div>
+	</div>
+	
+	<div w3-include-html="footer.html">
+	</div>
+</body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script src="moduleLoader.js"></script>
+<script src="hiddenScript.js"></script>
+<script src="scrollToTop.js"></script>
+<script src="toggleFont.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let id = params.get("id");
+	let extensions = params.get("ext").split("-");
+	for(let i = 0; i < extensions.length; i++)
+	{
+		loadImages(id+extensions[i]);
+	}
+	
+	
+</script>
+</html>
