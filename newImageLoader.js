@@ -78,6 +78,7 @@ function loadImagesPart2(dirName, imageExtension) {
 
         funnyImage.setAttribute('onclick', ("enlargeImage(\'" + ballsDirectory + cleanupHelper + "\', \'" + cleanupHelper + "\')"));
         funnyImage.setAttribute('class', 'theMedia');
+		funnyImage.setAttribute('order', arraySections[0]);
        // funnyImage.setAttribute('id', cleanupHelper);
         document.getElementById('imageHolder').appendChild(funnyImage);
     }
@@ -142,5 +143,16 @@ function loadVideos2(){
         document.getElementById('imageHolder').appendChild(swagVideo);
     }
 
+}
+
+function flipOrder()
+{
+	let allArt = document.getElementsByClassName("theMedia");
+	for(int i = 0; i < allArt.length; i++)
+	{
+		allArt[i].setAttribute("order", allArt[i].getAttribute("order") * -1);
+	}
+		
+	
 }
 

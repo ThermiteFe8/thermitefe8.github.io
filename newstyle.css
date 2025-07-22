@@ -504,19 +504,18 @@ html
 	flex-grow: 1;
 	box-shadow: 2.75vh 2.75vh var(--second-shadow-color), inset 0.5vh 0.5vh var(--third-highlight-color);
 	filter:brightness(0.9);
-	transition: background-position 1.25s, filter 0.45s, max-width 0.45s, margin-bottom 0.45s, font-size 0.45s;
+	transition: background-position 1.25s, filter 0.45s, transform 0.45s;
+	transform:scale(1);
 	transition-timing-function:cubic-bezier(.68,-0.55,.27,1.55);
 	
 }
 
 .markdownContainer.highlightable:hover
 {
+	transform:scale(1.025);
 	background-position:198%;
 	filter:brightness(1.1);
-	max-width:92%;
-	margin-bottom:5.85%;
 	cursor:pointer;
-	font-size: 1.03em;
 }
 
 #headerMarkdown
@@ -664,6 +663,10 @@ a
     padding: 0.2rem;
 }
 
+#modal-exit-button:hover{
+	cursor:pointer;
+}
+
 .hidden {
     display: none;
 }
@@ -692,4 +695,36 @@ a
 	align-items: center;
 	justify-content: center;
 	padding: 2%;
+}
+
+#orderSwapButton
+{
+	font-family:t;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:4vh;
+	display:flex;
+	font-size:1.25em;
+	border-radius:0.2em;
+	padding: 2%;
+	text-decoration: underline;
+	background-image:url('glossStripes.png');
+	background-size:47%;
+	background-repeat:repeat-y;
+	background-position:-61%;
+	box-shadow: 1vh 1vh var(--second-shadow-color), inset 0.5vh 0.5vh var(--third-highlight-color);
+	filter:brightness(0.9);
+	transition: background-position 1.25s, filter 0.45s, transform 0.45s;
+	transition-timing-function:cubic-bezier(.68,-0.55,.27,1.55);
+	margin-bottom:0em;
+	max-width:90%;
+	transform:scale(1);
+}
+
+#orderSwapButton:hover
+{
+	background-position:198%;
+	filter:brightness(1.1);
+	cursor:pointer;
+	transform:scale(1.15);
 }
