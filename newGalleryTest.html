@@ -35,7 +35,7 @@
 		<button id="orderSwapButton" onclick="flipOrder()" > Newest to Oldest </button>
 		
 		<div id="imageHolder">
-
+			
         </div>
 	</div>
 	
@@ -48,7 +48,7 @@
 </script> 
 
 
-<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
 <script>
 	let params = new URLSearchParams(document.location.search);
 	let id = params.get("id");
@@ -58,6 +58,17 @@
 		loadImages(id, extensions[i]);
 	}
 	
+	if(params.has("vidtxt"))
+	{
+		loadVideos(params.get("vidtxt"));
+	}
+	
+	if(params.has("md"))
+	{
+		document.getElementById("headerMarkdown").firstElementChild.setAttribute('src', params.get("md"));
+	}
+	
 	
 </script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </html>

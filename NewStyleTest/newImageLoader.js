@@ -148,7 +148,7 @@ function loadVideos2(){
 function flipOrder()
 {
 	let allArt = document.getElementsByClassName("theMedia");
-	for(int i = 0; i < allArt.length; i++)
+	for(var i = 0; i < allArt.length; i++)
 	{
 		allArt[i].setAttribute("order", allArt[i].getAttribute("order") * -1);
 	}
