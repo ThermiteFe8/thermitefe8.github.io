@@ -58,14 +58,14 @@
 		loadImages(id, extensions[i]);
 	}
 	
-	if(params.has("vidtxt"))
+	if(params.has("vd"))
 	{
-		loadVideos(params.get("vidtxt"));
+		loadVideos(params.get("vd") + ".txt");
 	}
 	
 	if(params.has("md"))
 	{
-		document.getElementById("headerMarkdown").firstElementChild.setAttribute('src', params.get("md"));
+		document.getElementById("headerMarkdown").firstElementChild.setAttribute('src', "MDFiles/" + params.get("md") + ".md");
 	}
 	
 	

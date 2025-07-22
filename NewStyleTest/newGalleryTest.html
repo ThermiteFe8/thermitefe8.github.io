@@ -68,12 +68,12 @@
 	
 	if(params.has("vidtxt"))
 	{
-		loadVideos(params.get("vidtxt"));
+		loadVideos(params.get("vidtxt") + ".txt");
 	}
 	
 	if(params.has("md"))
 	{
-		document.getElementById("headerMarkdown").firstElementChild.setAttribute('src', params.get("md"));
+		document.getElementById("headerMarkdown").firstElementChild.setAttribute('src', "MDFiles/" + params.get("md") + ".md");
 	}
 	
 	

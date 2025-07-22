@@ -1,5 +1,3 @@
-0 - Rook Background 4k - July 2021.mp4
-1 - Impostor King Background 4k - July 2021.mp4
 10 - Waterfall Gorilla Concept Timelapse - February 2023.mp4
 11 - Canopy Gorilla Concept Timelapse - February 2023.mp4
 12 - Doodles and Dia FNF Concept Timelapse - February 2023.mp4
@@ -10,7 +8,6 @@
 17 - Pizza Tower but Sonic challenge - March 2023.mp4
 18 - Pyrite Reference Timelapse - April 2023.mp4
 19 - 2D design final asset drawing timelapse - April 2023.mp4
-2 - Sans Background 4K - August 2021.mp4
 20 - Limit timelapse - May 2023.mp4
 21 - Lynne Timelapse - May 2023.mp4
 22 - Lucidream Omori - May 2023.mp4
@@ -22,7 +19,6 @@
 28 - PrincessTimelapse - November 2023.mp4
 28 - Secret Santa Timelapse - November 2023.mp4
 29 - Starshine Pixel Timelapse - November 2023.mp4
-3 - Dusttale RTX - December 2021.mp4
 30 - Starshine Album Art.mp4
 4 - Amogus Timelapse - November 2022.mp4
 5 - Trans Marionette Artivism Timelapse - November 2022.mp4
@@ -30,5 +26,6 @@
 7 - Pokemon ScarVi Relighting Timelapse - November 2022.mp4
 8 - Robin Secret Santa Timelapse - December 2022.mp4
 9 - Scrapnik Mecha Sonic Timelapse - January 2023.mp4
+all sketches.mp4
 Controller idea.mp4
 fileNames.txt

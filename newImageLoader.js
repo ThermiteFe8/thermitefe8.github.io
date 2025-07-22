@@ -140,6 +140,7 @@ function loadVideos2(){
         var swagVideo = document.createElement("iframe");
         swagVideo.src = allFiles[i];
         swagVideo.setAttribute('class', 'theMedia');
+		swagVideo.style.order(i+300);
         document.getElementById('imageHolder').appendChild(swagVideo);
     }
 
