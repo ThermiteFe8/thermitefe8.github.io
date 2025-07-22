@@ -1,0 +1,98 @@
+<html lang = "en">
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>New Style Test</title>
+	<link rel = "stylesheet" href = "newstyle.css">
+</head>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<body>
+	<div w3-include-html="header.html">
+		
+	</div>
+
+	<div id= "centralContent" >
+		<div class="halfsiesContainer">
+			
+			<div class="halfsies">
+				<div class="verticalHalfsiesContainer">
+					<div class="verticalHalfsies">
+						<div  class="markdownContainer">
+							<md-block>
+								![Mail Icon](MailIcon.png)
+								## Contact
+								You can reach out to me through [Gmail](mailto:thermitefe8@gmail.com), Discord (ThermiteFe), or [Linkeldn](https://www.linkedin.com/in/nicole-tiongson-9a6975274/).
+							</md-block>
+						</div>
+					</div>
+					<div class="verticalHalfsies">
+						<div class="markdownContainer">
+							<md-block>
+								![enter image description here](YTIcon.png)
+								## Socials
+								You can view my works on [itch.io](https://thermitefe8.itch.io/), [my Youtube channel](https://www.youtube.com/@thermitefe8299), or here!
+							</md-block>
+						</div>
+					</div>		
+				</div>
+			</div>
+			<div class="halfsies">
+				<div id = "profileDesc"class="markdownContainer">		
+					<md-block>
+					![enter image description here](thermiteIcon.png)
+					# About Me
+					I am a multidisciplinary artist - I make 2D illustrations, animations, 3D models/textures, graphics, videos, and music.
+					
+					Primarily, I'm a game developer, having worked on over a dozen game projects by now, some by myself, some on smaller teams, and some with larger teams/clubs like [GADIG](https://orgs.gmu.edu/gadig/?gmuw-rd=sm&gmuw-rdm=ht). 
+					
+					I recently graduated from my Computer Game Design program, and am working on independent game projects. I'm also searching for full time work.
+					</md-block>
+				</div>
+			</div>
+		</div>
+		
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer">
+					<md-block>
+						## New Style?
+						This site may look different - I've recently updated it with newer background art, a layout that works well on both mobile and desktop, and generally better navigation and QOL.
+						
+						All of the same works from the old site should be available - if you run into any issues, contact me [here](mailto:thermitefe8@gmail.com).
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer">
+					<md-block>
+						## More Info?
+						This site uses a weird image loader that reads image paths/names from a text file, since there isn't an easy way to iterate through folders with this system. Hypothetically, it makes my life easier since I can add images more easily, but I'm not so sure these days.
+						
+						I'm also using a markdown converter/loader so that adding modules/text like this doesn't completely suck.
+					</md-block>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<div w3-include-html="footer.html">
+	</div>
+</body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script src="moduleLoader.js"></script>
+<script src="hiddenScript.js"></script>
+<script src="scrollToTop.js"></script>
+<script src="toggleFont.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let id = params.get("id");
+	getData(id+".json");
+</script>
+</html>

@@ -745,3 +745,18 @@ a
 	filter:brightness(1.1);
 	transform:scale(1.03);
 }
+
+.pdfEmbed
+{
+	max-width:90%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1em;
+}
+
+.TtheMedia
+{
+	display:flex;
+	max-width:90%;
+	padding: 0.5em;
+}

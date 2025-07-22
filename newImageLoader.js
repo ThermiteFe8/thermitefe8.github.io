@@ -148,9 +148,20 @@ function loadVideos2(){
 function flipOrder()
 {
 	let allArt = document.getElementsByClassName("theMedia");
+	var total = 0;
 	for(var i = 0; i < allArt.length; i++)
 	{
 		allArt[i].style.order = allArt[i].style.order * -1;
+		total = total + allArt[i].style.order;
+	}
+	
+	if(total > 0)
+	{
+		document.getElementById('orderSwapButton').innerHTML('Oldest to Newest');
+	}
+	else
+	{
+		document.getElementById('orderSwapButton').innerHTML('Newest to Oldest');
 	}
 		
 	

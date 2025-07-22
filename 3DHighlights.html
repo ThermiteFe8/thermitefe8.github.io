@@ -1,0 +1,55 @@
+<html lang = "en">
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>New Style Test</title>
+	<link rel = "stylesheet" href = "newstyle.css">
+</head>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<script src="newImageLoader.js"></script>
+<body>
+	<section class="modal hidden">
+        <img id="modal-image" src="">
+        <b id="zoomedName"></b>
+        <p id="zoomedDescription"></p>
+		<button id="modal-exit-button" onclick="closeImage()">Exit</button>
+		</section>
+	<div class="overlay hidden" onclick="closeImage()"></div>
+	<div w3-include-html="header.html">
+		
+	</div>
+	
+	<div id= "centralContent" >
+		
+
+		
+	
+		<div id = "headerMarkdown" class="markdownContainer">
+			<md-block>
+				# 3D Highlights
+				Some of my favorite 3D models/textures, complete with sketchfab embeds so you can turn them around and stuff!
+			</md-block>
+		</div>
+		
+		
+		<div id="imageHolder">
+			<iframe class="TtheMedia" title="Final 398 Project" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3002bfc3e18f4ceab1dc7fa035dad6bb/embed"> </iframe> 
+			<iframe class="TtheMedia" title="Fridge" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/d61dede2a80d4347a1b13472f17864f0/embed"> </iframe> 
+			<iframe class="TtheMedia" title="Forklift" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/519228d87b7343f196163129fd062db4/embed"> </iframe> 
+			<iframe class="TtheMedia" title="Security Camera" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/6522294f3cb94544a689e502a77dee13/embed"> </iframe> 
+			<iframe class="TtheMedia" title="Mech Texture" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f9097b8a474b48cc8e4c79544b05fdfc/embed"> </iframe> 
+			<iframe class="TtheMedia" title="Warehouse Shelf" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2cb8530f8b094916a98f7aa82bd46499/embed"> </iframe> 
+        </div>
+	</div>
+	
+	<div w3-include-html="footer.html">
+	</div>
+</body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+</html>
