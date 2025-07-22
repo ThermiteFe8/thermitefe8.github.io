@@ -728,3 +728,20 @@ a
 	cursor:pointer;
 	transform:scale(1.15);
 }
+
+.theMedia
+{
+	box-shadow: 1vh 1vh var(--second-shadow-color);
+	filter:brightness(1);
+	transform:scale(1);
+	outline:0em solid var(--highlighted-button-color);
+	transition: filter 0.45s, transform 0.45s, outline 0.45s;
+	transition-timing-function:cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.theMedia:hover
+{
+	outline:0.2em solid var(--highlighted-button-color);
+	filter:brightness(1.1);
+	transform:scale(1.03);
+}
