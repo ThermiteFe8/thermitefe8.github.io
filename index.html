@@ -2,63 +2,91 @@
 <head>
 	<meta charset="UTF=8">
 	<meta name="viewport" content="width=device-width, inital-scale=1.0">
-	<title>Thermite's Website</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
+	<title>New Style Test</title>
+	<link rel = "stylesheet" href = "newstyle.css">
 </head>
-
-<body class="container">
-	<main>
-		<div id="topIndexSection">
-			<img onclick="window.location.href = '/portfolioHighlightIndex.html'" src="thermiteIcon.png" id="swagIcon" />
-				<img onclick="window.location.href = '/portfolioIndex.html'" src = "Logo.png" id="swagIcon" />
-		</div>
-		<p onclick="window.location.href = '/more.html'" id="my-titles">Game Artist | Programmer | Sound Designer | Composer</p>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<body>
+	<div w3-include-html="header.html">
 		
-		<div id="portfolioIndexSet">
-            <div class="columnDivs">
-                <img onclick="window.location.href = '/portfolioHighlightIndex.html'" src="HighlightIndex Thumbnail.png" class="indexThumbnail" />
-                <button onclick="window.location.href = '/portfolioHighlightIndex.html'">Highlights</button>
-            </div>
-            <div class="columnDivs">
-                <img onclick="window.location.href = '/portfolioIndex.html'" src="Archive Thumbnail.png" class="indexThumbnail" />
-                <button onclick="window.location.href = '/portfolioIndex.html'">All Works</button>
-            </div>
-        </div>
-		
-		<div id="portfolioIndexSet">
-            <div class="columnDivs">
-                <img onclick="window.location.href = '/portfolioGameTimelessTrials'" src="Recent Game Thumbnail.png" class="indexThumbnail" />
-                <button onclick="window.location.href = '/portfolioGameTimelessTrials'">Recent Game</button>
-            </div>
-            <div class="columnDivs">
-                <img onclick="window.location.href = '/portfolioGameBakeMeCrazy'" src="Indev Thumbnail.png" class="indexThumbnail" />
-                <button onclick="window.location.href = '/portfolioGameBakeMeCrazy'">Indev Game</button>
-            </div>
-        </div>
+	</div>
 
-		<div id="moreButtons">
-			<button id="mainMenuIndex" onclick="window.location.href = '/more.html'">More About Me</button>
-			<button id="mainMenuIndex" onclick="window.location.href ='/commission.html'">Commission Info</button>
+	<div id= "centralContent" >
+		<div class="halfsiesContainer">
+			<div class="halfsies">
+				<div id = "profileDesc"class="markdownContainer highlightable" onclick="window.location.href = 'About'">		
+					<md-block>
+					![enter image description here](thermiteIcon.png)
+					# Nicole's Portfolio
+					## ThermiteFe
+					Take a look around! I make art, music, games, videos, and more - essentially everything I've ever created can be accessed here. Check out the "highlights" section for some of my favorite works, and go to "all works" if you wanna see everything. Enjoy!
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies">
+				<div class="verticalHalfsiesContainer">
+					<div class="verticalHalfsies">
+						<div  class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=/Game Projects/Timeless Trials&ext=gif-png&md=gameTimeless'">
+							<md-block>
+								![enter image description here](timelessTrialsThumbnail.png)
+								## Timeless Trials
+								This is one of my most recently completed games. It's a pixelart dungeon crawler where the main mechanic allows you to switch rooms around. I did a bunch of art for this game. 
+							</md-block>
+						</div>
+					</div>
+					<div class="verticalHalfsies">
+						<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=/Game Projects/Bake Me Crazy&ext=gif-png&md=gameBake'">
+							<md-block>
+								![enter image description here](BakeMeCrazyThumbnail.png)
+								## Bake Me Crazy
+								This game is currently in development. It's a dating simulator combined with a cooking game, created with team GADIG. 
+							</md-block>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		
-		<div id="AboutMe">
-			<button onclick="window.location.href = 'mailto:thermitefe8@gmail.com'"class="svgButtons"><img src="Gmail_Icon_(2013-2020).svg.png" alt="Mail" class="svgIcons"></button>
-			<button onclick="window.location.href = 'https://ko-fi.com/thermitefe8'"class="svgButtons"><img src="KOFI LOGO.png" alt="Ko-Fi" class="svgIcons"></button>
-			<button onclick="window.location.href='https://www.youtube.com/channel/UCLOeP5ukWxQ9YBYXQ__ZfBw'"class="svgButtons"><img src="YouTube_full-color_icon_(2017).svg.png" alt="Youtube"class="svgIcons"></button>
-			<button onclick="window.location.href='https://drive.google.com/drive/folders/1_kYBALy0N_z9UARW3eOCmaxLQVPtZMN7?usp=drive_link'" class="svgButtons"><img src="Google_Drive_icon_(2020).svg.png" alt="Google Drive"class="svgIcons"></button>
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'highlightIndex'">
+					<md-block>
+						![enter image description here](HighlightIndexThumbnail.png)
+						## Highlights
+						My favorite works of art, games, and more.
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'allIndex'">
+					<md-block>
+						![enter image description here](ArchiveThumbnail.png)
+						## All Works
+						Everything I've ever made.
+					</md-block>
+				</div>
+			</div>
 		</div>
-
-	</main>
-	<footer>
-		<button onclick="window.location.href = '/'">Home</button>
-		<button onclick="window.location.href = '/portfolioGameIndex.html'">Games</button>
-		<button onclick="window.location.href = '/portfolioHighlightIndex.html'">Highlights</button>
-		<button onclick="window.location.href = '/portfolioIndex.html'">All Works</button>
-		<button onclick="window.location.href = '/more.html'">About Me</button>
-		<button onclick="window.location.href = '/commission.html'">Commissions</button>
-	</footer>
+	</div>
+	</div>
 	
-<button id="BoundlessButton" onclick="window.location.href = '/BoundlessLoss.html'">Out of Bounds?</button>
+	<div w3-include-html="footer.html">
+	</div>
 </body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script src="moduleLoader.js"></script>
+<script src="hiddenScript.js"></script>
+<script src="scrollToTop.js"></script>
+<script src="toggleFont.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let id = params.get("id");
+	getData(id+".json");
+</script>
 </html>
