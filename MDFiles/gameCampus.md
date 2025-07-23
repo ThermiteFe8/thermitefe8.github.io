@@ -1,0 +1,3 @@
+# Campus Cook-Off
+
+This game's inspired by Overcooked. Originally, I was just an artist for this game, making concept art, environment art, character art, and UI art. However, I eventually stepped up into a programming role, implementing several core mechanics, bugfixes, and more in order to get the game working well on time. You can play through my suffering on [itch.io.](https://gmu-game.itch.io/campus-cook-off)

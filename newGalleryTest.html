@@ -35,7 +35,7 @@
 		<button id="orderSwapButton" onclick="flipOrder()" > Oldest to Newest </button>
 		
 		<div id="imageHolder">
-			
+
         </div>
 	</div>
 	
@@ -58,9 +58,9 @@
 		loadImages(id, extensions[i]);
 	}
 	
-	if(params.has("vd"))
+	if(params.has("vidtxt"))
 	{
-		loadVideos(params.get("vd") + ".txt");
+		loadVideos(params.get("vidtxt") + ".txt");
 	}
 	
 	if(params.has("md"))

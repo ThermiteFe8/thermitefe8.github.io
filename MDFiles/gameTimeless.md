@@ -1,0 +1,3 @@
+# Timeless Trials
+
+This pixelart dungeon crawler was our Senior Capstone Project. I did the player art/animations, final boss art/animations, every environment/puzzle element, every UI element, and all of the marketing material for this game, along with a few bugfixes/juice and some additional boss SFX. You can play this game on Steam very soon or right now on [itch.](https://jmiv.itch.io/timeless-trials-beta)

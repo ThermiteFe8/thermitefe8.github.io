@@ -1,0 +1,75 @@
+<html lang = "en">
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>Error 404</title>
+	<link rel = "stylesheet" href = "newstyle.css">
+</head>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<body>
+	<div w3-include-html="header.html">
+		
+	</div>
+
+	<div id= "centralContent" >
+		<div class="halfsiesContainer">
+			
+			<div class="halfsies">
+				<div class="verticalHalfsiesContainer">
+					<div class="verticalHalfsies">
+						<div  class="markdownContainer highlightable" onclick="window.location.href = '#'">
+							<md-block>
+								![Game Icon](gameThumbnail.png)
+								## Games Index
+								A list of all the game projects I've contributed to.
+							</md-block>
+						</div>
+					</div>
+					<div class="verticalHalfsies">
+						<div class="markdownContainer highlightable" onclick="window.location.href = 'About'">
+							<md-block>
+								![enter image description here](thermiteIcon.png)
+								## About Me
+								More information about me and this site.
+							</md-block>
+						</div>
+					</div>		
+				</div>
+			</div>
+			<div class="halfsies">
+				<div id = "profileDesc"class="markdownContainer">		
+					<md-block>
+					![enter image description here](error.png)
+					# Error 404 - Page Not Found
+					The page you requested is unavailable.
+					
+					This website was very recently overhauled - the entire style and link/loading system was changed up. As such, some previously circulated links are orphaned. Feel free to look around again.
+				
+					</md-block>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	</div>
+	
+	<div w3-include-html="footer.html">
+	</div>
+</body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script src="moduleLoader.js"></script>
+<script src="hiddenScript.js"></script>
+<script src="scrollToTop.js"></script>
+<script src="toggleFont.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let id = params.get("id");
+	getData(id+".json");
+</script>
+</html>
