@@ -140,7 +140,7 @@ function loadVideos2(){
         var swagVideo = document.createElement("iframe");
         swagVideo.src = allFiles[i];
         swagVideo.setAttribute('class', 'theMedia');
-		swagVideo.style.order(i+300);
+		swagVideo.style.order = i+300;
         document.getElementById('imageHolder').appendChild(swagVideo);
     }
 
@@ -158,11 +158,11 @@ function flipOrder()
 	
 	if(total > 0)
 	{
-		document.getElementById('orderSwapButton').innerHTML('Oldest to Newest');
+		document.getElementById('orderSwapButton').innerHTML = 'Oldest to Newest';
 	}
 	else
 	{
-		document.getElementById('orderSwapButton').innerHTML('Newest to Oldest');
+		document.getElementById('orderSwapButton').innerHTML = 'Newest to Oldest';
 	}
 		
 	
