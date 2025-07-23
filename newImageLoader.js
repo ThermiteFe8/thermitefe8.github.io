@@ -50,7 +50,7 @@ function loadImagesPart2(dirName, imageExtension) {
         if (imageExtension == ".mp4") {
             funnyImage = document.createElement("video");
         }
-		console.log("imageExtension");
+		console.log(imageExtension);
         if (imageExtension == ".mp4"){
              funnyImage.src = ballsDirectory + mediaFiles[i] + "#t=0.001";  
         }
