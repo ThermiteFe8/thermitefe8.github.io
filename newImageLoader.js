@@ -50,11 +50,13 @@ function loadImagesPart2(dirName, imageExtension) {
         if (imageExtension == ".mp4") {
             funnyImage = document.createElement("video");
         }
+		console.log("imageExtension");
         if (imageExtension == ".mp4"){
              funnyImage.src = ballsDirectory + mediaFiles[i] + "#t=0.001";  
         }
         else if (imageExtension == ".png")
         {
+			console.log("Replacing PNG with JPEG");
             var tempString = mediaFiles[i].replace(".png", ".jpg");
             funnyImage.src = "/Thumbnails/" + tempString;
         }
