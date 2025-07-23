@@ -59,16 +59,20 @@
 
 <script>
 	let params = new URLSearchParams(document.location.search);
-	let id = params.get("id");
-	let extensions = params.get("ext").split("-");
-	for(let i = 0; i < extensions.length; i++)
+	if(params.has("id") && params.has("ext"))
 	{
-		loadImages(id, extensions[i]);
+		let id = params.get("id");
+		let extensions = params.get("ext").split("-");
+		for(let i = 0; i < extensions.length; i++)
+		{
+			loadImages(id, extensions[i]);
+		}
 	}
 	
-	if(params.has("vidtxt"))
+	
+	if(params.has("vid"))
 	{
-		loadVideos(params.get("vidtxt") + ".txt");
+		loadVideos(params.get("vid") + ".txt");
 	}
 	
 	if(params.has("md"))
