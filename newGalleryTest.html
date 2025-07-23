@@ -57,7 +57,7 @@
 		let extensions = params.get("ext").split("-");
 		for(let i = 0; i < extensions.length; i++)
 		{
-			loadImages(id, extensions[i]);
+			loadImages(id, "." + extensions[i]);
 		}
 	}
 	

@@ -35,15 +35,7 @@
 		<button id="orderSwapButton" onclick="flipOrder()" > Oldest to Newest </button>
 		
 		<div id="imageHolder">
-			<img src="poster.png" onclick="enlargeImage('poster.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="square.png" onclick="enlargeImage('square.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
-			<img src="long.png" onclick="enlargeImage('long.png', '79 - Senior Game Expo HD Poster - May 2025.png')" class="theMedia">
+
         </div>
 	</div>
 	
@@ -65,7 +57,7 @@
 		let extensions = params.get("ext").split("-");
 		for(let i = 0; i < extensions.length; i++)
 		{
-			loadImages(id, extensions[i]);
+			loadImages(id, "." + extensions[i]);
 		}
 	}
 	
