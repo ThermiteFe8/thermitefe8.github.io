@@ -1,0 +1,144 @@
+<html lang = "en">
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>Archives</title>
+	<link rel = "stylesheet" href = "newstyle.css">
+</head>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<body>
+	<div w3-include-html="header.html">
+		
+	</div>
+	
+	<div id= "centralContent" >
+		<div id = "headerMarkdown" class="markdownContainer">
+			<md-block>
+				# All Works
+				Everything I make. Games, 2D art, 3D art, music, videos, essays - all of it is here. Categories like 2D art have works going back since 2020, so you can see how everything's changed over time.
+			</md-block>
+		</div>
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=&ext=png&md=art'">
+					<md-block>
+						![enter image description here](ArtThumbnail.png)
+						## 2D Art
+						Static Digital Paintings and Backgrounds.
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'GameIndex'">
+					<md-block>
+						![enter image description here](gameThumbnail.png)
+						## Games
+						All of my Games.
+					</md-block>
+				</div>
+			</div>
+		</div>
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=/3D Art&ext=gif-png&vid=YT3DList&md=3D'">
+					<md-block>
+						![enter image description here](3DThumbnail.png)
+						## 3D Art
+						Models and Textures.
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=/Animation&ext=gif-png&vid=YTAnimListt&md=anim'">
+					<md-block>
+						![enter image description here](AnimationThumbnail.png)
+						## Animations
+						All of my animations.
+					</md-block>
+				</div>
+			</div>
+		</div>
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'writingPage'">
+					<md-block>
+						![enter image description here](writingThumbnail.png)
+						## Writing
+						Various essays/reviews I've written.
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?vid=YTMusicList&md=music'">
+					<md-block>
+						![enter image description here](mikuThumbnail.png)
+						## Music
+						Music I've written - all of this is on YT.
+					</md-block>
+				</div>
+			</div>
+		</div>
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=/Collabs+Edits&ext=png&md=collab'">
+					<md-block>
+						![enter image description here](collabThumbnail.png)
+						## Collabs/Edits
+						Art/edits where someone else's work was used to a great extent.
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=/Videos&ext=mp4&vid=YTTimelapseList&md=Timelapse'">
+					<md-block>
+						![enter image description here](timelapseThumbnail.png)
+						## Timelapses
+						Art timelapses/speedpaints.
+					</md-block>
+				</div>
+			</div>
+		</div>
+		<div class="halfsiesContainer">
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?id=/Sketches&ext=png&md=sketch'">
+					<md-block>
+						![enter image description here](SketchThumbnail.png)
+						## Traditional Art
+						Physical art I've drawn, mostly in college.
+					</md-block>
+				</div>
+			</div>
+			<div class="halfsies smallerModule">
+				<div class="markdownContainer highlightable" onclick="window.location.href = 'gallery?vid=YTVideoList&md=Vid'">
+					<md-block>
+						![enter image description here](videoThumbnail.png)
+						## Videos
+						Various videos - anything from essays to gameplay showcases.
+					</md-block>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div w3-include-html="footer.html">
+	</div>
+</body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script src="moduleLoader.js"></script>
+<script src="hiddenScript.js"></script>
+<script src="scrollToTop.js"></script>
+<script src="toggleFont.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let id = params.get("id");
+	getData(id+".json");
+</script>
+</html>

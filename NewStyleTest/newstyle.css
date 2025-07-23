@@ -71,6 +71,14 @@
 {
 	background-color:var(--default-button-color);
 	max-height:7.75vh;
+	transition: background-color 0.5s;
+	
+}
+
+#SmallerLogo:hover, #SmallerLogo:focus
+{
+	background-color:var(--highlighted-button-color);
+	cursor:pointer;
 }
 
 #headerbar, #headerbarsmall
