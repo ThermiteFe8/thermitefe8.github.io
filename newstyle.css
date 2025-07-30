@@ -520,6 +520,7 @@ html
 #headerMarkdown
 {
 	margin-bottom:3%;
+	font-size: 2.5vh;
 }
 
 .downloadIcon
@@ -762,6 +763,8 @@ a
 .TtheMedia
 {
 	display:flex;
-	max-width:90%;
+	/*! max-width:90%; */
 	padding: 0.5em;
+	height: 30vh;
+	width: 40%;
 }
