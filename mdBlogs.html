@@ -40,11 +40,12 @@
 <script src="moduleLoader.js"></script>
 <script src="hiddenScript.js"></script>
 <script src="scrollToTop.js"></script>
-<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 <script>
 	let params = new URLSearchParams(document.location.search);
 	let id = params.get("id");
+	console.log("/markdown/" + id + ".md");
 	document.getElementById("blogHolder").src = "/markdown/" + id + ".md";
 	document.getElementById("download").onclick = "window.open('/Blogs/" + id + ".pdf','_blank')"
 </script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 </html>
