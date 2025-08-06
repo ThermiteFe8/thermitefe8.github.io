@@ -1,0 +1,50 @@
+<html lang = "en">
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>Writing+</title>
+	<link rel = "stylesheet" href = "newstyle.css">
+</head>
+<script src="include.js"></script>
+<script src="dropdown.js"></script>
+<body>
+	<div w3-include-html="header.html">
+		
+	</div>
+	
+	<div id= "centralContent" >
+		<script src="toggleFont.js"></script>
+		<div id="fontButtons">
+			<button id="download">Download</button>
+			<button onclick="toggleFont()">Font</button>
+			<button onclick="increaseSize()">&nbsp+&nbsp</button>
+			<button onclick="decreaseSize()">&nbsp-&nbsp</button>
+		</div>
+		
+		<div id = "blogMarkdown" class="markdownContainer">
+			<md-block id = "blogHolder" >
+
+			</md-block>
+		</div>
+		
+	</div>
+	
+	<div w3-include-html="footer.html">
+	</div>
+</body>
+
+<script>
+	includeHTML();
+</script> 
+
+<script src="moduleLoader.js"></script>
+<script src="hiddenScript.js"></script>
+<script src="scrollToTop.js"></script>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script>
+	let params = new URLSearchParams(document.location.search);
+	let id = params.get("id");
+	document.getElementById("blogHolder").src = "/markdown/" + id + ".md";
+	document.getElementById("download").onclick = "window.open('/Blogs/" + id + ".pdf','_blank')"
+</script>
+</html>

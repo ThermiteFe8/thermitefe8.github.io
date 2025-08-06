@@ -392,7 +392,6 @@ html
 	background-attachment:fixed;
 	padding:0;
 	margin:0;
-	font-family: "OpenDyslexic";
 }
 
 
@@ -592,7 +591,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  
 
 }
 
@@ -767,4 +766,49 @@ a
 	padding: 0.5em;
 	height: 30vh;
 	width: 40%;
+}
+
+#blogMarkdown
+{
+	font-size:3vh;
+}
+
+#fontButtons
+{
+	display:flex;
+	justify-content:center;
+	font-family:"Times New Roman";
+	height: 6.4vh;
+	padding: 1%;
+	max-width: 100%;
+}
+
+#fontButtons *
+{
+	padding:1%;
+	font-size:4vh;
+	font-family:"Times";
+	margin-left: 1vh;
+	margin-right: 1vh;
+	box-shadow: 0.5vh 0.5vh var(--second-shadow-color), inset 0.5vh 0.5vh var(--third-highlight-color);
+	background-image:url('glossStripes.png');
+	background-size:47%;
+	background-repeat:repeat-y;
+	background-position:-61%;
+	
+	filter:brightness(0.9);
+	transition: background-position 1.25s, filter 0.45s, transform 0.45s;
+	transform:scale(1);
+	transition-timing-function:cubic-bezier(.68,-0.55,.27,1.55);
+	
+}
+
+
+
+#fontButtons *:hover
+{
+	transform:scale(1.025);
+	background-position:198%;
+	filter:brightness(1.1);
+	cursor:pointer;
 }
