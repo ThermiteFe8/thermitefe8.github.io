@@ -15,6 +15,10 @@ function toggleFont() {
 function increaseSize()
 {
 	currentSize++;
+	if(currentSize <= 0)
+	{
+		currentSize = 1;
+	}
 	document.getElementById("blogMarkdown").style.fontSize = currentSize.toString() +'vh';
 }
 
