@@ -25,5 +25,9 @@ function increaseSize()
 function decreaseSize()
 {
 	currentSize--;
+	if(currentSize <= 0)
+	{
+		currentSize = 1;
+	}
 	document.getElementById("blogMarkdown").style.fontSize = currentSize.toString() +'vh';
 }
