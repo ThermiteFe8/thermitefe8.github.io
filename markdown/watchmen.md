@@ -1,7 +1,5 @@
 # Watchmen Review
 
-### By Nicole/ThermiteFe
-
 Comic books have a difficult time justifying themselves as unique storytelling mediums in the public eye. They’re either treated as “storyboards” for the inevitable movie/show, viewed as less ambitious animations, or read like “novels but with pictures so you don’t have to describe everything”. Outside of meta gimmicks, like the stuff they do with Gwenpool, Deadpool, and the more recent Flash comics, it isn’t obvious why you’d choose to tell a story through a comic, given infinite resources.
 
 Recently, I finished reading Watchmen (1986-1987). This comic book’s doing a lot. It’s another Superhero deconstruction. It explores what it’s like to be a god. It dares to ask, “what if Superheroes couldn’t just jump out the window without any consequences?”. Among other things, however, it helped me understand the unique strengths of this medium.
