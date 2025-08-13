@@ -61,9 +61,13 @@ function CleanJSON(inputJson)
 	{
 		console.log(inputJson[keys[i]]);
 		inputJson[keys[i]] = replacementString;
+		if(keys[i] == "language")
+		{
+			inputJson[keys[i]] = "en";
+		}
 	}
 	
-	const jsonString = JSON.stringify(inputJson, null, 2);
+	const jsonString = "{\"en\":" + JSON.stringify(inputJson, null, 2) + "}";
 	const blob = new Blob([jsonString], { type: 'application/json' });
 	const url = URL.createObjectURL(blob);
 	const a = document.createElement('a');
