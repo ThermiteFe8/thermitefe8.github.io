@@ -1,0 +1,88 @@
+<html>
+<head>
+	<meta charset="UTF=8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>jCleaner</title>
+	<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+	<div id = "bigContainer">
+		<h1>Welcome to the JSON Cleaner!</h1>
+		<p>You may upload a json file you'd like to remove the values of OR paste it into the textfield below!</p>
+		<p>I don't recommend doing both, but if you do it'll prioritize the textfield.</p>
+		<p>Sometimes, things break if there straight up isn't any value associated with the keys/ids, so you can check the checkbox to add some placeholder text to your stripped JSON file</p>
+		<p>When you're ready, press "Clean JSON file!" to download!</p>
+		
+		
+		<input type="file" accept=".json" id="input" />
+		<textarea id="textField" rows="4" cols="50" placeholder="Paste JSON data here"></textarea>
+		
+		<div>
+		<input type="checkbox" id="blankCheck" name="blankCheck" checked />
+		<label for="blankCheck">Replace every value with the word "Blank"?</label>
+		</div>
+		
+		<button id="startButton" onclick="StartCleaning()">Clean JSON file!</button>
+		
+	</div>
+	<script type="module">
+
+  // Import the functions you need from the SDKs you need
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
+  
+  import { getFirestore, doc, setDoc } from 'https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js';
+  
+
+
+
+  // TODO: Add SDKs for Firebase products that you want to use
+
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  const firebaseConfig = {
+
+    apiKey: "AIzaSyAIHgriERGZW21SML7noJDPJ4YiP9C79To",
+
+    authDomain: "the-quiet-game-1401d.firebaseapp.com",
+
+    projectId: "the-quiet-game-1401d",
+
+    storageBucket: "the-quiet-game-1401d.firebasestorage.app",
+
+    messagingSenderId: "383635994685",
+
+    appId: "1:383635994685:web:342e0a233e4ead59e69254",
+
+    measurementId: "G-4DF6S0L5YQ"
+
+  };
+
+
+  // Initialize Firebase
+
+  const app = initializeApp(firebaseConfig);
+
+  const analytics = getAnalytics(app);
+  
+  const db = getFirestore(app);
+  
+  await setDoc(doc(db, "cities", "LA"), {
+  name: "Los Angeles",
+  state: "CA",
+  country: "USA"
+});
+
+</script>
+</body>
+
+
+</html>
