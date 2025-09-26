@@ -1,7 +1,13 @@
-import { doc, setDoc } from "firebase/firestore"; 
+function newGame()
+{
+	fetch('TaskList.txt')
+  .then(response => response.text())
+  .then((data) => {
+    console.log(data)
+  })
+}
 
-await setDoc(doc(db, "cities", "LA"), {
-  name: "Los Angeles",
-  state: "CA",
-  country: "USA"
-});
+function randomParameter(inputJson)
+{
+	
+}
