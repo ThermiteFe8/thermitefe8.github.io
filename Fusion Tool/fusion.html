@@ -15,11 +15,16 @@
         }
 		#plantInformation *{
 			margin-left:15px;
+			overflow-y: auto; 
 		}
 		
 		#displayContainer {
 			display:flex;
 			flex-direction:row;
+		}
+		#propertyContainer{
+			display:flex;
+			flex-direction:column;
 		}
     </style>
 </head>
@@ -38,19 +43,33 @@
 		</div>
 	</div>
 	
-	<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
-	<label for="basePlant">Base Plants</label>
-	<input type="checkbox" class="plantProperties" id = "straight" value="straight" checked = "true"></input>
-	<label for="straight">Straight-Shooting Plants</label>
-	<input type="checkbox" class="plantProperties" id = "sunProducer" value="sunProducer" checked = "true"></input>
-	<label for="sunProducer">Sun Producing Plants</label>
-	<input type="checkbox" class="plantProperties" id = "aggroSun" value="aggroSun" checked = "true"></input>
-	<label for="aggroSun">Active Sun Producers</label>
-	
+	<div id="propertyContainer">
+		<div class="tickboxContainer">
+			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
+			<label for="basePlant">Base Plants</label>
+		</div>
+		<div class="tickboxContainer">
+			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
+			<label for="basePlant">BaseashuduihasibydaibdPlants</label>
+		</div>
+		<div class="tickboxContainer">
+			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
+			<label for="basePlant">Base asbygudiygayvudbiy</label>
+		</div>
+		<div class="tickboxContainer">
+			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
+			<label for="basePlant">Baafdbiydiyvafyiavuvffibwdafaeiuse Plants</label>
+		</div>
+		<div class="tickboxContainer">
+			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
+			<label for="basePlant">Basbaaae Plants</label>
+		</div>
+	</div>
 	
 	<button onclick="searchPlants()">Search</button>
 		<script type="text/javascript">
-			const tickboxes = document.getElementsByClassName("plantProperties");
+			let tickboxes = [];
+			const propertyContainer = document.getElementById("propertyContainer");
 			const infoCont = document.getElementById("plantInformation");
 			var nodes;
 			var edges;
@@ -60,7 +79,38 @@
 			var network;
 			// create an array with nodes
 			let rawJsonData;
-			fetch("https://thermitefe8.github.io/Fusion%20Tool/testJson.json")
+			
+			fetch("https://thermitefe8.github.io/Fusion Tool/Categories.txt")
+			.then(response => response.text())
+			.then((data) => {
+				console.log(data)
+				let allLines = data.split("\n");
+				for(let i = 0; i < allLines.length; i++)
+				{
+					let currentCategory = allLines[i].split("|");
+				
+					let newTickboxContainer = document.createElement("div");
+					newTickboxContainer.setAttribute('class', 'tickboxContainer');
+					let newCheckbox = document.createElement("input");
+					newCheckbox.setAttribute('type', 'checkbox');
+					newCheckbox.setAttribute('class', 'plantProperties');
+					newCheckbox.setAttribute('id', currentCategory[0]);
+					newCheckbox.setAttribute('value', currentCategory[0]);
+					newCheckbox.setAttribute('checked', 'true');
+					
+					let newLabel = document.createElement("label");
+					newLabel.setAttribute('for', currentCategory[0]);
+					newLabel.textContent = currentCategory[1];
+					newTickboxContainer.appendChild(newCheckbox);
+					newTickboxContainer.appendChild(newLabel);
+					propertyContainer.appendChild(newTickboxContainer);
+				
+				}
+				tickboxes = propertyContainer.getElementsByClassName("plantProperties");
+				
+			});
+			
+			fetch("https://thermitefe8.github.io/Fusion%20Tool/Fusion.json")
 			.then(response => response.json())
 			.then(data => {
 				console.log(data);
@@ -75,6 +125,21 @@
 					let tempRecharge = rawJsonData[i].recharge;
 					let tempDPS = rawJsonData[i].DPS;
 					let tempDescription = rawJsonData[i].description;
+					
+					
+					if(rawJsonData[i].ingredients != "")
+					{
+						let tempIngredients = rawJsonData[i].ingredients.split("+");
+						for(let k = 0; k < tempIngredients.length; k++)
+						{
+							tempEdges.push({to: tempId, from: tempIngredients[k]})
+						}
+					}
+					else
+					{
+						tempProperties.push("basePlant");
+					}
+					
 					let currentNode = {id: tempId, label: tempId, properties: tempProperties, cost: tempCost, recharge: tempRecharge, DPS: tempDPS, description: tempDescription};
 					if(tempCost == "")
 					{
@@ -86,15 +151,6 @@
 					}
 					
 					tempNodes.push(currentNode);
-					
-					if(rawJsonData[i].ingredients != "")
-					{
-						let tempIngredients = rawJsonData[i].ingredients.split("+");
-						for(let k = 0; k < tempIngredients.length; k++)
-						{
-							tempEdges.push({to: tempId, from: tempIngredients[k]})
-						}
-					}
 					
 				}
 					
