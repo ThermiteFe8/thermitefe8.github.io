@@ -12,10 +12,11 @@
             width: 400px;
             height: 400px;
             border: 1px solid lightgray;
+			overflow-y: auto;
         }
 		#plantInformation *{
 			margin-left:15px;
-			overflow-y: auto; 
+			 
 		}
 		
 		#displayContainer {
@@ -25,10 +26,15 @@
 		#propertyContainer{
 			display:flex;
 			flex-direction:column;
+			height:150px;
+			flex-wrap:wrap;
+			overflow-x:auto;
 		}
     </style>
 </head>
 	<body>
+	<input type="search" id="query" name="q" placeholder="Search...">
+	<button onclick ="newSearchFunction()"type="submit">Search</button>
 	<div id = "displayContainer">
 		<div id="mynetwork"></div>
 		<div id="plantInformation">
@@ -44,30 +50,15 @@
 	</div>
 	
 	<div id="propertyContainer">
-		<div class="tickboxContainer">
-			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
-			<label for="basePlant">Base Plants</label>
-		</div>
-		<div class="tickboxContainer">
-			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
-			<label for="basePlant">BaseashuduihasibydaibdPlants</label>
-		</div>
-		<div class="tickboxContainer">
-			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
-			<label for="basePlant">Base asbygudiygayvudbiy</label>
-		</div>
-		<div class="tickboxContainer">
-			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
-			<label for="basePlant">Baafdbiydiyvafyiavuvffibwdafaeiuse Plants</label>
-		</div>
-		<div class="tickboxContainer">
-			<input type="checkbox" class="plantProperties" id="basePlant" value="basePlant" checked = "true"></input>
-			<label for="basePlant">Basbaaae Plants</label>
-		</div>
+		
 	</div>
 	
 	<button onclick="searchPlants()">Search</button>
+	<button onclick="highlightAll()">Select All</button>
+	<button onclick="highlightNone()">Select None</button>
+	
 		<script type="text/javascript">
+			const query = document.getElementById("query");
 			let tickboxes = [];
 			const propertyContainer = document.getElementById("propertyContainer");
 			const infoCont = document.getElementById("plantInformation");
@@ -80,7 +71,7 @@
 			// create an array with nodes
 			let rawJsonData;
 			
-			fetch("https://thermitefe8.github.io/Fusion Tool/Categories.txt")
+			fetch('https://thermitefe8.github.io/Fusion%20Tool/Categories.txt')
 			.then(response => response.text())
 			.then((data) => {
 				console.log(data)
@@ -190,8 +181,14 @@
 					  label: true,
 						},
 					shadow: true,
-					smooth: true,
-					}
+					smooth: false,
+				},
+				layout: {
+					improvedLayout: false // This line disables the improved layout algorithm
+				},
+				physics: {
+					enabled: false // You can also disable physics entirely if needed
+				}
 				}
 
 				// initialize your network!
@@ -269,35 +266,35 @@
 			network.on("doubleClick", function (params) {
 				// Check if a node was double-clicked
 				if (params.nodes.length > 0) {
-					var nodeId = params.nodes[0]; // Get the ID of the double-clicked node
-					console.log("Double-clicked node with ID:", nodeId);
-					currentNode = nodes.get(nodeId);
-					const connections = network.getConnectedEdges(nodeId);
-					for(let k = 0; k < nodeIds.length; k++)
-					{
-						let node = nodes.get(nodeIds[k]);
-						node.hidden = true;
-						nodes.update(node);
-					}
-					currentNode.hidden = false;
-					nodes.update(currentNode);
-					for(let i = 0; i < connections.length; i++)
-					{
-						let tempNode;
-						if(edges.get(connections[i]).to == nodeId)
-						{
-							tempNode = nodes.get(edges.get(connections[i]).from);	
-						}
-						else
-						{
-							tempNode = nodes.get(edges.get(connections[i]).to);
-						}
-						tempNode.hidden = false;
-						nodes.update(tempNode);
-					}
-					
-					
-				}
+  const nodeId = params.nodes[0]; // Get the ID of the double-clicked node
+  console.log("Double-clicked node with ID:", nodeId);
+
+  // Hide all nodes initially
+  const updatedNodes = nodeIds.map(id => {
+    const node = nodes.get(id);
+    node.hidden = true;
+    return node;
+  });
+
+  // Keep current node visible
+  const currentNode = nodes.get(nodeId);
+  currentNode.hidden = false;
+  updatedNodes.push(currentNode);
+
+  // Reveal connected nodes
+  const connections = network.getConnectedEdges(nodeId);
+  for (const edgeId of connections) {
+    const edge = edges.get(edgeId);
+    const neighborId = edge.to === nodeId ? edge.from : edge.to;
+    const neighborNode = nodes.get(neighborId);
+    neighborNode.hidden = false;
+    updatedNodes.push(neighborNode);
+  }
+
+  // Batch update once
+  nodes.update(updatedNodes);
+}
+
 			});
 			network.on("click", function (params) {
 				// Check if a node was double-clicked
@@ -337,33 +334,71 @@
 				}
 			}
 			
-			function searchPlants()
-			{
-				for(let k = 0; k < nodeIds.length; k++)
-				{
-					let node = nodes.get(nodeIds[k]);
-					node.hidden = true;
-					nodes.update(node);
-					
-				}
-				for(let i = 0; i < tickboxes.length; i++)
-				{
-					let propertyValue = tickboxes[i].value;
-					for(let k = 0; k < nodeIds.length; k++)
-					{
-						let node = nodes.get(nodeIds[k]);
-						if(node.properties.includes(propertyValue))
-						{
-							if(tickboxes[i].checked == true)
-							{
-								node.hidden = false;
-								nodes.update(node);
-							}
-						}
-						
-					}
+			function searchPlants() {
+				const activeValues = new Set(
+					Array.from(tickboxes)
+					.filter(tb => tb.checked)
+					.map(tb => tb.value)
+				);
+
+				const updatedNodes = nodeIds.map(id => {
+					const node = nodes.get(id);
+					const props = Array.isArray(node.properties) ? node.properties : [String(node.properties)];
+					node.hidden = !props.some(p => activeValues.has(p));
+					return node;
+				});
+
+				try {
+				// Try batch update (most efficient)
+					nodes.update(updatedNodes);
+				} catch (err) {
+				// Fallback: update nodes one-by-one
+					for (const n of updatedNodes) nodes.update(n);
 				}
 			}
+			
+			function highlightAll()
+			{
+				for(let i = 0; i < tickboxes.length; i++)
+				{
+					tickboxes[i].checked = true;
+				}
+			}
+			
+			function highlightNone()
+			{
+				for(let i = 0; i < tickboxes.length; i++)
+				{
+					tickboxes[i].checked = false;
+				}
+			}
+			
+			function newSearchFunction()
+			{
+				searchKeywords(query.value);
+			}
+			
+			function searchKeywords(newWord)
+			{
+				let updatedNodes = []
+				for(let i = 0; i < nodeIds.length; i++)
+				{
+					let currentNode = nodes.get(nodeIds[i]);
+					currentNode.hidden = true;
+					if(currentNode.id.includes(newWord) || currentNode.description.includes(newWord) || currentNode.properties.includes(newWord))
+					{
+						currentNode.hidden = false;
+					}
+					updatedNodes.push(currentNode);
+				}
+				
+				if(updatedNodes.length > 0)
+				{
+					nodes.update(updatedNodes);
+				}
+			}
+
+
 		</script>
 	</body>
 </html>
