@@ -50,76 +50,97 @@
 	
 	<button onclick="searchPlants()">Search</button>
 		<script type="text/javascript">
+			const tickboxes = document.getElementsByClassName("plantProperties");
+			const infoCont = document.getElementById("plantInformation");
+			var nodes;
+			var edges;
+			var nodeIds;
+			var data;
+			var options;
+			var network;
 			// create an array with nodes
-			fetch('testJson.json')
+			let rawJsonData;
+			fetch("https://thermitefe8.github.io/Fusion%20Tool/testJson.json")
 			.then(response => response.json())
 			.then(data => {
 				console.log(data);
-			})
-			.catch(error => {
-				console.error('Error fetching or parsing JSON:', error);
-			});
-			
-			const tickboxes = document.getElementsByClassName("plantProperties");
-			const infoCont = document.getElementById("plantInformation");
-			
-			var nodes = new vis.DataSet([
-				{id: "Peashooter", label: 'Peashooter', properties: ["basePlant", "straight"], cost: 100, recharge: 7.5, DPS: "20/1.5s", description: "I'm a Peashooter"},
-				{id: "Sunflower", label: 'Sunflower', properties: ["sunProducer", "basePlant"], cost: 50, recharge: 7.5, DPS: "25/25s", description: "I'm a Sunflower"},
-				{id: "Sun Peashooter", label: 'Sun Peashooter', properties: ["sunProducer", "aggroSun", "straight"], DPS: "30/1.5s", description: "I'm a Sun Shooter"},
-				{id: "Twin Sunflower", label: 'Twin Sunflower', properties: ["sunProducer"], DPS: "25 x 2/20s", description: "I'm a Twin Sunflower"},
-				{id: "Repeater", label: 'Repeater', properties: ["straight"], DPS: "2 x 2/1.5s", description: "Repeater!"}
-			]);
-			
-			const nodeIds = nodes.getIds();
-			
-			for(let k = 0; k < nodeIds.length; k++)
-			{
-				let node = nodes.get(nodeIds[k]);
-				if(node.properties.includes("basePlant"))
+				rawJsonData = data;
+				let tempNodes = [];
+				let tempEdges = [];
+				for(let i = 0; i < rawJsonData.length; i++)
 				{
-					node.color = "MediumSeaGreen";
-					nodes.update(node);
+					let tempId = rawJsonData[i].id;
+					let tempProperties = rawJsonData[i].properties.split(";");
+					let tempCost = rawJsonData[i].cost;
+					let tempRecharge = rawJsonData[i].recharge;
+					let tempDPS = rawJsonData[i].DPS;
+					let tempDescription = rawJsonData[i].description;
+					let currentNode = {id: tempId, label: tempId, properties: tempProperties, cost: tempCost, recharge: tempRecharge, DPS: tempDPS, description: tempDescription};
+					if(tempCost == "")
+					{
+						delete currentNode['cost'];
+					}
+					if(tempRecharge == "")
+					{
+						delete currentNode['recharge'];
+					}
+					
+					tempNodes.push(currentNode);
+					
+					if(rawJsonData[i].ingredients != "")
+					{
+						let tempIngredients = rawJsonData[i].ingredients.split("+");
+						for(let k = 0; k < tempIngredients.length; k++)
+						{
+							tempEdges.push({to: tempId, from: tempIngredients[k]})
+						}
+					}
+					
+				}
+					
+				nodes = new vis.DataSet(tempNodes);
 				
+				nodeIds = nodes.getIds();
+				
+				for(let k = 0; k < nodeIds.length; k++)
+				{
+					let node = nodes.get(nodeIds[k]);
+					if(node.properties.includes("basePlant"))
+					{
+						node.color = "MediumSeaGreen";
+						nodes.update(node);
+					
+					}
 				}
-			}
-			
-			
-			// create an array with edges
-			var edges = new vis.DataSet([
-				{from: "Peashooter", to: "Sun Peashooter"},
-				{from: "Sunflower", to: "Sun Peashooter"},
-				{from: "Sunflower", to: "Twin Sunflower"},
-				{from: "Sunflower", to: "Twin Sunflower"},
-				{from: "Peashooter", to: "Repeater"},
-				{from: "Peashooter", to: "Repeater"}
-			]);
-			
-			
-			// create a network
-			var container = document.getElementById('mynetwork');
+				
+				
+				// create an array with edges
+				edges = new vis.DataSet(tempEdges);
+				
+				
+				// create a network
+				container = document.getElementById('mynetwork');
 
-			// provide the data in the vis format
-			var data = {
-				nodes: nodes,
-				edges: edges
-			};
-			var options = {
-			edges:{
-				arrows: 'to',
-				font: '12px arial #ff0000',
-				scaling:{
-				  label: true,
-					},
-				shadow: true,
-				smooth: true,
+				// provide the data in the vis format
+				data = {
+					nodes: nodes,
+					edges: edges
+				};
+				options = {
+				edges:{
+					arrows: 'to',
+					font: '12px arial #ff0000',
+					scaling:{
+					  label: true,
+						},
+					shadow: true,
+					smooth: true,
+					}
 				}
-			}
 
-			// initialize your network!
-			var network = new vis.Network(container, data, options);
-			
-			network.on("selectNode", function (params) {
+				// initialize your network!
+				network = new vis.Network(container, data, options);
+				network.on("selectNode", function (params) {
 				var selectedNodes = network.getSelectedNodes();
 				if (selectedNodes.length > 0) {
 					var selectedNodeId = selectedNodes[0]; // Get the ID of the first selected node
@@ -229,6 +250,15 @@
 					
 				}
 			});
+			})
+			.catch(error => {
+				console.error('Error fetching or parsing JSON:', error);
+			});
+			
+			
+			
+			
+			
 			function recursiveSearch(newId)
 			{
 				if('cost' in nodes.get(newId))
