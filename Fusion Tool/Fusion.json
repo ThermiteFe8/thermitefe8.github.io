@@ -2817,7 +2817,7 @@
     "recharge": "",
     "DPS": "8000 Toughness",
     "description": "Can store up Toughness and protect your plants. \nSpecial:\nMetal plant. Anti-crush. Max damage received is capped at 8k. \nHealing can exceed maximum Toughness without any cap. Spawns with 80x Toughness as initial HP. \nRedirects damage to itself in a 3x3 area. \nRecovers 4.8k HP when fed metal objects. When metal objects on the lawn disappear, every Giga Mecha-nut restores (4.8k/total Giga Mecha-nuts) HP. \nUsing a Wall-nut on it restores 8k HP instantly and summons a Sharkmarine (stationary if on land with 1/3 the HP of the Giga Mecha-nut).",
-    "ingredients": "Giga Mecha Fragments+Wall-nut"
+    "ingredients": "Wall-nut+Giga Mecha Fragments"
   },
   {
     "Timestamp": "2025/10/04 10:41:15 AM AST",
@@ -2827,7 +2827,7 @@
     "recharge": "",
     "DPS": "8000 Toughness.",
     "description": "Can receive attributes from Jalapeno or Ice-shroom, with effects upon death. \nToughness: 8000\nSpecial:\nChanges form when affected by Ice-shroom or Jalapeno, healing 3000 Toughness upon transformation. \nReleases the current form's effects upon death. \nAbsorbs damage for other plants in a 3x3 radius, but with the damage doubled. \nHealing can exceed maximum Toughness (up to 4x)\nRecovers 1k HP when fed metal objects. When metal objects on the lawn disappear and no Giga Mecha-nuts are present, every Mecha-nut restores (1k/total number of Mecha-nuts) HP.",
-    "ingredients": "Mecha Fragments+Wall-nut"
+    "ingredients": "Wall-nut+Mecha Fragments"
   },
   {
     "Timestamp": "2025/10/04 10:41:36 AM AST",
