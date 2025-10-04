@@ -181,14 +181,14 @@
 					scaling:{
 					  label: true,
 						},
-					shadow: true,
 					smooth: false,
 				},
 				layout: {
-					improvedLayout: false // This line disables the improved layout algorithm
+					improvedLayout: false,
+					// This line disables the improved layout algorithm
 				},
 				physics: {
-					enabled: false // You can also disable physics entirely if needed
+					enabled: true // You can also disable physics entirely if needed
 				}
 				}
 
@@ -294,6 +294,12 @@
 
   // Batch update once
   nodes.update(updatedNodes);
+  
+  network.fit({animation: {
+    duration: 3000, // Animation duration in milliseconds
+    easingFunction: 'easeInOutQuint' // Easing function for the animation
+  }});
+  
 }
 
 			});
@@ -356,6 +362,10 @@
 				// Fallback: update nodes one-by-one
 					for (const n of updatedNodes) nodes.update(n);
 				}
+				network.fit({animation: {
+    duration: 3000, // Animation duration in milliseconds
+    easingFunction: 'easeInOutQuint' // Easing function for the animation
+  }});
 			}
 			
 			function highlightAll()
@@ -397,8 +407,13 @@
 				{
 					nodes.update(updatedNodes);
 				}
+				network.fit({animation: {
+    duration: 3000, // Animation duration in milliseconds
+    easingFunction: 'easeInOutQuint' // Easing function for the animation
+  }});
 			}
-
+			
+			
 
 		</script>
 	</body>

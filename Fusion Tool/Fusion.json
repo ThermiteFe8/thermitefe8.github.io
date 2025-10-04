@@ -391,6 +391,16 @@
   },
   {
     "Timestamp": "2025/10/03 9:19:01 AM AST",
+    "id": "Wall-nut",
+    "properties": "defensive",
+    "cost": "50",
+    "recharge": "30",
+    "DPS": "4000 Toughness",
+    "description": "Wall-nuts have hard shells which protect your plants. Special: Wall-nut and subsequent fusions prevent splash damage from explosive cherries at difficulty 4 or lower.",
+    "ingredients": ""
+  },
+  {
+    "Timestamp": "2025/10/03 9:19:01 AM AST",
     "id": "Giant Wall-nut",
     "properties": "instant;infinite pierce",
     "cost": "",
