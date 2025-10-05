@@ -189,7 +189,11 @@
 				},
 				physics: {
 					enabled: true // You can also disable physics entirely if needed
-				}
+				},
+				 interaction: {
+            navigationButtons: true, // Enable navigation buttons including zoom
+            keyboard: true // Optional: Enable keyboard navigation
+        }
 				}
 
 				// initialize your network!
@@ -296,7 +300,7 @@
   nodes.update(updatedNodes);
   
   network.fit({animation: {
-    duration: 3000, // Animation duration in milliseconds
+    duration: 1500, // Animation duration in milliseconds
     easingFunction: 'easeInOutQuint' // Easing function for the animation
   }});
   
@@ -363,7 +367,7 @@
 					for (const n of updatedNodes) nodes.update(n);
 				}
 				network.fit({animation: {
-    duration: 3000, // Animation duration in milliseconds
+    duration: 1500, // Animation duration in milliseconds
     easingFunction: 'easeInOutQuint' // Easing function for the animation
   }});
 			}
@@ -408,7 +412,7 @@
 					nodes.update(updatedNodes);
 				}
 				network.fit({animation: {
-    duration: 3000, // Animation duration in milliseconds
+    duration: 1500, // Animation duration in milliseconds
     easingFunction: 'easeInOutQuint' // Easing function for the animation
   }});
 			}
