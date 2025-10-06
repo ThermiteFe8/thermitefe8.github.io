@@ -10,13 +10,13 @@
     "Timestamp": "2025/10/06 3:24:45 PM AST",
     "Timestamp__1": 7000,
     "LeftLight": false,
-    "RightLight": "",
+    "RightLight": "nothing",
     "loop endcap": ""
   },
   {
     "Timestamp": "2025/10/06 3:24:52 PM AST",
     "Timestamp__1": 9000,
-    "LeftLight": "",
+    "LeftLight": "nothing",
     "RightLight": false,
     "loop endcap": ""
   },

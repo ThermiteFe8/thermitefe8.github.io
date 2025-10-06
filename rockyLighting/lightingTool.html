@@ -75,19 +75,69 @@
 				rightLight.style.backgroundColor = "black";
 			}
 			
+			function toggleLeft(on)
+			{
+				
+				if(on == true)
+				{
+					LeftOn();
+				}
+				else
+				{
+					LeftOff();
+				}
+			}
+			
+			function toggleRight(on)
+			{
+				
+				if(on == true)
+				{
+					RightOn();
+				}
+				else
+				{
+					RightOff();
+				}
+			}
+		
+			
 			function update()
 			{
 				if(ticking == true)
 				{
 					timer += delta();
-					console.log(timer);
 					render();
+					let finishedEvents = [];
 					for(let i = 0; i < timeArray.length; i++)
 					{
-						if(timeArray[i].Timestamp__1 >= timer)
+						if(timeArray[i].Timestamp__1 <= timer)
 						{
+							let tempHolder = false;
+							if(timeArray[i].LeftLight != "")
+							{
+								console.log(timeArray[i].LeftLight);
+								tempHolder = true;
+								toggleLeft(timeArray[i].LeftLight);
+							}
 							
+							if(timeArray[i].RightLight != "")
+							{
+								tempHolder = true;
+								toggleRight(timeArray[i].RightLight);
+							}
+							
+							if(tempHolder == true)
+							{
+								finishedEvents.push(i);
+							}
 						}
+					}
+					
+					for(let i = 0; i < finishedEvents.length; i++)
+					{
+						timeArray.splice(i, 1);
+						console.log(timeArray);
 					}
 				}	
 			}
