@@ -5,17 +5,76 @@
 	</head>
 	<body>
 
+		<style>
+			#leftLight
+			{
+				background-color:black;
+				border: 3px solid lightgray;
+				width:150px;
+				height:150px;
+			}
+			#rightLight
+			{
+				background-color:black;
+				border: 3px solid lightgray;
+				width:150px;
+				height:150px;
+			}
+			#lightContainer
+			{
+				display:flex;
+			}
+		</style>
 		<h1 id="display">This is a Heading</h1>
-		<p>This is a paragraph.</p>
+		<div id="lightContainer">
+			<div id="leftLight"> </div>
+			<div id="rightLight"> </div>
+		</div>
 		<button onclick="startTimer()">Start</button>
 		<button onclick="stopTimer()">Stop</button>
 		<button onclick="resetTimer()">Reset</button>
+		<button onclick = "toggleLeftLight()">Left Light</button>
+		<button onclick = "toggleRightLight()">Right Light</button>
 		<script type="text/javascript">
 			let timer = 0;
 			let ticking = false;
 			let offset = 0;
-			let display = document.getElementById("display");
+			const display = document.getElementById("display");
+			const leftLight = document.getElementById("leftLight");
+			const rightLight = document.getElementById("rightLight");
 			let interval;
+			let timeArray = [];
+			
+			
+			fetch("https://thermitefe8.github.io/rockyLighting/csvjson.json")
+			.then(response => response.json())
+			.then(data => 
+			{
+				timeArray = data;
+				console.log(data);			
+			});
+				
+				
+			
+			
+			function LeftOn()
+			{
+				leftLight.style.backgroundColor = "yellow";
+			}
+			function LeftOff()
+			{
+				leftLight.style.backgroundColor = "black";
+			}
+			
+			function RightOn()
+			{
+				rightLight.style.backgroundColor = "yellow";
+			}
+			function RightOff()
+			{
+				rightLight.style.backgroundColor = "black";
+			}
+			
 			function update()
 			{
 				if(ticking == true)
@@ -23,6 +82,13 @@
 					timer += delta();
 					console.log(timer);
 					render();
+					for(let i = 0; i < timeArray.length; i++)
+					{
+						if(timeArray[i].Timestamp__1 >= timer)
+						{
+							
+						}
+					}
 				}	
 			}
 			
