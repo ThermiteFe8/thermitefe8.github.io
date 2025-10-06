@@ -44,7 +44,8 @@
 			const rightLight = document.getElementById("rightLight");
 			let interval;
 			let timeArray = [];
-			
+			let leftSwitch = false;
+			let rightSwitch = false;
 			
 			fetch("https://thermitefe8.github.io/rockyLighting/csvjson.json")
 			.then(response => response.json())
@@ -53,8 +54,19 @@
 				timeArray = data;
 				console.log(data);			
 			});
+			
 				
-				
+			function toggleLeftLight()
+			{
+				leftSwitch = !leftSwitch;	
+				toggleLeft();
+			}
+			
+			function toggleRightLight()
+			{
+				rightSwitch = !rightSwitch;
+				toggleRight();
+			}
 			
 			
 			function LeftOn()
@@ -75,10 +87,10 @@
 				rightLight.style.backgroundColor = "black";
 			}
 			
-			function toggleLeft(on)
+			function toggleLeft()
 			{
 				
-				if(on == true)
+				if(leftSwitch == true)
 				{
 					LeftOn();
 				}
@@ -88,10 +100,10 @@
 				}
 			}
 			
-			function toggleRight(on)
+			function toggleRight()
 			{
 				
-				if(on == true)
+				if(rightSwitch == true)
 				{
 					RightOn();
 				}
@@ -114,17 +126,18 @@
 						if(timeArray[i].Timestamp__1 <= timer)
 						{
 							let tempHolder = false;
-							if(timeArray[i].LeftLight != "")
+							if(timeArray[i].LeftLight != "nothing")
 							{
-								console.log(timeArray[i].LeftLight);
 								tempHolder = true;
-								toggleLeft(timeArray[i].LeftLight);
+								leftSwitch = timeArray[i].LeftLight;
+								toggleLeft();
 							}
 							
-							if(timeArray[i].RightLight != "")
+							if(timeArray[i].RightLight != "nothing")
 							{
 								tempHolder = true;
-								toggleRight(timeArray[i].RightLight);
+								rightSwitch = timeArray[i].RightLight;
+								toggleRight();
 							}
 							
 							if(tempHolder == true)
@@ -152,6 +165,17 @@
 			
 			function resetTimer()
 			{
+				fetch("https://thermitefe8.github.io/rockyLighting/csvjson.json")
+			.then(response => response.json())
+			.then(data => 
+			{
+				timeArray = data;
+				console.log(data);	
+				leftSwitch = false;
+				rightSwitch = false;
+				toggleLeft();
+				toggleRight();
+			});
 				timer = 0;
 				render();
 			}

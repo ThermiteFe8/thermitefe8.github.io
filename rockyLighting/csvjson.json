@@ -1,30 +1,50 @@
 [
   {
-    "Timestamp": "2025/10/06 3:24:32 PM AST",
-    "Timestamp__1": 4500,
+    "Timestamp": "2025/10/06 5:34:42 PM AST",
+    "timestamp": 4000,
+    "Description": "Turn both lights on!",
     "LeftLight": true,
     "RightLight": true,
-    "loop endcap": ""
+    "Looping": false,
+    "loopEndpoint": "",
+    "loopInterval": "",
+    "leftStep2": "nothing",
+    "rightStep2": "nothing"
   },
   {
-    "Timestamp": "2025/10/06 3:24:45 PM AST",
-    "Timestamp__1": 7000,
+    "Timestamp": "2025/10/06 5:35:33 PM AST",
+    "timestamp": 10000,
+    "Description": "Turn the left light off",
     "LeftLight": false,
     "RightLight": "nothing",
-    "loop endcap": ""
+    "Looping": false,
+    "loopEndpoint": "",
+    "loopInterval": "",
+    "leftStep2": "nothing",
+    "rightStep2": "nothing"
   },
   {
-    "Timestamp": "2025/10/06 3:24:52 PM AST",
-    "Timestamp__1": 9000,
+    "Timestamp": "2025/10/06 5:35:55 PM AST",
+    "timestamp": 13500,
+    "Description": "Turn the Right Light off",
     "LeftLight": "nothing",
     "RightLight": false,
-    "loop endcap": ""
+    "Looping": false,
+    "loopEndpoint": "",
+    "loopInterval": "",
+    "leftStep2": "nothing",
+    "rightStep2": "nothing"
   },
   {
-    "Timestamp": "2025/10/06 3:25:04 PM AST",
-    "Timestamp__1": 13000,
+    "Timestamp": "2025/10/06 5:37:16 PM AST",
+    "timestamp": 18000,
+    "Description": "Flash both lights every 1.5 seconds!",
     "LeftLight": true,
     "RightLight": true,
-    "loop endcap": ""
+    "Looping": true,
+    "loopEndpoint": 25000,
+    "loopInterval": 1500,
+    "leftStep2": false,
+    "rightStep2": false
   }
 ]
