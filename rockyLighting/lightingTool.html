@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+
+		<h1 id="display">This is a Heading</h1>
+		<p>This is a paragraph.</p>
+		<button onclick="startTimer()">Start</button>
+		<button onclick="stopTimer()">Stop</button>
+		<button onclick="resetTimer()">Reset</button>
+		<script type="text/javascript">
+			let timer = 0;
+			let ticking = false;
+			let offset = 0;
+			let display = document.getElementById("display");
+			let interval;
+			function update()
+			{
+				if(ticking == true)
+				{
+					timer += delta();
+					console.log(timer);
+					render();
+				}	
+			}
+			
+			function startTimer()
+			{
+				offset = Date.now();
+				ticking = true;
+				interval = setInterval(update, 1);
+				console.log("Starting");
+			}
+			
+			function resetTimer()
+			{
+				timer = 0;
+				render();
+			}
+			
+			function stopTimer()
+			{
+				ticking = false;
+				if (interval) 
+				{
+					clearInterval(interval);
+					interval = null;
+				}
+			}
+			
+			function delta() 
+			{
+				var now = Date.now(),
+				d = now - offset;
+
+				offset = now;
+				return d;
+			}
+			
+			function render() 
+			{
+				display.innerHTML = timer;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+[
+  {
+    "Timestamp": "2025/10/06 3:24:32 PM AST",
+    "Timestamp__1": 4500,
+    "Left Light": true,
+    "Right Light": true,
+    "loop endcap": ""
+  },
+  {
+    "Timestamp": "2025/10/06 3:24:45 PM AST",
+    "Timestamp__1": 7000,
+    "Left Light": false,
+    "Right Light": "",
+    "loop endcap": ""
+  },
+  {
+    "Timestamp": "2025/10/06 3:24:52 PM AST",
+    "Timestamp__1": 9000,
+    "Left Light": "",
+    "Right Light": false,
+    "loop endcap": ""
+  },
+  {
+    "Timestamp": "2025/10/06 3:25:04 PM AST",
+    "Timestamp__1": 13000,
+    "Left Light": true,
+    "Right Light": true,
+    "loop endcap": ""
+  }
+]
