@@ -2,7 +2,7 @@
   {
     "Timestamp": "2025/10/06 5:34:42 PM AST",
     "timestamp": 4000,
-    "Description": "Turn both lights on!",
+    "Description": "Turn both lights on",
     "LeftLight": true,
     "RightLight": true,
     "Looping": false,
@@ -38,7 +38,7 @@
   {
     "Timestamp": "2025/10/06 5:37:16 PM AST",
     "timestamp": 18000,
-    "Description": "Flash both lights every 1.5 seconds!",
+    "Description": "Flash both lights every 1.5 seconds",
     "LeftLight": true,
     "RightLight": true,
     "Looping": true,

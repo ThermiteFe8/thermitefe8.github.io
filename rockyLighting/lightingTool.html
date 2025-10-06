@@ -25,7 +25,9 @@
 				display:flex;
 			}
 		</style>
-		<h1 id="display">This is a Heading</h1>
+		<h3 id="prompt">Prompt goes here</h3>
+		<p>Countdown: </p>
+		<p id="display">Timer Goes here</p>
 		<div id="lightContainer">
 			<div id="leftLight"> </div>
 			<div id="rightLight"> </div>
@@ -42,10 +44,21 @@
 			const display = document.getElementById("display");
 			const leftLight = document.getElementById("leftLight");
 			const rightLight = document.getElementById("rightLight");
+			const prompter = document.getElementById("prompt");
+			let nextTimestamp = 9999;
 			let interval;
 			let timeArray = [];
 			let leftSwitch = false;
 			let rightSwitch = false;
+			
+			
+			let looping = false;
+			let loopingInterval = 1000;
+			let loopingEndpoint = 5000;
+			let loopLeft1 = false;
+			let loopLeft2 = false;
+			let loopRight1 = false;
+			let loopRight2 = false;
 			
 			fetch("https://thermitefe8.github.io/rockyLighting/csvjson.json")
 			.then(response => response.json())
@@ -121,9 +134,10 @@
 					timer += delta();
 					render();
 					let finishedEvents = [];
+					let eventsToAdd = [];
 					for(let i = 0; i < timeArray.length; i++)
 					{
-						if(timeArray[i].Timestamp__1 <= timer)
+						if(timeArray[i].timestamp <= timer)
 						{
 							let tempHolder = false;
 							if(timeArray[i].LeftLight != "nothing")
@@ -140,17 +154,76 @@
 								toggleRight();
 							}
 							
+							if(timeArray[i].Looping == true)
+							{
+								looping = true;
+								loopingInterval = timeArray[i].loopInterval;
+								loopingEndpoint = timeArray[i].loopEndpoint;
+								loopLeft1 = timeArray[i].LeftLight;
+								loopLeft2 = timeArray[i].leftStep2;
+								loopRight1 = timeArray[i].RightLight;
+								loopRight2 = timeArray[i].rightStep2;
+								
+								let loopCount = (loopingEndpoint - timeArray[i].timestamp)/loopingInterval;
+								console.log(loopingInterval);
+								console.log(loopingEndpoint);
+								
+								if(loopCount > 0)
+								{
+									for(let k = 0; k < loopCount; k++)
+									{
+										let tempLeft = false;
+										let tempRight = false;
+										let tempDescription = timeArray[i].Description;
+										if(k%2 == 0)
+										{
+											tempLeft = timeArray[i].LeftLight;
+											tempRight = timeArray[i].RightLight;
+											tempDescription = tempDescription + "(Flip A)";
+										}
+										else
+										{
+											tempLeft = timeArray[i].leftStep2;
+											tempRight = timeArray[i].rightStep2;
+											tempDescription = tempDescription + "(Flip B)";
+										}
+										let tempEvent = 
+										{
+											timestamp: timeArray[i].timestamp + k * timeArray[i].loopInterval,
+											Description: tempDescription,
+											LeftLight: tempLeft,
+											RightLight: tempRight,
+											Looping: false
+										};
+										eventsToAdd.push(tempEvent);
+										console.log("adding event");
+									}
+								}
+							}
+							else
+							{
+								looping = false;
+							}
+							
 							if(tempHolder == true)
 							{
+								//prompter.textContent = timeArray[i].Description;
+								console.log(i);
 								finishedEvents.push(i);
 							}
 						}
 					}
 					
-					for(let i = 0; i < finishedEvents.length; i++)
+					for(let i = 0; i < eventsToAdd.length; i++)
 					{
+						timeArray.push(eventsToAdd[i]);
+					}
+					
+					for(let i = 0; i < finishedEvents.length; i++)
+					{	console.log(finishedEvents);
 						timeArray.splice(i, 1);
 						console.log(timeArray);
+						setNextEvent();
 					}
 				}	
 			}
@@ -161,6 +234,33 @@
 				ticking = true;
 				interval = setInterval(update, 1);
 				console.log("Starting");
+				setNextEvent();
+				
+			}
+			
+			function setNextEvent()
+			{
+				if(timeArray.length > 0)
+				{
+					let tempStamp = Number.MAX_SAFE_INTEGER;
+					let tempIndex = 0;
+					for(let i = 0; i < timeArray.length; i++)
+					{
+						if(timeArray[i].timestamp < tempStamp)
+						{
+							tempStamp = timeArray[i].timeStamp;
+							tempIndex = i;
+						}
+					}
+					prompter.textContent = timeArray[tempIndex].Description;
+					nextTimestamp = timeArray[tempIndex].timestamp;
+				}
+				else
+				{
+					prompter.textContent = "Finished!";
+					stopTimer();
+				}
+				
 			}
 			
 			function resetTimer()
@@ -201,7 +301,7 @@
 			
 			function render() 
 			{
-				display.innerHTML = timer;
+				display.innerHTML = ((nextTimestamp - timer)/1000).toFixed(1);
 			}
 		</script>
 	</body>
