@@ -10,15 +10,15 @@
 			{
 				background-color:black;
 				border: 3px solid lightgray;
-				width:150px;
-				height:150px;
+				width:200px;
+				height:200px;
 			}
 			#rightLight
 			{
 				background-color:black;
 				border: 3px solid lightgray;
-				width:150px;
-				height:150px;
+				width:200px;
+				height:200px;
 			}
 			#lightContainer
 			{
@@ -33,15 +33,22 @@
 		<p><span id="nextLight">light</span> in <span id="display">0.0</span> seconds</p>
 		
 		<div id="lightContainer">
-			<div id="leftLight"> </div>
-			<div id="rightLight"> </div>
+			<div>
+				<div id="leftLight"> </div>
+				<p>Rating: <span id = "leftRating"></span></p>
+				<p>Should be: <span id="leftState">Off</span></p>
+			</div>
+			<div>
+				<div id="rightLight"> </div>
+				<p>Rating: <span id = "rightRating"></span></p>
+				<p>Should be: <span id="rightState">Off</span></p>
+			</div>
 		</div>
 		<button onclick="startTimer()">Start</button>
 		<button onclick="stopTimer()">Stop</button>
 		<button onclick="resetTimer()">Reset</button>
 		<button onclick = "toggleLeftLight()">Left Light</button>
 		<button onclick = "toggleRightLight()">Right Light</button>
-		<p id="ratingText">Rating Text Here</p>
 		<script type="text/javascript">
 			let timer = 0;
 			let ticking = false;
@@ -51,7 +58,10 @@
 			const rightLight = document.getElementById("rightLight");
 			const prompter = document.getElementById("prompt");
 			const nextLight = document.getElementById("nextLight");
-			const ratingText = document.getElementById("ratingText");
+			const leftRating = document.getElementById("leftRating");
+			const rightRating = document.getElementById("rightRating");
+			const leftState = document.getElementById("leftState");
+			const rightState = document.getElementById("rightState");
 			let nextTimestamp = 9999;
 			let nextEvent = "";
 			let interval;
@@ -112,7 +122,7 @@
 					leftSwitch = !leftSwitch;	
 					toggleLeft();
 					latestPressL = timer;
-					setRating();
+					leftRating.textContent = setRating(latestPressL, true);
 				}
 			}
 			
@@ -123,49 +133,65 @@
 					rightSwitch = !rightSwitch;
 					toggleRight();
 					latestPressR = timer;
-					setRating();
+					rightRating.textContent = setRating(latestPressR, false);
 				}
 			}
 			
-			function setRating(latestPress)
+			function setRating(latestPress, isLeft)
 			{
-				let ratingString = "Left triggered "
-				console.log("setting rating");
-				let rightEarly = nextTimestamp - latestPressR;
-				let leftEarly = nextTimestamp  - latestPressL;
-				
-				let rightLate = Number.MAX_SAFE_INTEGER;
-				let leftLate = Number.MAX_SAFE_INTEGER;
-				
+				let earlyHit = -1;
+				let lateHit = -1;
+				let ratingString = ""
 				if(previousEvent != "")
 				{
-					rightLate = latestPressR - previousEvent.timestamp;
-				
-					leftLate = latestPressL - previousEvent.timestamp;
+					if(isLeft == true)
+					{
+						if(previousEvent.LeftLight != "nothing")
+						{
+							lateHit = latestPress - previousEvent.timestamp;
+						}
+					}
+					else
+					{
+						if(previousEvent.RightLight != "nothing")
+						{
+							lateHit = latestPress - previousEvent.timestamp;
+						}
+					}
 				}
 				
-				
-				if(leftEarly > leftLate)
+				if(nextEvent != "")
 				{
-					ratingString = ratingString + leftLate + " ms late";
-				}
-				else
-				{
-					ratingString = ratingString + leftEarly + " ms early";
-				}
-				
-				ratingString = ratingString + " + Right triggered "
-				
-				if(rightEarly > rightLate)
-				{
-					ratingString = ratingString + rightLate + " ms late";
-				}
-				else
-				{
-					ratingString = ratingString + rightEarly + " ms early";
+					if(isLeft == true)
+					{
+						if(nextEvent.LeftLight != "nothing")
+						{
+							earlyHit = nextEvent.timestamp -  latestPress;
+						}
+					}
+					else
+					{
+						if(nextEvent.RightLight != "nothing")
+						{
+							earlyHit = nextEvent.timestamp - latestPress;
+						}
+					}
 				}
 				
-				ratingText.textContent = ratingString;
+				if(earlyHit >= 0 || lateHit >= 0)
+				{
+					if(lateHit < 0 || earlyHit < lateHit)
+					{
+						ratingString = earlyHit + " ms EARLY";
+					}
+					else
+					{
+						ratingString = lateHit + " ms LATE";
+					}
+				}
+				
+				return ratingString;
+				
 				
 			}
 			
@@ -231,6 +257,14 @@
 							if(timeArray[i].LeftLight != "nothing")
 							{
 								tempHolder = true;
+								if(timeArray[i].LeftLight == true)
+								{
+									leftState.textContent = "On";
+								}
+								else
+								{
+									leftState.textContent = "Off";
+								}
 								if(interactMode == false)
 								{
 									leftSwitch = timeArray[i].LeftLight;
@@ -242,6 +276,14 @@
 							if(timeArray[i].RightLight != "nothing")
 							{
 								tempHolder = true;
+								if(timeArray[i].RightLight == true)
+								{
+									rightState.textContent = "On";
+								}
+								else
+								{
+									rightState.textContent = "Off";
+								}
 								if(interactMode == false)
 								{
 									rightSwitch = timeArray[i].RightLight;
@@ -430,6 +472,8 @@
 				rightSwitch = false;
 				toggleLeft();
 				toggleRight();
+				leftState.textContent = "Off";
+				rightState.textContent = "Off";
 			});
 				timer = 0;
 				render();
