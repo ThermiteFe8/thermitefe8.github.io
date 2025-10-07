@@ -24,10 +24,14 @@
 			{
 				display:flex;
 			}
+			
+			
 		</style>
-		<h3 id="prompt">Prompt goes here</h3>
-		<p>Countdown: </p>
-		<p id="display">Timer Goes here</p>
+		<input type = "checkbox" id = "interactMode" onclick="toggleInteract()" checked="false">
+		<label for = "interactMode">Interact Mode</label>
+		<h3>Your cue: <span id = "prompt"></span></h3>
+		<p><span id="nextLight">light</span> in <span id="display">0.0</span> seconds</p>
+		
 		<div id="lightContainer">
 			<div id="leftLight"> </div>
 			<div id="rightLight"> </div>
@@ -37,6 +41,7 @@
 		<button onclick="resetTimer()">Reset</button>
 		<button onclick = "toggleLeftLight()">Left Light</button>
 		<button onclick = "toggleRightLight()">Right Light</button>
+		<p id="ratingText">Rating Text Here</p>
 		<script type="text/javascript">
 			let timer = 0;
 			let ticking = false;
@@ -45,7 +50,10 @@
 			const leftLight = document.getElementById("leftLight");
 			const rightLight = document.getElementById("rightLight");
 			const prompter = document.getElementById("prompt");
+			const nextLight = document.getElementById("nextLight");
+			const ratingText = document.getElementById("ratingText");
 			let nextTimestamp = 9999;
+			let nextEvent = "";
 			let interval;
 			let timeArray = [];
 			let leftSwitch = false;
@@ -60,6 +68,20 @@
 			let loopRight1 = false;
 			let loopRight2 = false;
 			
+			
+			let acceptableThreshold = 1000;
+			let latestPressL = 0;
+			let latestPressR = 0;
+			let interactModeElem = document.getElementById("interactMode");
+			interactModeElem.checked = false;
+			let interactMode = false;
+			let previousEvent = "";
+			
+			function toggleInteract()
+			{
+				interactMode = interactModeElem.checked;
+			}
+			
 			fetch("https://thermitefe8.github.io/rockyLighting/csvjson.json")
 			.then(response => response.json())
 			.then(data => 
@@ -68,17 +90,83 @@
 				console.log(data);			
 			});
 			
+			
+			document.onkeypress = function (e) 
+			{
+				e = e || window.event;
+				if(e.keyCode == 102)
+				{
+					toggleLeftLight();
+				}
+				if(e.keyCode == 107)
+				{
+					toggleRightLight();
+				}
+			// use e.keyCode
+			};
 				
 			function toggleLeftLight()
 			{
-				leftSwitch = !leftSwitch;	
-				toggleLeft();
+				if(interactMode && ticking)
+				{
+					leftSwitch = !leftSwitch;	
+					toggleLeft();
+					latestPressL = timer;
+					setRating();
+				}
 			}
 			
 			function toggleRightLight()
 			{
-				rightSwitch = !rightSwitch;
-				toggleRight();
+				if(interactMode && ticking)
+				{
+					rightSwitch = !rightSwitch;
+					toggleRight();
+					latestPressR = timer;
+					setRating();
+				}
+			}
+			
+			function setRating(latestPress)
+			{
+				let ratingString = "Left triggered "
+				console.log("setting rating");
+				let rightEarly = nextTimestamp - latestPressR;
+				let leftEarly = nextTimestamp  - latestPressL;
+				
+				let rightLate = Number.MAX_SAFE_INTEGER;
+				let leftLate = Number.MAX_SAFE_INTEGER;
+				
+				if(previousEvent != "")
+				{
+					rightLate = latestPressR - previousEvent.timestamp;
+				
+					leftLate = latestPressL - previousEvent.timestamp;
+				}
+				
+				
+				if(leftEarly > leftLate)
+				{
+					ratingString = ratingString + leftLate + " ms late";
+				}
+				else
+				{
+					ratingString = ratingString + leftEarly + " ms early";
+				}
+				
+				ratingString = ratingString + " + Right triggered "
+				
+				if(rightEarly > rightLate)
+				{
+					ratingString = ratingString + rightLate + " ms late";
+				}
+				else
+				{
+					ratingString = ratingString + rightEarly + " ms early";
+				}
+				
+				ratingText.textContent = ratingString;
+				
 			}
 			
 			
@@ -143,15 +231,22 @@
 							if(timeArray[i].LeftLight != "nothing")
 							{
 								tempHolder = true;
-								leftSwitch = timeArray[i].LeftLight;
-								toggleLeft();
+								if(interactMode == false)
+								{
+									leftSwitch = timeArray[i].LeftLight;
+									toggleLeft();
+								}
+
 							}
 							
 							if(timeArray[i].RightLight != "nothing")
 							{
 								tempHolder = true;
-								rightSwitch = timeArray[i].RightLight;
-								toggleRight();
+								if(interactMode == false)
+								{
+									rightSwitch = timeArray[i].RightLight;
+									toggleRight();
+								}
 							}
 							
 							if(timeArray[i].Looping == true)
@@ -179,13 +274,13 @@
 										{
 											tempLeft = timeArray[i].LeftLight;
 											tempRight = timeArray[i].RightLight;
-											tempDescription = tempDescription + "(Flip A)";
+											tempDescription = tempDescription + " (Loop A)";
 										}
 										else
 										{
 											tempLeft = timeArray[i].leftStep2;
 											tempRight = timeArray[i].rightStep2;
-											tempDescription = tempDescription + "(Flip B)";
+											tempDescription = tempDescription + " (Loop B)";
 										}
 										let tempEvent = 
 										{
@@ -221,6 +316,7 @@
 					
 					for(let i = 0; i < finishedEvents.length; i++)
 					{	console.log(finishedEvents);
+						previousEvent = timeArray[i];
 						timeArray.splice(i, 1);
 						console.log(timeArray);
 						setNextEvent();
@@ -242,6 +338,7 @@
 			{
 				if(timeArray.length > 0)
 				{
+					
 					let tempStamp = Number.MAX_SAFE_INTEGER;
 					let tempIndex = 0;
 					for(let i = 0; i < timeArray.length; i++)
@@ -252,6 +349,17 @@
 							tempIndex = i;
 						}
 					}
+					
+					nextEvent = timeArray[tempIndex];
+					if(timeArray[tempIndex].Looping == true)
+					{
+						nextLight.textContent = parseLoopLight(timeArray[tempIndex].LeftLight, timeArray[tempIndex].RightLight, timeArray[tempIndex].leftStep2, timeArray[tempIndex].rightStep2, timeArray[tempIndex].loopInterval);
+					}
+					else
+					{
+						nextLight.textContent = "Turn the " + parseNextLight(timeArray[tempIndex].LeftLight, timeArray[tempIndex].RightLight);
+					}
+					
 					prompter.textContent = timeArray[tempIndex].Description;
 					nextTimestamp = timeArray[tempIndex].timestamp;
 				}
@@ -261,6 +369,53 @@
 					stopTimer();
 				}
 				
+			}
+			
+			function parseNextLight(lightL, lightR)
+			{
+				let returnString = "";
+				if(lightL != "nothing")
+				{
+					returnString = returnString + "LEFT";
+					if(lightL == true)
+					{
+						returnString = returnString + " ON";
+					}
+					else
+					{
+						returnString = returnString + " OFF";
+					}
+					
+				}
+				if(lightR != "nothing")
+				{
+					if(lightL != "nothing")
+					{
+						returnString = returnString + " + ";
+					}
+					returnString = returnString + "RIGHT"
+					if(lightR == true)
+					{
+						returnString = returnString + " ON";
+					}
+					else
+					{
+						returnString = returnString + " OFF";
+					}
+				}
+				
+				return returnString;
+			}
+			
+			function parseLoopLight(lightL, lightR, lightL2, lightR2, newInterval)
+			{
+				let returnString = "Flip between the ";
+				returnString = returnString + parseNextLight(lightL, lightR);
+				returnString = returnString + " and ";
+				returnString = returnString + parseNextLight(lightL2, lightR2);
+				returnString = returnString + " every " + ((newInterval)/1000).toFixed(1) + " seconds";
+				
+				return returnString;
 			}
 			
 			function resetTimer()
@@ -301,7 +456,16 @@
 			
 			function render() 
 			{
-				display.innerHTML = ((nextTimestamp - timer)/1000).toFixed(1);
+				let difference = nextTimestamp - timer;
+				if(difference >= 0)
+				{
+					display.innerHTML = ((nextTimestamp - timer)/1000).toFixed(1);
+				}
+				else
+				{
+					display.innerHTML = "0.0";
+				}
+				
 			}
 		</script>
 	</body>
