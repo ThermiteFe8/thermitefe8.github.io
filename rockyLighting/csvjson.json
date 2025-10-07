@@ -2,7 +2,7 @@
   {
     "Timestamp": "2025/10/06 5:34:42 PM AST",
     "timestamp": 4000,
-    "Description": "Turn both lights on",
+    "Description": "Janet appears onscreen",
     "LeftLight": true,
     "RightLight": true,
     "Looping": false,
@@ -14,7 +14,7 @@
   {
     "Timestamp": "2025/10/06 5:35:33 PM AST",
     "timestamp": 10000,
-    "Description": "Turn the left light off",
+    "Description": "Brad hits the goddamn griddy",
     "LeftLight": false,
     "RightLight": "nothing",
     "Looping": false,
@@ -26,7 +26,7 @@
   {
     "Timestamp": "2025/10/06 5:35:55 PM AST",
     "timestamp": 13500,
-    "Description": "Turn the Right Light off",
+    "Description": "Frank also hits the Griddy",
     "LeftLight": "nothing",
     "RightLight": false,
     "Looping": false,
@@ -38,7 +38,7 @@
   {
     "Timestamp": "2025/10/06 5:37:16 PM AST",
     "timestamp": 18000,
-    "Description": "Flash both lights every 1.5 seconds",
+    "Description": "Morbius morbs everywhere",
     "LeftLight": true,
     "RightLight": true,
     "Looping": true,
