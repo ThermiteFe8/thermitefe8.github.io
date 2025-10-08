@@ -49,6 +49,8 @@
 		<button onclick="resetTimer()">Reset</button>
 		<button onclick = "toggleLeftLight()">Left Light</button>
 		<button onclick = "toggleRightLight()">Right Light</button>
+		<input type="search" id="skipInput" name="q" placeholder="Skip to MS count">
+		<p>Current time elapsed: <span id="elapsedTimeMin">0</span> mins; <span id="elapsedTimeDisplay">0</span> ms</p>
 		<script type="text/javascript">
 			let timer = 0;
 			let ticking = false;
@@ -62,6 +64,9 @@
 			const rightRating = document.getElementById("rightRating");
 			const leftState = document.getElementById("leftState");
 			const rightState = document.getElementById("rightState");
+			const skipInput = document.getElementById("skipInput");
+			const elapsedTimeDisplay = document.getElementById("elapsedTimeDisplay");
+			const elapsedTimeMin = document.getElementById("elapsedTimeMin");
 			let nextTimestamp = 9999;
 			let nextEvent = "";
 			let interval;
@@ -356,7 +361,7 @@
 						timeArray.push(eventsToAdd[i]);
 					}
 					
-					for(let i = 0; i < finishedEvents.length; i++)
+					for(let i = finishedEvents.length - 1; i >= 0; i--)
 					{	console.log(finishedEvents);
 						previousEvent = timeArray[i];
 						timeArray.splice(i, 1);
@@ -368,11 +373,55 @@
 			
 			function startTimer()
 			{
-				offset = Date.now();
-				ticking = true;
-				interval = setInterval(update, 1);
-				console.log("Starting");
-				setNextEvent();
+				let skipVal = Math.trunc(skipInput.value);
+				console.log(skipInput.value);
+				if(skipInput.value != "")
+				{
+					if(skipVal < timer)
+					{
+						fetch("https://thermitefe8.github.io/rockyLighting/rockyCues.json")
+						.then(response => response.json())
+						.then(data => 
+						{
+							timeArray = data;
+							console.log(data);	
+							leftSwitch = false;
+							rightSwitch = false;
+							toggleLeft();
+							toggleRight();
+							leftState.textContent = "Off";
+							rightState.textContent = "Off";
+							offset = Date.now();
+							timer = Math.trunc(skipInput.value);
+							ticking = true;
+							interval = setInterval(update, 1);
+							console.log("Starting");
+							setNextEvent();
+						});
+						
+					}
+					else
+					{
+						offset = Date.now();
+						timer = Math.trunc(skipInput.value);
+						ticking = true;
+						interval = setInterval(update, 1);
+						console.log("Starting");
+						setNextEvent();
+					}
+					skipInput.value = "";
+				}
+				else
+				{
+					offset = Date.now();
+					timer = timer;
+					ticking = true;
+					interval = setInterval(update, 1);
+					console.log("Empty Starting");
+					setNextEvent();
+				}
+
+				
 				
 			}
 			
@@ -462,7 +511,7 @@
 			
 			function resetTimer()
 			{
-				fetch("https://thermitefe8.github.io/rockyLighting/csvjson.json")
+				fetch("https://thermitefe8.github.io/rockyLighting/rockyCues.json")
 			.then(response => response.json())
 			.then(data => 
 			{
@@ -501,6 +550,8 @@
 			function render() 
 			{
 				let difference = nextTimestamp - timer;
+				elapsedTimeMin.textContent = Math.trunc(timer/60000);
+				elapsedTimeDisplay.textContent = timer%60000;
 				if(difference >= 0)
 				{
 					display.innerHTML = ((nextTimestamp - timer)/1000).toFixed(1);
