@@ -193,7 +193,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:45:46",
-    "timestamp": 1639194,
+    "timestamp": 1639594,
     "Description": "Janet onscreen",
     "LeftLight": true,
     "RightLight": "nothing",
@@ -205,7 +205,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:46:35",
-    "timestamp": 1640489,
+    "timestamp": 1640889,
     "Description": "Janet offscreen",
     "LeftLight": false,
     "RightLight": "nothing",
@@ -217,7 +217,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:47:19",
-    "timestamp": 1641823,
+    "timestamp": 1643523,
     "Description": "Brad onscreen",
     "LeftLight": true,
     "RightLight": "nothing",
@@ -229,7 +229,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:49:02",
-    "timestamp": 1642823,
+    "timestamp": 1645523,
     "Description": "Brad offscreen",
     "LeftLight": false,
     "RightLight": "nothing",
@@ -241,7 +241,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:49:52",
-    "timestamp": 1647909,
+    "timestamp": 1648209,
     "Description": "Janet onscreen",
     "LeftLight": true,
     "RightLight": "nothing",
@@ -253,7 +253,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:50:36",
-    "timestamp": 1648908,
+    "timestamp": 1649308,
     "Description": "Janet Offscreen",
     "LeftLight": false,
     "RightLight": "nothing",
@@ -277,7 +277,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:52:27",
-    "timestamp": 1652623,
+    "timestamp": 1652223,
     "Description": "Janet offscreen again",
     "LeftLight": false,
     "RightLight": "nothing",
@@ -289,7 +289,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:53:41",
-    "timestamp": 1654710,
+    "timestamp": 1654310,
     "Description": "Brad onscreen",
     "LeftLight": true,
     "RightLight": "nothing",
@@ -301,7 +301,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:54:06",
-    "timestamp": 1655710,
+    "timestamp": 1655510,
     "Description": "Brad offscreen",
     "LeftLight": false,
     "RightLight": "nothing",
@@ -312,8 +312,32 @@
     "rightStep2": "nothing"
   },
   {
+    "Timestamp": "10/7/2025 20:53:41",
+    "timestamp": 1657388,
+    "Description": "Brad onscreen (again)",
+    "LeftLight": true,
+    "RightLight": "nothing",
+    "Looping": false,
+    "loopEndpoint": "",
+    "loopInterval": "",
+    "leftStep2": "nothing",
+    "rightStep2": "nothing"
+  },
+  {
+    "Timestamp": "10/7/2025 20:54:06",
+    "timestamp": 1658889,
+    "Description": "Brad offscreen(again)",
+    "LeftLight": false,
+    "RightLight": "nothing",
+    "Looping": false,
+    "loopEndpoint": "",
+    "loopInterval": "",
+    "leftStep2": "nothing",
+    "rightStep2": "nothing"
+  },
+  {
     "Timestamp": "10/7/2025 20:55:24",
-    "timestamp": 1661050,
+    "timestamp": 1660850,
     "Description": "Janet onscreen (last time)",
     "LeftLight": true,
     "RightLight": "nothing",
@@ -325,7 +349,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:55:54",
-    "timestamp": 1662051,
+    "timestamp": 1661851,
     "Description": "Janet offscreen (last time)",
     "LeftLight": false,
     "RightLight": "nothing",

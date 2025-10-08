@@ -338,7 +338,7 @@
 											Looping: false
 										};
 										eventsToAdd.push(tempEvent);
-										console.log("adding event");
+										console.log(tempEvent);
 									}
 								}
 							}
@@ -356,17 +356,19 @@
 						}
 					}
 					
-					for(let i = 0; i < eventsToAdd.length; i++)
-					{
-						timeArray.push(eventsToAdd[i]);
-					}
 					
+
 					for(let i = finishedEvents.length - 1; i >= 0; i--)
 					{	console.log(finishedEvents);
 						previousEvent = timeArray[i];
 						timeArray.splice(i, 1);
 						console.log(timeArray);
 						setNextEvent();
+					}
+					if(eventsToAdd.length > 0)
+					{
+						console.log("pushingEvents");
+						timeArray.unshift(...eventsToAdd);
 					}
 				}	
 			}
