@@ -97,7 +97,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:31:19",
-    "timestamp": 1212054,
+    "timestamp": 1212232,
     "Description": "Time warp \"chorus beat drop\" (Let's do the time warp again)",
     "LeftLight": true,
     "RightLight": true,
@@ -109,7 +109,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:32:43",
-    "timestamp": 1212054,
+    "timestamp": 1220982,
     "Description": "Crim shows up during time warp (part 1)",
     "LeftLight": false,
     "RightLight": false,
@@ -217,7 +217,7 @@
   },
   {
     "Timestamp": "10/7/2025 20:47:19",
-    "timestamp": 1643823,
+    "timestamp": 1642823,
     "Description": "Brad onscreen",
     "LeftLight": true,
     "RightLight": "nothing",
