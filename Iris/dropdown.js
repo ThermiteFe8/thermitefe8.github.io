@@ -25,7 +25,7 @@ function ToggleAllDropdown() {
   document.getElementById("AllDropdown").classList.toggle("show");
 }
 
-function ToggleGamesDropdown() {
+function ToggleCreatorDropdown() {
 	var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -34,7 +34,7 @@ function ToggleGamesDropdown() {
         openDropdown.classList.remove('show');
       }
     }
-  document.getElementById("GamesDropdown").classList.toggle("show");
+  document.getElementById("CreatorDropdown").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it

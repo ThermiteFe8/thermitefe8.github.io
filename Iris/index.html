@@ -3,8 +3,9 @@
 </head>
 <link rel = "stylesheet" href = "style.css">
 <body>
+<script src="dropdown.js"></script>
 	<div id = "headerBar">
-		<img id ="SmallerLogo"src ="SmallerLogo.png" onclick="window.location.href = 'index.html'">
+		<button class="dropbtn">Home</button>
 		<div class="dropdown">
 			  <button onclick="ToggleAllDropdown()" class="dropbtn">All Issues</button>
 			  <div id="AllDropdown" class="dropdown-content">
@@ -31,8 +32,8 @@
 			  </div>
 		</div>
 		<div class="dropdown">
-			  <button onclick="ToggleAllDropdown()" class="dropbtn">Creators</button>
-			  <div id="AllDropdown" class="dropdown-content">
+			  <button onclick="ToggleCreatorDropdown()" class="dropbtn">Creators</button>
+			  <div id="CreatorDropdown" class="dropdown-content">
 				<a href="">Jamie Bautista</a>
 				<a href="">Arnold Arre</a>
 				<a href="">Jim Jimenez</a>
@@ -46,37 +47,43 @@
 				</img>
 			</div>
 			<div id="creditsBlock">
-				<md-block>
-					## Case 12: The Inner Circle
-					__Credits:__
-					- Story by [Jamie Bautista](JamieB.html)
-					- Pencils/Inks by [Jim Jimenez](Jim.html)
-					- Colors by [Jamie Bautista](JamieB.html)
-
-					Release Date: <u>August 28th, 2010</u>
-
-					Youtube Version: [Real Gone from Cars](https://www.youtube.com/watch?v=HdimnI4Xtc0)
-				</md-block>
+				<h1>Case 12: The Inner Circle</h1>
+				<p id="creditsLabel">Credits:</p>
+				<ul>
+					<li>
+					Story by <a href="jamieB.html">Jamie Bautista</a>
+					</li>
+					<li>
+					Pencils/Inks by <a href="jamieB.html">Jim Jimenez</a>
+					</li>
+					<li>
+					Colors by <a href="jamieB.html">Jamie Bautista</a>
+					</li>
+				</ul>
+				<p>Release Date: August 28th, 2010</p>
+				<p>Youtube Version: <a href="">Real Gone from Cars</a></p>
 			</div>
 		</div>
 		<div id="descriptionBlock">
-			<md-block>
-				## Description
-			
-				Lorem ipsum lorem ipsum placeholder text. Driving in my truck right after a beer - hey, that bump is shaped like a deer! DUI? How about you die! I'll go a hundred miles an hour. Little did you know, I'm filled up on gas. I'mma get you.
-			</md-block>
+			<h2>Description:</h2>
+			<p>
+				What is the secret of MacGuffin Plains? And how does it tie into the things Iris Able has been investigating such as her mother's whereabouts, the origin of her headquarters, and the mysterious Holding Company? Iris is about to embark on her most dangerous case yet as she discovers the story of the Inner Circle. But will she still be able to crack the case now that she no longer has the help of her former friend, Danton Cord? Written by Jamie Bautista (Cast, Siglo: Passion), with art by Jim, Jay, Joy Jimenez JBrothers.
+			</p>
 		</div>
 		
 		<div id="issueNavButtons">
-			<button id="">Previous Case</button>
-			<button>Next Case</button>
+			<button id="previousButton">🠈 Prev <br><span>Case 11</span></button>
+			<button id="nextButton">Next 🠊<br><span>Case 13</span></button>
 		</div>
 		
 		
 	</div>
 	<div id = "footerBar">
+		<a href="index.html">Home</a>
+		<a href="About">About</a>
+		<p>©2025</p>
 	</div>
 </body>
 <script type="module" src="https://md-block.verou.me/md-block.js"></script>
-<script src="dropdown.js"></script>
+
 </html>
