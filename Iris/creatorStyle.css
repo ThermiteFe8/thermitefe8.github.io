@@ -16,9 +16,10 @@
 		width:582vh;
 	}
 
-	#pfpContainer img
+	#pfpContainer a img
 	{
 		width:74%;
+	filter: drop-shadow(-1.2vh -1.2vh 0 var(--border-highlight)) drop-shadow(1.2vh 1.2vh 0 var(--border-shadow)) drop-shadow(1.5vh 1.5vh var(--first-shadow-color));
 	}
 
 	#creatorDesc
@@ -145,9 +146,10 @@
 		width:582vh;
 	}
 
-	#pfpContainer img
+	#pfpContainer a img 
 	{
 		width:74%;
+		filter: drop-shadow(-1.2vh -1.2vh 0 var(--border-highlight)) drop-shadow(1.2vh 1.2vh 0 var(--border-shadow)) drop-shadow(1.5vh 1.5vh var(--first-shadow-color));
 	}
 
 	#creatorDesc
@@ -275,13 +277,15 @@
 		width:100%;
 	}
 
-	#pfpContainer img
+	#pfpContainer a img
 	{
 		width:100%;
+		filter: drop-shadow(-1.2vh -1.2vh 0 var(--border-highlight)) drop-shadow(1.2vh 1.2vh 0 var(--border-shadow)) drop-shadow(1.5vh 1.5vh var(--first-shadow-color));
 	}
 
 	#creatorDesc
 	{
+	margin-top: 2.5vh;
 	}
 
 	#creatorDesc h1
