@@ -1,0 +1,24 @@
+1 - Alarm Animation - October 2025.gif
+10 - ABC Book - October 2025.png
+11 - Feedback Lights and Wires - October 2025.png
+12 - Hatch Opening Anim - October 2025.gif
+13 - Trapdoor Opening Anim - October 2025.gif
+14 - Boiler Room Full Overworld - October 2025.png
+15 - Crazy Text Zoomed - October 2025.png
+16 - Valve Puzzle Zoomed - October 2025.png
+17 - Telescope Room Full Overworld - October 2025.png
+18 - Keypad and Telescope - October 2025.png
+19 - Star Chart Zoomed - October 2025.png
+2 - Front Control Room Full Overworld - October 2025.png
+20 - BathroomFull Overworld - October 2025.png
+21 - Arrows and Icons - October 2025.png
+22 - Extryption Logo - October 2025.png
+23 - Win Screen - October 2025.png
+3 - Keyboard and Input - October 2025.png
+4 - Back Control Room Full Background - October 2025.png
+5 - Back Control Room Door Open Anim - October 2025.gif
+6 - Open Keypad - October 2025.png
+7 - Artifact Room Full Overworld - October 2025.png
+8 - Left Right Buttons - October 2025.png
+9 - Left Right Instructions - October 2025.png
+fileNames.txt
