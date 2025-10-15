@@ -1,20 +1,20 @@
 :root
 {
-	--border-highlight:#35356B;
+	--border-highlight:#46334E;
 	--border-shadow:#000000;
-	--bar-color:#656CD9;
-	--center-color:#30284D;
+	--bar-color:#81629E;
+	--center-color:#3E2738;
 	--item-color:#CCBFFF;
-	--backdrop-color:#231d4b;
-	--default-button-color:#837fff;
-	--highlighted-button-color:#FFAB62;
+	--backdrop-color:#311C37;
+	--default-button-color:#AE7BBA;
+	--highlighted-button-color:#FF9756;
 	--first-shadow-color:rgba(6, 6, 32, 0.57);
 	--second-shadow-color:#1A1857C9;
-	--first-highlight-color:#E88B76;
+	--first-highlight-color:#FF9756;
 	--second-highlight-color:#FFA5A5B8;
 	--third-highlight-color:#FDFDFF;
 	--third-shadow-color:#7265C3;
-	--hyperlink-color:#ff7a7a;
+	--hyperlink-color:#FF7A5C;
 }
 
 html
@@ -159,7 +159,7 @@ body
 #centralContent a
 {
 	color:var(--hyperlink-color);
-	transition: color 0.5s, transform 0.4s;
+	transition: color 0.5s, transform 0.4s, background-color 0.5s;
 	transform:scale(1);
 	display:inline-block;
 	cursor:pointer;
