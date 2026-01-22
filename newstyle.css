@@ -566,6 +566,8 @@ md-block * img
 	background-color:transparent;
 	filter: drop-shadow(-0.7vh -0.7vh 0 var(--third-shadow-color)) drop-shadow(0.85vh 0.8vh 0 var(--third-highlight-color));
 	width:100%;
+	margin-top:2.5vh;
+	margin-bottom:2.5vh;
 }
 
 
