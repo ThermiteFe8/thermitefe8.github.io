@@ -86,5 +86,6 @@
 85 - Exploding Car - April 2025.gif
 86 - Easel - April 2025.gif
 87 - Road Cone - April 2025.gif
+88 - Timless Trials Protagonist - January 2026.png
 9 - Basic Sword - September 2024.gif
 fileNames.txt
